@@ -1,8 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+- real time chate engine for comments
+- Blog
+- Portfolio
+- Drag and Drop interface
 
-stuff
+## Code Example
+
+``` ruby
+def stuff
+end
+```
