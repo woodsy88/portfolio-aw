@@ -2,11 +2,12 @@
 
 <%= link_to "Create New", new_portfolio_path %>
 <% @portfolio_items.each do |item| %>
-  <p><%= item.title %></p>
+  <p><%= link_to item.title, portfolio_path(item.id) %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
   <!--  I dont want to show item.thumb_image IF item.thumb_image is empty(nil). if you dont have an thumb_image it doesnt throw an error    -->
 <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
+<%= link_to "show", portfolio_path(item.id) %>
 <%= link_to "edit", edit_portfolio_path(item.id) %>
   
 <% end %>
