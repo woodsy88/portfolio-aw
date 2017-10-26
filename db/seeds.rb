@@ -52,8 +52,6 @@ puts "10 blog posts created"
       )
   end
 
-
-
   1.times do |portfolio_item|
     Portfolio.create!(
       title: "Portfolio title #{portfolio_item}",
@@ -61,7 +59,14 @@ puts "10 blog posts created"
       body: "Mauris dapibus mauris nulla, Aenean aliquet elit tellus, nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, ac commodo erat. Quisque in sem quam. Sed at iaculis sem. Duis luctus sedtristique elementum risus Fusce vulputate efficitur tellus a hendrerit.",
       main_image: "http://via.placeholder.com/600x400",
       thumb_image: "http://via.placeholder.com/300x150",
-
       )
   end
   puts "9 portfolio items rewarded"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "technology #{technology}",
+    )
+end
+puts "3 technolgies created"
+
