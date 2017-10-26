@@ -1,5 +1,6 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
+  # Portfolio.create!(title: "Web App 1", subtitle: "anything", body: "stuff", technologies_attributes: [{name: "Ruby"},{name: "Rails"},{name: "Java"}])
   accepts_nested_attributes_for :technologies, 
                                  reject_if: lambda { |attrs| attrs['name'].blank? }
 
