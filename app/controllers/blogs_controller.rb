@@ -2,31 +2,26 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   #go into layout directory, find blog html.erb file
   layout "blog"
-  # GET /blogs
-  # GET /blogs.json
+  
   def index
     @blogs = Blog.all
-    @page_title = "Blog"
-  end
+    @page_title = "Blog"                                                          
+  end   
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
-    @page.title = @blog.title
+    @page_title = @blog.title
     @seo_keywords = @blog.body
   end
 
-  # GET /blogs/new
+ 
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
   def edit
   end
+           
 
-  # POST /blogs
-  # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
 
