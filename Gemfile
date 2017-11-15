@@ -62,3 +62,5 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'popper_js', '~> 1.12.3'
+
+gem 'woods_view_tool', git: 'https://github.com/woodsy88/woods-view-tool'

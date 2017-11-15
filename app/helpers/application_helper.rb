@@ -29,5 +29,9 @@ module ApplicationHelper
     end 
  end
 
+ def copyright_generator
+   WoodsViewTool::Renderer.copyright 'Andrew Woods', 'All right reserved'
+ end
+
 end
 
