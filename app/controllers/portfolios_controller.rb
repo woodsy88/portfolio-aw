@@ -1,6 +1,11 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy] 
+ 
+ #petergate - authetication for different user roles at controller level
+ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
 layout 'portfolio'
+
   def index 
     @portfolio_items = Portfolio.all
   end
