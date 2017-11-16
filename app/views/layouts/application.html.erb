@@ -18,11 +18,12 @@
                 <%= render 'shared/application_nav' %>
                     
                    
-                        <%= login_helper %>
+                      
                             <%= yield %>
-                                <%= copyright_generator %>
-                                    <%= source_helper("application") %>
-                
+                                
+                                   
+<%= render 'layouts/footer' %>
+     <%= source_helper("application") %>            
             </div>
         </div>
     </div>
