@@ -12,21 +12,17 @@
 </head>
 
 <body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
+   
                 <%= render 'shared/application_nav' %>
                     
                    
                       
-                            <%= yield %>
+                            <div class="container"><%= yield %></div>
                                 
                                    
 <%= render 'layouts/footer' %>
      <%= source_helper("application") %>            
-            </div>
-        </div>
-    </div>
+          
 </body>
 
 </html>
