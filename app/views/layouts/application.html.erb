@@ -3,6 +3,9 @@
 
 <head>
     <title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <%= @page_title  %>
     </title>
     <%= csrf_meta_tags %>
@@ -12,16 +15,11 @@
 </head>
 
 <body>
-   
-                <%= render 'shared/application_nav' %>
-                    
-                   
-                      
-                           <div class="container"> <%= yield %></div>
-                                
-                                   
-<%= render 'layouts/footer' %>
-     <%= source_helper("application") %>            
+
+            <%= render 'shared/application_nav' %>
+            <div class="container"> <%= yield %></div>
+            <%= render 'layouts/footer' %>
+            <%= source_helper("application") %>            
           
 </body>
 

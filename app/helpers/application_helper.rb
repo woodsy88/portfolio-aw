@@ -9,15 +9,15 @@ module ApplicationHelper
 
 #need to pass in a style with login helper
     #setting style = to an empty string by default for when no style is set
- def login_helper style = ''
-     if current_user.is_a?(GuestUser) 
-          (link_to 'Signup', new_user_registration_path, class: style) +
-          " " +
-         (link_to 'Login', new_user_session_path, class: style)
-     else 
-        link_to "Logout", destroy_user_session_path, method: :delete, class: style 
-     end  
- end
+  def login_helper style = ''
+    if current_user.is_a?(GuestUser)
+      (link_to "Register", new_user_registration_path, class: style) +
+      " ".html_safe +
+      (link_to "Login", new_user_session_path, class: style)
+    else
+      link_to "Logout", destroy_user_session_path, method: :delete, class: style
+    end
+  end
 
  def sample_helper_2
     content_tag(:div, "My Content", class: "my-class")
