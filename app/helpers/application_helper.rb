@@ -8,7 +8,8 @@ module ApplicationHelper
  end
 
 #need to pass in a style with login helper
- def login_helper style
+    #setting style = to an empty string by default for when no style is set
+ def login_helper style = ''
      if current_user.is_a?(GuestUser) 
           (link_to 'Signup', new_user_registration_path, class: style) +
           " " +
