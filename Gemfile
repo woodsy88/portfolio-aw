@@ -66,3 +66,9 @@ gem 'popper_js', '~> 1.12.3'
 gem 'woods_view_tool', '~> 0.1.0'
 
 gem 'petergate', '~> 1.8'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
+
