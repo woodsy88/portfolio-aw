@@ -1,14 +1,14 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   #petergate - authetication for different user roles at controller level
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
 
-  #go into layout directory, find blog html.erb file
+  #go into layout directory, find blog html.erb file and use it instead of application.html.erb
   layout "blog"
   
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = "Blog"                                                          
   end   
 
