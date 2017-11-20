@@ -35,5 +35,51 @@ module ApplicationHelper
    WoodsViewTool::Renderer.copyright 'Andrew Woods', 'All right reserved'
  end
 
+ #NAV HELPER
+
+ def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home'
+      },
+      {
+        url: about_me_path,
+        title: 'About Me'
+      },
+      {
+        url: contact_path,
+        title: 'Contact'
+      },
+      {
+        url: blogs_path,
+        title: 'Blog'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
+      },
+    ]
+ end
+
+
+ def nav_helper style, tag_type
+    #style = css class, tag_type = html tag
+    nav_links = ""
+
+    nav_items.each do |item|
+      #append a set of strings using <<. Shovels it onto the end. ex. ss << dd = ssdd
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active_nav_link? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+
+    nav_links.html_safe
+ end
+
+ def active_nav_link? path 
+  #return "active" if the current page matches the path we pass in
+  "active" if current_page? path
+ end
+
 end
+
 
