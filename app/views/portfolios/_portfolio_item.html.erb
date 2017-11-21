@@ -4,6 +4,7 @@
     <p class="card-text">
       <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span>
       <span><%= portfolio_item.subtitle %></span>
+      <p><%= portfolio_item.position %></p>
       <%= link_to "show", portfolio_show_path(portfolio_item.id), class: "btn btn-primary" %>
     </p>
 </div>

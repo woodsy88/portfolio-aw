@@ -13,6 +13,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: "React")
   end
 
+  def self.by_position
+    order("position ASC")
+  end
+
   scope :rub_on_rails_portfolio, -> { where(subtitle: 'Ruby on Rails') }
 
   #callback - after a portfolio item has been initialized (when new action called)
