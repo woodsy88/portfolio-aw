@@ -10,6 +10,14 @@ layout 'portfolio'
     @portfolio_items = Portfolio.by_position
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render body: nil # dont try to render a view
+  end
+
   def react
      @react_portfolio_items = Portfolio.react
   end
