@@ -28,5 +28,8 @@ module PortfolioAw
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #when rails starts up application, load any modules inside lib directoy
+    config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
