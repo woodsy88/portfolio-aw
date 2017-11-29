@@ -80,3 +80,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
 #allows u to create a d.env file - used for amazon aws
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
+
+gem 'gritter', '~> 1.2'
