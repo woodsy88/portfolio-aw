@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   #get 'pages/about'
   get 'about-me', to: 'pages#about'
-
   #get 'pages/contact'
   get 'contact', to: 'pages#contact'
+
+  get 'tech-news', to: 'pages#tech_news'
 
   resources :portfolios, except: [:show] do
     get 'react-items', to: 'portfolios#react'
