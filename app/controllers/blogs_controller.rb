@@ -13,8 +13,15 @@ class BlogsController < ApplicationController
   end   
 
   def show
+                  #includes allows you to 'include' the comments associated with that blog
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+
+    #instantiates a new comment for the comment form on the blog show page
+    @comment = Comment.new
+   
     @page_title = @blog.title
     @seo_keywords = @blog.body
+
   end
 
  

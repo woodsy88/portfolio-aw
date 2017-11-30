@@ -13,5 +13,23 @@
   </div>
 </div>
 
+<!-- Start of Comments Form -->
+<% unless current_user.is_a? GuestUser %>
+<%= form_for @comment, url: '#' do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+  <% end %>
+
+<% end %>
+<!-- End of comments form -->
+
+<!-- automatically loooks in views for partial called _comment -->
+<!-- renders all comments associated with that specific blog -->
+<%= render @blog.comments %>
+
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', blogs_path %>
