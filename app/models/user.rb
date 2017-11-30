@@ -17,6 +17,8 @@ class User < ApplicationRecord
 # Virtual Atrribute for first_name and last_name
   validates_presence_of :name
 
+  has_many :comments, dependent: :destroy
+
   def first_name
     #runs on each instance
     self.name.split.first
