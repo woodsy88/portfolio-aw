@@ -1,4 +1,4 @@
-/*jQuery(document).on 'turbolinks:load', ->
+jQuery(document).on 'turbolinks:load', ->
   comments = $('#comments')
   if comments.length > 0
     App.global_chat = App.cable.subscriptions.create {
@@ -19,4 +19,4 @@
       comments.data('blog-id')
       textarea.val('')
     e.preventDefault()
-    return false*/
+    return false

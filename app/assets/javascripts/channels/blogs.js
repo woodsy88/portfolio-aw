@@ -1,4 +1,4 @@
-jQuery(document).on('turbolinks:load', function() {
+/*jQuery(document).on('turbolinks:load', function() {
   var comments;
   comments = $('#comments');
   if (comments.length > 0) {
@@ -30,4 +30,4 @@ jQuery(document).on('turbolinks:load', function() {
     e.preventDefault();
     return false;
   });
-});
+});*/
