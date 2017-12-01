@@ -13,10 +13,13 @@
   </div>
 </div>
 
+<!-- add new comments -->
 <%= render 'comments/comment_form' %>
 <!-- automatically loooks in views for partial called _comment -->
 <!-- renders all comments associated with that specific blog -->
-<%= render @blog.comments %>
+<div id="comments" data-blog-id="<%= @blog.id %>">
+  <%= render @blog.comments %>
+ </div>
 
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', blogs_path %>
