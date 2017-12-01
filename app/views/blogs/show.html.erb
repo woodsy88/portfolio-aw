@@ -1,25 +1,16 @@
+<div class="col-sm-8 blog-main">
 
-<div class="col-md-8 blog-main">
-  <h2> <%= @blog.title %></h2>
-  
-<% if logged_in?(:site_admin)  %>
-  <div class="blog-post-meta">
-    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-    <%= link_to 'Back', blogs_path %>
-  </div>
-  <% end  %>
-  <div class="blog-content">
+  <h2><%= @blog.title %></h2>
+
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <%= link_to 'Back', blogs_path %>
+  <p>
     <%= @blog.body %>
+  </p>
+  <!-- add new comments -->
+  <%= render 'comments/comment_form' %>
+<!-- automatically loooks in views for partial called _comment.  renders all comments associated with that specific blog -->
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
   </div>
 </div>
-
-<!-- add new comments -->
-<%= render 'comments/comment_form' %>
-<!-- automatically loooks in views for partial called _comment -->
-<!-- renders all comments associated with that specific blog -->
-<div id="comments" data-blog-id="<%= @blog.id %>">
-  <%= render @blog.comments %>
- </div>
-
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-<%= link_to 'Back', blogs_path %>
