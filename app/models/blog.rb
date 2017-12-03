@@ -8,9 +8,9 @@ class Blog < ApplicationRecord
   #part of paginate, latest blogs created are the first to show
   #default_scope -> { order(updated_at: :desc) }
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
-  belongs_to :topic, optional: true
+  belongs_to :topic #, optional: true
 
   has_many :comments, dependent: :destroy
 
