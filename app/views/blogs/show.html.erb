@@ -14,7 +14,7 @@
     </span>
   </nav>
 
-  <%= link_to 'Back', blogs_path %>
+  <%= link_to fa_icon('long-arrow-left'), blogs_path, class: "arrow-icon-size" %>
 
   <p>
     <%= markdown @blog.body %>
