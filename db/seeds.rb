@@ -7,6 +7,29 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+User.create!(
+  email: "a@d.co",
+  password: "password",
+  password_confirmation: "password",
+  name: "Admin User",
+  roles: "site_admin"
+  )
+
+puts "1 admin user created"
+
+
+
+User.create!(
+  email: "user@user.com",
+  password: "password",
+  password_confirmation: "password",
+  name: "Regular User",
+
+  )
+
+puts "1 regular user was created"
+
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
