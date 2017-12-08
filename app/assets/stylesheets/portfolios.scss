@@ -40,7 +40,6 @@ body {
 
 .card {
   float: left;
-  width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
@@ -70,3 +69,16 @@ footer p {
   
 }
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Ubuntu', serif;
+}

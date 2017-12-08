@@ -1,21 +1,17 @@
-<div class="blog-main">
-  <div class="blog-post">
-
-      <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-      <p class="blog-post-meta">Created <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>
-
-      <% if logged_in?(:site_admin) %>
-          <div class="blog-post-meta">
-          <%= link_to blog.status, toggle_status_blog_path(blog)  %> /
-          <%= link_to 'Show', blog %> /
-          <%= link_to 'Edit', edit_blog_path(blog) %> /
-          <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-      <% end %>
-
-      <p><%= blog.body %></p>  
-  </div>
+<div class="col-md-12">
+    <div class="card card-spacing">
+        <div class="blog-post">
+          <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
+            <div class="card-block">
+              
+                <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
+                <p class="blog-post-meta">Created
+                    <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>
+                
+                    <p>
+                        <%= markdown blog.body %>
+                    </p>
+            </div>
+        </div>
+    </div>
 </div>
-      
-
-

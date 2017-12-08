@@ -147,15 +147,18 @@ h6,
  */
 
 .blog-post {
-  margin-bottom: 4rem;
+
+  margin-bottom: 20px;
 }
 .blog-post-title {
+  font-family: 'Ubuntu', sans-serif;
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 22px;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #999;
+  font-size: 12px;
 }
 
 
@@ -192,4 +195,47 @@ h6,
 
 .comment-name {
   font-weight: 700;
+}
+
+.blogcrumb {
+  font-size: 1.25em;
+
+ a {
+  margin-right: 10px;
+ }
+}
+
+.arrow-icon-size {
+  font-size: 2.0em;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog-sidebar-source {
+  margin-top: 20px;
+}
+
+.card-spacing {
+  margin-bottom: 20px;
+}
+
+.card-block {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Ubuntu', serif;
 }
