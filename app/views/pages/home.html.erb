@@ -1,10 +1,10 @@
 
  <div class="inner cover">
-            <h1 class="cover-heading mb-5">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <h1 class="cover-heading mb-5">Andrew Woods</h1>
+            <p class="lead">Welcome to my site</p>
             <p class="lead">
-              <%= link_to "Learn more", about_me_path, class: "btn btn-lg btn-secondary"  %>
-              <a href="<%= about_me_path %>" class="btn btn-lg btn-secondary">Learn More</a>
+              <%= link_to "Resources", blogs_path, class: "btn btn-lg btn-secondary"  %>
+              <a href="<%= about_me_path %>" class="btn btn-lg btn-secondary">About Me</a>
             </p>
           </div>
  
@@ -12,12 +12,10 @@
 
 <h1>Hi <%= current_user.first_name if current_user  %></h1>
 
-<h2>Blog Posts</h2>
-<%= @post.inspect %>
-<h2>Skills</h2>
-<%= @skill.inspect %>
-<p>
-  <%=  current_user.role %></p>
+<h2>Code Snippets</h2>
+
+
+
 
  
 

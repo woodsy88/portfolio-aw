@@ -1,14 +1,17 @@
-<div class="blog-main">
-  <div class="blog-post">
-
-      <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-      <p class="blog-post-meta">Created <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>
-
-    <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
-
-      <p><%= markdown blog.body %></p>  
-  </div>
+<div class="col-md-12">
+    <div class="card card-spacing">
+        <div class="blog-post">
+          <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
+            <div class="card-block">
+              
+                <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
+                <p class="blog-post-meta">Created
+                    <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>
+                
+                    <p>
+                        <%= markdown blog.body %>
+                    </p>
+            </div>
+        </div>
+    </div>
 </div>
-      
-
-
