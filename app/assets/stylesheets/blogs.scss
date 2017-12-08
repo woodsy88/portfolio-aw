@@ -147,11 +147,13 @@ h6,
  */
 
 .blog-post {
+
   margin-bottom: 20px;
 }
 .blog-post-title {
+  font-family: 'Ubuntu', sans-serif;
   margin-bottom: .25rem;
-  font-size: 18px;
+  font-size: 22px;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
@@ -222,4 +224,18 @@ h6,
 .card-block {
   padding-right: 30px;
   padding-left: 30px;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Ubuntu', serif;
 }
