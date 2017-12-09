@@ -34,21 +34,21 @@ margin-right: 15px;
 
 /*Banner*/
 
-#banner-background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 500px;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  /* image-url is a direct line to rails asset pipeline*/
-  background: image-url('home_bg.jpg') no-repeat;
-  background-size: cover;
-}
+// #banner-background {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 500px;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   -webkit-transform: translateX(-50%) translateY(-50%);
+//   transform: translateX(-50%) translateY(-50%);
+//   /* image-url is a direct line to rails asset pipeline*/
+//   background: image-url('home_bg.jpg') no-repeat;
+//   background-size: cover;
+// }
 
 .app-footer {
   color: white;
