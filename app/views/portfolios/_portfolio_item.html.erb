@@ -8,7 +8,7 @@
         <% portfolio_item.technologies.each do |technology| %>
             <li class="tech-portfolio-card-item"><%= technology.name %></li>
         <% end  %>
-       <%= link_to "show", portfolio_show_path(portfolio_item.id), class: "btn btn-primary btn-block" %>
+       <%= link_to "Full Details", portfolio_show_path(portfolio_item.id), class: "mt-5 btn btn-primary btn-block" %>
       </p>
   </div>
 </div>

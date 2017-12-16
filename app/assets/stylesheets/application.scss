@@ -1,6 +1,6 @@
 @import "bootstrap";
 @import "gritter";
-
+@import "_colors.scss";
 
 
 /* Custom Style */
@@ -106,4 +106,16 @@ h6, .h6 {
 .banner-type-product {
   font-size: 20px;
   font-weight: 700;
+}
+
+// Button Styles
+
+.btn-primary {
+    color: #fff;
+    background-color: $turq;
+    border-color: $turq;
+}
+
+.btn-primary:hover {
+  background-color: #7d8f85;
 }
