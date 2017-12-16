@@ -82,3 +82,30 @@ h5, .h5,
 h6, .h6 {
   font-family: 'Nunito', serif;
 }
+
+// Portfolio Index Cards
+
+.portfolio-card {
+  .tech-portfolio-card-item {
+
+  }
+
+  .portfolio-card-title {
+  font-size: 25px;
+  font-weight: 600; 
+  }
+
+  .portfolio-card-title a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .portfolio-card-title a:hover {
+    color: #676767;
+  }
+
+  .portfolio-card-subtitle {
+    font-size: 20px;
+  }
+}
+

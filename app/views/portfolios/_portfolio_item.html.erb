@@ -1,10 +1,14 @@
 <div class="col-md-4">
-  <div class="card" data-id="<%= portfolio_item.id  %>">
-      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+  <div class="card portfolio-card" data-id="<%= portfolio_item.id  %>">
+      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'rounded' %>
       <p class="card-text">
-        <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span>
-        <span><%= portfolio_item.subtitle %></span>
-        <%= link_to "show", portfolio_show_path(portfolio_item.id), class: "btn btn-primary" %>
+        <h3 class="portfolio-card-title"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
+        <h4 class="portfolio-card-subtitle"><%= portfolio_item.subtitle %></h4>
+
+        <% portfolio_item.technologies.each do |technology| %>
+            <li class="tech-portfolio-card-item">technology.name</li>
+        <% end  %>
+       <%= link_to "show", portfolio_show_path(portfolio_item.id), class: "btn btn-primary btn-block" %>
       </p>
   </div>
 </div>
