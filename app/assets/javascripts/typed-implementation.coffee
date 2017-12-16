@@ -1,8 +1,10 @@
 ready = ->
   Typed.new '.element',
     strings: [
-      'Product Manager'
-      "It's my goal to ensure that anyone with a passion for coding can become a true programming artisan."
+      "Developer"
+      "Marketer"
+      "Designer"
+      'Manager'
     ]
     typeSpeed: 0
   return
