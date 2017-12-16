@@ -112,10 +112,11 @@ h6, .h6 {
 
 .btn-primary {
     color: #fff;
-    background-color: $turq;
-    border-color: $turq;
+    background-color: $royal-blue;
+    border-color: $royal-blue;
 }
 
 .btn-primary:hover {
-  background-color: #7d8f85;
+  background-color: $lighter-royal-blue;
+  border-color: $lighter-royal-blue;
 }
