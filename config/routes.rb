@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root to: 'pages#home'
   
-  resources :topics, only: [:index, :show]
+  resources :topics #, only: [:index, :show]
 
   resources :comments
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
