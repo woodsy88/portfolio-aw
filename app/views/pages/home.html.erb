@@ -1,23 +1,14 @@
 
- <div class="inner cover">
-            <h1 class="cover-heading mb-5">Andrew Woods</h1>
- <p class="lead">
-    I am a <span class="banner-type-product">Product</span> <span class="element"></span>
-  </p>
-              <%= link_to "Resources", blogs_path, class: "btn btn-lg btn-secondary"  %>
-              <a href="<%= about_me_path %>" class="btn btn-lg btn-secondary">About Me</a>
-            </p>
-          </div>
- 
+<%= render 'home_banner' %>
 
 
-<h1>Hi <%= current_user.first_name if current_user  %></h1>
+<h1><%= current_user.first_name if current_user  %></h1>
 
 <h2>Code Snippets</h2>
 
 
 
 
- 
+
 
 

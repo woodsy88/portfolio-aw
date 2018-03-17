@@ -1,10 +1,11 @@
 <!-- can use topic as local variable connected to the @topic on the index render call -->
 
-<div class="container">
-  <div class="row">
+
+  <div class="col-md-12">
     <div class="card">
-        <div class="card-block"><%= link_to topic.title, topic_path(topic) %>
-          <%= topic.blogs.count %> resources</div>
+        <div class="card-block">
+          <%= link_to topic.title, topic_path(topic) %>
+          <%= topic.blogs.count %> resources
+        </div>
     </div>
   </div>
-</div>

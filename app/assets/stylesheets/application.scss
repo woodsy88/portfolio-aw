@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "gritter";
 @import "_colors.scss";
+@import "_fonts.scss";
 
 
 /* Custom Style */
@@ -9,12 +10,45 @@
   color: #000;
 }
 
+.home-banner {
+  background-color: #F9F9FA;
+}
+
+.banner-inner-container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.navbar {
+  background-color: $royal-blue;
+}
+
+.nav-link {
+  color: #F9F9FA;
+}
+
+.nav-link:hover {
+  color: #deddd7;
+}
+
 
 .auth-links {
  a {
    color: #000;
  }
 
+}
+
+.navbar-brand {
+  color: #F9F9FA;
+}
+
+.navbar-brand:hover {
+  color: #deddd7;
+}
+
+.navbar-toggler-icon {
+  color: #F9F9FA !important;
 }
 
 
@@ -86,7 +120,7 @@ margin-right: 15px;
 
 .skill {
   margin-top: 5px;
-  margin-bottom: 5px;  
+  margin-bottom: 5px;
 }
 
 body {

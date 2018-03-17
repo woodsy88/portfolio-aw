@@ -1,5 +1,12 @@
 <h1>Topics</h1>
 <!-- Creates each loop for each topic using _topic.html.erb -->
- <%= render @topics %>
+ 
+
+ <div class="row">
+  <%= render @topics %>
+  </div>
+
+
+<%= link_to ("<i class='fa fa-rocket'></i> " +'New Topic').html_safe, new_topic_path, class: 'btn btn-primary'  %>
     
   

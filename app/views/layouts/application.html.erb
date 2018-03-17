@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,300i,400,600,700,800,900" rel="stylesheet">
 
-    
+
     <%= csrf_meta_tags %>
         <meta name="keywords" content="<%= @seo_keywords  %>" />
 
@@ -19,11 +19,11 @@
 </head>
 
 <body>
-       
+
             <%= render 'shared/application_nav' %>
-            <div class="container"> <%= yield %></div>
+            <%= yield %>
             <%= render 'layouts/footer' %>
-            <%= alerts %>     
+            <%= alerts %>
 
 </body>
 

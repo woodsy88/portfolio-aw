@@ -12,13 +12,14 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  background-color: $royal-blue;
 }
 
 .jumbotron {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: #ececec;
 }
 
 .jumbotron p:last-child {
@@ -68,7 +69,7 @@ footer p {
 /* Custom Styles */
 
 .portfolio-form {
-  
+
 }
 
 body {
@@ -97,7 +98,7 @@ h6, .h6 {
 
   .portfolio-card-title {
   font-size: 25px;
-  font-weight: 600; 
+  font-weight: 600;
   }
 
   .portfolio-card-title a {
