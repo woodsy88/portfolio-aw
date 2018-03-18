@@ -38,7 +38,7 @@
 .nun-black-h4 {
   font-family: 'Nunito', sans-serif;
   color: #000;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: .25rem;
   font-size: 24px;
 
@@ -64,6 +64,13 @@
   color: #000;
   font-weight: 400;
   font-size: 16px;
+}
+
+.nun-light-italic {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(87, 87, 87);
+    font-weight: 300i;
+    font-size: 16px;
 }
 
 //  200,300,300i,400,600,700,800,900
