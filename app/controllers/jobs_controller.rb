@@ -30,6 +30,13 @@ class JobsController < ApplicationController
     def edit    
     end
 
+    def destroy
+        @job.destroy
+        respond_to do |format|
+            format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
+        end        
+    end
+
     def update
         respond_to do |format|
             if @job.update(job_params)
