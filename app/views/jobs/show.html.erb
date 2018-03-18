@@ -1,0 +1,15 @@
+<div class="container">
+<div class="card">
+        <div class="card">
+                <h2><%= @job.company  %></h2>
+                <h3><%= @job.job_title %></h3>
+                <p><%= @job.body %></p>
+            </div>
+
+        <%  if logged_in?(:site_admin) %>
+            <div >
+                <%= link_to "Edit Item", edit_job_path(@job), class: 'btn btn-warning' %>
+            </div>
+        <%  end  %>            
+</div>
+</div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :jobs
   root to: 'pages#home'
   
   resources :topics #, only: [:index, :show]
