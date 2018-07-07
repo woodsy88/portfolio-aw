@@ -55,6 +55,21 @@ end
 
 puts "10 blog posts created"
 
+
+5.times do |job|
+  Job.create!(
+    company: "Job #{job}", 
+    job_title: "Title of Job",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
+    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
+    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
+    ac commodo erat. Quisque in sem quam."
+    )
+end
+
+puts "10 jobs created"
+
 5.times do |skill|
   Skill.create!(
     title: "My Skill #{skill}",

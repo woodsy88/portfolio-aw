@@ -31,16 +31,9 @@
   </div>
 
       <div class="collapse" id="jobHistory">
-        <div class="card card-block">
-          Crowdmatrix
-        </div>
-        <div class="card card-block">
-          Hackworks
-        </div>
-         <div class="card card-block">
-          XMG
-        </div>
-
+          <% @jobs.each do |job| %>
+          <div class="card card-block"> <%= job.company %></div>
+          <% end %>
       </div>
 
        <div class="collapse" id="education">

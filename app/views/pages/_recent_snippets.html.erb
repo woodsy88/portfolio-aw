@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <% @recent_snippets.each do |snippet| %>
+    <div class="col-md-4 card">
+      <h1 class="nun-black-h3"><%= snippet.title %></h1>
+      <p><%= markdown truncate snippet.body, length: 150 %></p>
+      <%= link_to 'Visit Snippet', blog_path(snippet.id), class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>
