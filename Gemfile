@@ -94,3 +94,7 @@ gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 ruby "2.4.0"
+
+gem 'webpacker', '~> 3.3'
+
+gem 'react-rails'
