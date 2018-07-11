@@ -32,7 +32,9 @@
 
       <div class="collapse" id="jobHistory">
           <% @jobs.each do |job| %>
-          <div class="card card-block"> <%= job.company %></div>
+            <%= react_component("Job", { company: job.company, 
+                                        job_title: job.job_title, 
+                                        body: truncate(job.body, length: 100) }) %>
           <% end %>
       </div>
 
