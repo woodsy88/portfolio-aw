@@ -1,19 +1,28 @@
 <div class="container">
 
 <div class="row">
-            <% @jobs.each do |job| %>
-            <div class="card">
-                <h2><%= job.company  %></h2>
-                <h3><%= job.job_title %></h3>
-                <p><%= job.body %></p>
-            </div>
+    <% @jobs.each do |job| %>
 
-                <%  if logged_in?(:site_admin) %>
-                    <div >
+<div class="col-md-12">
+            <div class="card card-block">
+                <h2><%= job.company %></h2><span><%= job.date_text %></span>
+                <h3><%= job.job_title %></h3>
+                <%= job.position  %>
+                <p><%= truncate(job.body, length: 100) %></p>
+    
+                <% job.skills.each do |skill| %>
+                    <%= render skill %>
+                <% end %>
+    
+    
+                <% if logged_in?(:site_admin) %>
+                    <div>
                         <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-warning' %>
                     </div>
-                <%  end  %>
-            <% end %>
+                <% end %>
+            </div>
+</div>
+     <% end %>
 
 </div>    
 </div>
