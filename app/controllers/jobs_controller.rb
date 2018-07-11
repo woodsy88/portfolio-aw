@@ -58,7 +58,8 @@ class JobsController < ApplicationController
                                     :job_title, 
                                     :body, 
                                     :position,
-                                    :date_text
+                                    :date_text,
+                                    skill_ids: []
                                     )
     end
 
