@@ -7,7 +7,7 @@
 farts
 <% if @job.skills.any? %>
   <p>Skills: <% @job.skills.each do |skill| %></p>
-      <%= skill.title %>
+      <%= render @job.skills %>
   <% end %>
 <% end %>        
            
