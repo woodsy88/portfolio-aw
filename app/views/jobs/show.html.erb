@@ -4,6 +4,12 @@
         <h2><%= @job.company  %></h2>
         <h3><%= @job.job_title %></h3>
         <p><%= @job.body %></p>
+farts
+<% if @job.skills.any? %>
+  <p>Skills: <% @job.skills.each do |skill| %></p>
+      <%= skill.title %>
+  <% end %>
+<% end %>        
            
 
         <span class="pull-right">
