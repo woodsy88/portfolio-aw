@@ -10,6 +10,7 @@
         <% @skills.each do |skill|  %>
              <div class="skill">
                 <li class="badge"><%= skill.title %></li>
+                <small><%= pluralize(skill.jobs.count, "job") if skill.jobs  %></small>
                <div class="progress">
                  <div class="progress-bar progress-bar-striped bg-warning"
                       role="progressbar"
@@ -31,14 +32,17 @@
   </div>
 
       <div class="collapse" id="jobHistory">
-          <% @jobs.each do |job| %>
-            <%= react_component("Job", { company: job.company, 
-                                        job_title: job.job_title, 
-                                        body: truncate(job.body, length: 100),
-                                        position: job.position,
-                                        date_text: job.date_text
-                                         }) %>
-          <% end %>
+       
+            <% @jobs.each do |job| %>
+             <div class="card card-block">
+                 <h2> <%= job.company %></h2>
+                 <h3> <%= job.job_title %></h3>
+                  <% job.skills.each do |skill| %>
+                      <%= render skill %>
+                  <% end %>
+               </div>   
+            <% end %>
+        
       </div>
 
        <div class="collapse" id="education">
