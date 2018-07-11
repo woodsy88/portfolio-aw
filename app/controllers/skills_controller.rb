@@ -1,5 +1,9 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update]
+
+   #petergate - authetication for different user roles at controller level
+ access all: [:show, :index], user: {except: [ :new, :create, :update, :edit]}, site_admin: :all
+ 
   def new
      @skill = Skill.new
   end
