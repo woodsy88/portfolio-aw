@@ -64,7 +64,9 @@ puts "10 blog posts created"
     Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
-    ac commodo erat. Quisque in sem quam."
+    ac commodo erat. Quisque in sem quam.",
+    position: "Product Manager",
+    date_text: "Januay, 2012 - December, 2015"
     )
 end
 

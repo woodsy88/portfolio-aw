@@ -34,7 +34,10 @@
           <% @jobs.each do |job| %>
             <%= react_component("Job", { company: job.company, 
                                         job_title: job.job_title, 
-                                        body: truncate(job.body, length: 100) }) %>
+                                        body: truncate(job.body, length: 100),
+                                        position: job.position,
+                                        date_text: job.date_text
+                                         }) %>
           <% end %>
       </div>
 
