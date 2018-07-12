@@ -1,11 +1,39 @@
 <div class="container">
-<%= @skill.title %>
-<% if @skill.jobs.count != 0 %>
-  <h4 align="center">Job's containing <%= @skill.title %></h4>
-
-  <% @skill.jobs.each do |job| %>
-      <%= job.company %>
+ <h4 align="center"><%= @skill.title %></h4>
+  
+<div class="row">
+ 
+  
+    <% if @skill.jobs.count != 0 %>
+      <div class="col-md-6">
+        <div class="card card-block">
+              <h4 align="center">Job's containing <%= @skill.title %></h4>
+            
+              <% @skill.jobs.each do |job| %>
+                  <%= job.company %>
+              <% end %>
+        </div>
+      </div>
+    <% else %>
+      <div class="col-md-6"><div class="card card-block"><h4 align="center">NA</h4></div></div>
+    <% end %>
+  
+  
+  
+  <% if @skill.portfolios.count != 0 %>
+  
+      <div class="col-md-6">
+        <div class="card card-block">
+              <h4 align="center">Portfolio items containing <%= @skill.title %></h4>
+            
+              <% @skill.portfolios.each do |portfolio_item| %>
+                  <%= portfolio_item.title %>
+              <% end %>
+        </div>
+      </div>
+  
+  <% else %>
+   <div class="col-md-6"><div class="card card-block"><h4 align="center">NA</h4></div></div>
   <% end %>
-<% else %>
-  <h4 align="center">No Jobs yet!</h4>
-<% end %>
+</div>
+</div>
