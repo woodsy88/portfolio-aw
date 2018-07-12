@@ -173,7 +173,7 @@ GEM
     petergate (1.8.0)
       activerecord (> 4.0.0)
     pg (0.21.0)
-    popper_js (1.12.5)
+    popper_js (1.12.9)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
