@@ -1,11 +1,15 @@
-<div class="col-md-6">
-  <div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
+<%= render "shared/blog_masthead" %>
+<div class="row">
+  <div class="col-md-9">
+    <div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
+  
+     <%= paginate @blogs %>
+     <div class="row"><%= render @blogs %></div>
+     <%= paginate @blogs %>
+  </div>
+  <div class="col-md-3">
+  <%= render 'shared/blog_sidebar' %>
+  </div>
+  
 
-   <%= paginate @blogs %>
-   <div class="row"><%= render @blogs %></div>
-   <%= paginate @blogs %>
-</div>
-<div class="col-md-4">
-<%= render 'shared/blog_sidebar' %>
-</div>
-
+</div> 
