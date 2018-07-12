@@ -3,4 +3,7 @@ class Skill < ApplicationRecord
 
   has_many :job_skills
   has_many :jobs, through: :job_skills
+
+  has_many :portfolio_skills
+  has_many :portfolios, through: :portfolio_skills
 end

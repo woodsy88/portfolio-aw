@@ -14,6 +14,10 @@ class Portfolio < ApplicationRecord
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader
 
+
+  has_many :portfolio_skills
+  has_many :skills, through: :portfolio_skills
+
   def self.react
     where(subtitle: "React")
   end
