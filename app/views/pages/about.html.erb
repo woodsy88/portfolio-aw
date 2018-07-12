@@ -10,7 +10,16 @@
         <% @skills.each do |skill|  %>
              <div class="skill">
                 <li class="badge"><%= skill.title %></li>
-                <small><%= pluralize(skill.jobs.count, "job") if skill.jobs  %></small>
+                <small>
+                <%  if skill.jobs.any?  %>
+                  <%= link_to pluralize(skill.jobs.count, "job"), skill_path(skill) %>
+                <% end %>
+                </small>
+                <small>
+                <%  if skill.portfolios.any?  %>
+                  | <%= link_to pluralize(skill.portfolios.count, "portfolio items"), skill_path(skill) %>
+                <% end %>
+                </small>                
                <div class="progress">
                  <div class="progress-bar progress-bar-striped bg-warning"
                       role="progressbar"
