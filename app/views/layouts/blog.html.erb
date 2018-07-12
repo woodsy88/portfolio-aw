@@ -15,22 +15,13 @@
   </head>
 
   <body>
+      <%= render 'shared/blog_nav'  %>
+      <%= render "shared/blog_masthead" %>
 
-<%= render 'shared/blog_nav'  %>
-<%= render "shared/blog_masthead" %>
-
-       <div class="container">
-        
-            <%= yield %>
-       
-
+          <div class="container">
+              <%= yield %>
+          </div>
           
-         
-       </div>
-<%= render 'shared/main_footer' %>
-
- <%= alerts %>
-
-    
+      <%= render 'shared/main_footer' %>
   </body>
 </html>
