@@ -1,6 +1,9 @@
 class TopicsController < ApplicationController
 before_action :set_sidebar_topics
 before_action :set_topic, only: [:edit, :show, :update, :destroy]
+
+ access all: [:show, :index], user: {except: [:new, :create, :update, :edit]}, site_admin: :all
+ 
   layout 'blog'
 
  def new 
