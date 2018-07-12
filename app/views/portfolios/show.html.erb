@@ -8,6 +8,12 @@
       <h2><%= @portfolio_item.subtitle %></h2>
       <p><%= @portfolio_item.body %></p>
 
+      <%  if @portfolio_item.skills.any? %>
+          <% @portfolio_item.skills.each do |skill| %>
+              <%= render skill %>
+          <% end %>
+      <% end %>      
+
       <h2>Technologies Used</h2>
         <% @portfolio_item.technologies.each do |tech| %>
               <p><%= tech.name %></p>
