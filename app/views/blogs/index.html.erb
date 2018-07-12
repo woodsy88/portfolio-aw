@@ -1,8 +1,11 @@
-<div class="col-md-9">
+<div class="col-md-8">
   <div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
 
    <%= paginate @blogs %>
-   <%= render @blogs %>
+   <div class="row"><%= render @blogs %></div>
    <%= paginate @blogs %>
+</div>
+<div class="col-md-4">
+<%= render 'shared/blog_sidebar' %>
 </div>
 

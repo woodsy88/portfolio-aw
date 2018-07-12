@@ -3,7 +3,7 @@ before_action :set_sidebar_topics
 before_action :set_topic, only: [:edit, :show, :update, :destroy]
 
  access all: [:show, :index], user: {except: [:new, :create, :update, :edit]}, site_admin: :all
- 
+
   layout 'blog'
 
  def new 
@@ -28,9 +28,9 @@ before_action :set_topic, only: [:edit, :show, :update, :destroy]
   def show
     
     if logged_in?(:site_admin)
-      @blogs = @topic.blogs.recent.page(params[:page]).per(5)
+      @blogs = @topic.blogs.recent.page(params[:page]).per(10)
     else
-      @blogs = @topic.blogs.published.page(params[:page]).per(5)
+      @blogs = @topic.blogs.published.page(params[:page]).per(10)
     end
   end
 
