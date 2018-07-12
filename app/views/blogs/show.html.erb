@@ -16,6 +16,11 @@
 
   <%= link_to fa_icon('long-arrow-left'), blogs_path, class: "arrow-icon-size" %>
 
+            <%  if @blog.skills.any? %>
+                <% @blog.skills.each do |skill| %>
+                    <%= render skill %>
+                <% end %>
+            <% end %>
   <p>
     <%= markdown @blog.body %>
   </p>

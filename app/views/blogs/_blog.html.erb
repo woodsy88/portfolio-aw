@@ -9,6 +9,16 @@
                     <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>       
                     <p><%= markdown blog.body %></p>
             </div>
+
+
+            <%  if blog.skills.any? %>
+                <% blog.skills.each do |skill| %>
+                    <%= render skill %>
+                <% end %>
+            <% end %>
+
+
+
         </div>
     </div>
 </div>

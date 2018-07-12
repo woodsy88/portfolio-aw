@@ -6,4 +6,7 @@ class Skill < ApplicationRecord
 
   has_many :portfolio_skills
   has_many :portfolios, through: :portfolio_skills
+
+  has_many :blog_skills
+  has_many :blogs, through: :blog_skills
 end
