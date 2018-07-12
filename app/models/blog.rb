@@ -14,6 +14,10 @@ class Blog < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+
+  has_many :blog_skills
+  has_many :skills, through: :blog_skills
+
   def self.featured_blogs
     limit(2)
   end

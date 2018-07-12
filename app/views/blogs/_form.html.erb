@@ -21,6 +21,17 @@
   </div>
 
   <div class="form-group">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <%= f.collection_check_boxes :skill_ids, 
+                                      Skill.all, :id, :title do |cb| %>
+  <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+        <% end %>
+      </div>
+    </div>
+  </div>   
+
+  <div class="form-group">
     <!-- mapped to draft enum - enum gem -->
     <%= f.radio_button :status, 'draft' %>
     <%= f.label :status, 'Draft'  %>

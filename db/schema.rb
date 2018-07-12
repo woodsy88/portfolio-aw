@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180711235652) do
+ActiveRecord::Schema.define(version: 20180712213038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_skills", force: :cascade do |t|
+    t.integer "blog_id"
+    t.integer "skill_id"
+  end
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
