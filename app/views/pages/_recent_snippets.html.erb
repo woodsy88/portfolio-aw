@@ -5,12 +5,12 @@
 <div class="card card-block">
         <h1 class="nun-black-h3"><%= snippet.title %></h1>
         <p><%= markdown truncate snippet.body, length: 150 %></p>
+  
   <% if snippet.skills.any? %>
       <% snippet.skills.each do |skill| %>
             <%= render skill %>
       <% end %>
   <% end %>
-
 
         <%= link_to 'Visit Snippet', blog_path(snippet.id), class: "btn btn-primary" %>
 </div>
@@ -18,4 +18,3 @@
     <% end %>
   </div>
 </div>
-
