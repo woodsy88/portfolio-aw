@@ -35,26 +35,26 @@
     <div class="col-md-8">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, ac commodo erat. Quisque in sem quam. Sed at iaculis sem. Suspendisse aliquet arcu vitae lorem faucibus pretium. Duis luctus sed lacus eu lacinia. Integer fermentum tortor dictum risus ullamcorper, tristique elementum risus varius. Nunc efficitur risus et augue scelerisque varius. Fusce vulputate efficitur tellus a hendrerit.</p>
 
-  <div class="row">
-       <button class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#jobHistory" aria-expanded="false" aria-controller="jobHistory">Job History</button>
-    <button class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controller="education">Education</button>
-  </div>
+        <div class="row">
+          <button class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#jobHistory" aria-expanded="false" aria-controller="jobHistory">Job History</button>
+          <button class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controller="education">Education</button>
+        </div>
 
       <div class="collapse" id="jobHistory">
-       
             <% @jobs.each do |job| %>
              <div class="card card-block">
                  <h2> <%= job.company %></h2>
                  <h3> <%= job.job_title %></h3>
-                  <% job.skills.each do |skill| %>
-                      <%= render skill %>
-                  <% end %>
+                  <div class="row">
+                    <% job.skills.each do |skill| %>
+                        <%= render skill %>
+                    <% end %>
+                  </div>
                </div>   
-            <% end %>
-        
+            <% end %> 
       </div>
 
-       <div class="collapse" id="education">
+      <div class="collapse" id="education">
         <div class="card card-block">
             Trent University
         </div>

@@ -4,25 +4,18 @@
 @import "_fonts.scss";
 @import "_layout.scss";
 @import "pages.scss";
-@import "_cards.scss";
 @import "_nav.scss";
 @import "_footer.scss";
 @import "_buttons.scss";
+@import "tech_news.scss";
+@import "_cards.scss";
 
-// directories
-// @import "base/*";
-// @import "partials/*";
-// @import "responsive/*";
 
 
 
 
 
 /* Custom Style */
-
-.card-body {
-  color: #000;
-}
 
 
 .input_checkbox input {
@@ -50,35 +43,10 @@
 
 
 
-.tech-news {
-  color: black;
-  margin: 20px;
 
 
-.card {
-  padding: 30px;
-}
 
-}
 
-.tech-news a {
-  color: green;
-}
-
-.app-card-container {
-  color: #676767;
-  text-align: left;
-
-  .card {
-    padding: 40px;
-
-  }
-}
-
-.card-block {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
 
 .skill {
   margin-top: 5px;
