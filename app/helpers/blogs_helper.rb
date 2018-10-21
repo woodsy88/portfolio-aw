@@ -3,6 +3,9 @@ module BlogsHelper
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end
 
+  
+  #add customization from coderay and redcarpet gem
+  #allows syntax highlighting 
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       language ||= :plaintext
