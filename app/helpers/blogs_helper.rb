@@ -1,13 +1,11 @@
 module BlogsHelper
-
   def gravatar_helper user
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end
 
-  #add customization from coderay and redcarpet gem
-  #allows syntax highlighting 
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
+      language ||= :plaintext
       CodeRay.scan(code, language).div
     end
   end
@@ -27,9 +25,6 @@ module BlogsHelper
   end
 
   def blog_status_color blog
-    if blog.draft?
-      'color: red;'
-    end
+    'color: red;' if blog.draft?
   end
-
 end
