@@ -1,14 +1,19 @@
-<div class="inner cover">
-     <h1 class="cover-heading">Javascript News</h1>
-     <div class="row">
+<%= render 'shared/page_header', 
+            title: "Tech News", 
+            subtitle: "Ruby on Rails, Javascript & Product News" %>
+
+<div class="page-container news-container">
+  <div class="inner cover">
+      <div class="row">
         <%  @tweets.each do |tweet| %>
-              <div class="col-md-6">
+              <div class="col-md-2">
                 <div class="tech-news">
-                  <div class="card">
+                  <div class="card tech-news-card">
                     <%= twitter_parser tweet %>
                   </div>
                 </div>
               </div>
         <% end %>
-          </div>     
+      </div>     
+  </div>
 </div>

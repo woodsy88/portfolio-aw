@@ -56,4 +56,6 @@ config.webpacker.check_yarn_integrity = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.assets.quiet = true
 end

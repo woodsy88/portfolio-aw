@@ -21,3 +21,22 @@
     -webkit-box-shadow: 1px 1px 5px 2px #ccc;
     box-shadow: 1px 1px 5px 2px #ccc;
 }
+
+.page-container {
+    padding-top: 50px;
+}
+
+.banner-fonts {
+    .page-banner-header {
+        font-size: 55px;
+    }
+
+    .page-banner-sub-header {
+        font-size: 30px;
+        font-weight: 300;
+    }
+} 
+
+.banner-center {
+    text-align: center;
+}

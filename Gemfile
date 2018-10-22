@@ -50,6 +50,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'meta_request'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -60,7 +63,7 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'devise', '~> 4.2'
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 #gem 'popper_js', '~> 1.12.3'
 
 gem 'woods_view_tool', '~> 0.1.0'
@@ -98,3 +101,7 @@ ruby "2.4.0"
 gem 'webpacker', '~> 3.3'
 
 gem 'react-rails'
+
+gem "awesome_print", require:"ap"
+
+gem "pry-rails", group:"development"
