@@ -71,6 +71,18 @@ h6, .h6 {
 
 // Portfolio Index Cards
 
+  .portfolio-card-title {
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .portfolio-card-title a {
+    text-decoration: none;
+    color: #000;
+  }
+
 .portfolio-card {
 
   height: 430px;

@@ -2,14 +2,14 @@
   <div class="row">
     <% @recent_snippets.each do |snippet| %>
     <div class="col-md-4 d-flex">
-     <div class="card card-block code-snippet-card">
+     <div class="card code-snippet-card" style="width: 100%;">
+            <div class="card-body flex-fill">
               <div class="card-title">
                 <h1 class="nun-black-h3"><%= snippet.title %></h1>
               </div>
-              <div class="card-body flex-fill">
+              
                 <p><%= markdown truncate snippet.body, length: 150 %></p>
-              </div>
-        
+
             <% if snippet.skills.any? %>
               <div class="category-container">
                   <% snippet.skills.each do |skill| %>
@@ -17,7 +17,16 @@
                   <% end %>
               </div>   
             <% end %>
-              <%= link_to 'View Snippet', blog_path(snippet.id), class: "btn btn-primary" %>
+             
+ <p class="card-text"><small class="text-muted">Created <%= time_ago_in_words(snippet.created_at) %> ago</small></p>
+            </div>
+
+            <div class="card-footer">
+               <%= link_to 'View Snippet', blog_path(snippet.id), class: "btn btn-primary btn-block" %>
+
+            </div>
+        
+
       </div>
     </div>
     <% end %>

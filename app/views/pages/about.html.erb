@@ -1,67 +1,23 @@
 <%= render 'shared/page_header', 
-            title: "About ME", 
+            title: "About me", 
             subtitle: "Product Designer, Developer & Manager" %>
+
+
 <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <%=  image_tag "andrew.png", width: 200, alt: "profile image", class: 'profile-img' %>
-      </div>
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed tincidunt scelerisque elit, a convallis odio commodo vitae. 
-            Pellentesque sodales turpis eget urna varius, commodo dictum enim semper.</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="skills">
-          <% @skills.each do |skill|  %>
-               <div class="skill">
-                  <li class="badge"><%= skill.title %></li>
-                  <small>
-                  <%  if skill.jobs.any?  %>
-                    <%= link_to pluralize(skill.jobs.count, "job"), skill_path(skill) %>
-                  <% end %>
-                  </small>
-                  <small>
-                  <%  if skill.portfolios.any?  %>
-                    | <%= link_to pluralize(skill.portfolios.count, "portfolio items"), skill_path(skill) %>
-                  <% end %>
-                  </small>                
-                 <div class="progress">
-                   <div class="progress-bar progress-bar-striped bg-warning"
-                        role="progressbar"
-                        aria-valuenow="<%= skill.percent_utilized %>"
-                        aria-valuemax="100"
-                        style="width: <%= skill.percent_utilized %>%">
-                   </div>
-                 </div>
-               </div>
-          <% end %>
-        </div>
-
-      </div>
-    </div>
-    
-    <div class="row">       
-      <% @jobs.each do |job| %>
-        <div class="col-md-4">
-          <div class="card card-block">
-              <h2> <%= job.company %></h2>
-              <h3> <%= job.job_title %></h3>
-                <div class="row">
-                  <% job.skills.each do |skill| %>
-                      <%= render skill %>
-                  <% end %>
-                </div>
-            </div> 
-        </div>  
-      <% end %> 
-    </div>
   
-    <div class="row">        
-      <%= render 'education' %>
-    </div>
+  <div class="row spacing-lg">
+    <h2 class="spacing-sm">Skills</h2>
+    <%= render 'skills' %>
+  </div>
+    
+  <div class="row spacing-lg">  
+    <h2 class="spacing-sm">Work Experience</h2>     
+    <%= render 'jobs' %>
+  </div>
+
+  <div class="row spacing-lg">
+    <h2 class="spacing-sm">Education</h2>        
+    <%= render 'education' %>
+  </div>
 
 </div>
