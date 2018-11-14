@@ -9,4 +9,6 @@ class Skill < ApplicationRecord
 
   has_many :blog_skills
   has_many :blogs, through: :blog_skills
+
+  enum area: { design: 0, development: 1, management: 2 }
 end

@@ -25,3 +25,12 @@
     <% end %>
   </div>
 </div>
+
+<div class="col-md-4 d-flex">
+<div class="card" style="width: 18rem;">
+<h2>Management Skills</h2>
+  <% @management_skills.each do |skill| %>
+    <p><%= link_to skill.title, skill_path(skill) %></p>
+  <% end %>
+  </div>
+</div>

@@ -6,6 +6,10 @@ class PagesController < ApplicationController
 
   def about
     @skills = Skill.all
+    @design_skills = Skill.where(area: 'design')
+    @development_skills = Skill.where(area: 'development')
+    @management_skills = Skill.where(area: 'management')
+    @marketing_skills = Skill.where(area: 'marketing')
     @jobs = Job.all
   end
 
