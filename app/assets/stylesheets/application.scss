@@ -9,12 +9,17 @@
 @import "_buttons.scss";
 @import "tech_news.scss";
 @import "_cards.scss";
+@import "skills.scss";
 
 
 /* Custom Style */
 
 .input_checkbox input {
   width: auto !important;
+}
+
+body {
+  background-color: $tilda-grey;
 }
 
 /*Banner*/
