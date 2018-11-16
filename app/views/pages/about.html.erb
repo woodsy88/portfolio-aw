@@ -2,21 +2,16 @@
             title: "About me", 
             subtitle: "Product Designer, Developer & Manager" %>
 
-
 <div class="container">
-  <h2 class="spacing-sm">Skills</h2>
+  <%= render 'section_header', header: "Skills", 
+                               text: "I combine business and coding skills" %>
+  <%= render 'skills' %>
   
-    
-    <%= render 'skills' %>
-  
-  <div class="row spacing-lg">  
-    <h2 class="spacing-sm">Work Experience</h2>     
-    <%= render 'jobs' %>
-  </div>
-
-  <div class="row spacing-lg">
-    <h2 class="spacing-sm">Education</h2>        
-    <%= render 'education' %>
-  </div>
-
+  <%= render 'section_header', header: "Work Experience", 
+                               text: "I have worked at 4 tech startups over the last 7 years + have ran my own web development shop" %>
+  <%= render 'jobs' %>
+ 
+  <%= render 'section_header', header: "Education", 
+                               text: "I did my undergrad in business, then a post grad in Advanced Desgin and Project Management, followed by a coding bootcamp" %>     
+  <%= render 'education' %>
 </div>

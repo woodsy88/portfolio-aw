@@ -1,0 +1,37 @@
+<div class="row">
+          <% object.each do |skill| %>
+          <div class="col-md-4 d-flex">
+            <div class="card" style="width: 100%"> 
+              <div class="card-body flex-fill">
+                <h3 class="skill-card-header card-title"><%= link_to skill.title, skill_path(skill) %></h3>
+                  <div class="row container">
+                    
+                        <div class="small-font-skills">
+                        <%  if skill.jobs.any?  %>
+                          <%= link_to pluralize(skill.jobs.count, "job"), skill_path(skill) %>
+                        <% end %>
+                        </div>
+                    
+                        <div class="small-font-skills">
+                        <%  if skill.portfolios.any?  %>
+                          <%= link_to pluralize(skill.portfolios.count, "projects"), skill_path(skill) %>
+                        <% end %>
+                        </div>  
+                  
+                        <div class="small-font-skills">
+                        <%  if skill.blogs.any?  %>
+                          <%= link_to pluralize(skill.blogs.count, "resources"), skill_path(skill) %>
+                        <% end %>
+                        </div> 
+                  </div>
+              </div>
+               <%  if logged_in?(:site_admin) %>
+                    <div class="card-footer">
+                      <%= link_to 'Edit Skill', edit_skill_path(skill), class: "skill-edit-text" %>
+                    </div>
+               <% end %>
+
+              </div>   
+            </div>
+          <% end %>
+</div>  

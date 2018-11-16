@@ -79,10 +79,42 @@
 // home banner
 
 .banner-type-product {
+   
   font-size: 30px;
   font-weight: 700;
 }
 
 .element {
   font-size: 35px;
+}
+
+// New Headers
+
+
+.skill-card-header {
+  font-family: 'Open Sans', sans-serif;
+  color: $tilda-black;
+  font-weight: 700;
+  margin-bottom: .25rem;
+  font-size: 14px;
+  text-decoration: none !important;
+
+}
+
+.small-font-skills {
+  font-family: 'Open Sans', sans-serif;
+  color: $tilda-black;
+  font-weight: 300;
+  margin-bottom: .25rem;
+  font-size: 10px;
+  text-decoration: none !important;
+}
+
+.small-font-skills,
+.skill-card-header a {
+  text-decoration: none !important;
+}
+
+.skill-edit-text {
+  font-size: 9px;
 }

@@ -25,7 +25,7 @@ class SkillsController < ApplicationController
   
   def update
         @skill.update(skill_params)
-        redirect_to @skill, notice: 'Your skill was created successfully'    
+        redirect_to skills_path, notice: 'Your skill was created successfully'    
   end
 
   def show
@@ -34,6 +34,10 @@ class SkillsController < ApplicationController
   
   def index
     @skills = Skill.all
+    @design_skills = Skill.where(area: 'design')
+    @development_skills = Skill.where(area: 'development')
+    @management_skills = Skill.where(area: 'management')
+    @marketing_skills = Skill.where(area: 'marketing')    
   end
 
   private
