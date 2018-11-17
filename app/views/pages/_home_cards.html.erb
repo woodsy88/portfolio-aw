@@ -1,35 +1,9 @@
 <div class="container section-padding">
   <div class="row">
-    <div class="col-md-3 d-flex">
-      <div class="card home-cards flex-fill">
-        <div class="card-body">
-          <div class="card-title text-center">Work Experience</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 d-flex">
-      <div class="card home-cards flex-fill">
-        <div class="card-body">
-          <div class="card-title text-center">Skills & Education</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 d-flex">
-      <div class="card home-cards flex-fill">
-        <div class="card-body">
-          <div class="card-title text-center">Portfolio</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 d-flex">
-      <div class="card text-white bg-info mb-3 flex-fill" style="max-width: 18rem;">
-        <div class="card-header text-center">Header</div>
-        <div class="card-body">
-          <h5 class="card-title">Info card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
+      <%= render 'pages/cards/home_card', header: "Skills", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
+      <%= render 'pages/cards/home_card', header: "Work Experience", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
+      <%= render 'pages/cards/home_card', header: "Portfolio", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
+      <%= render 'pages/cards/home_card', header: "Blog", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
   </div>
 </div>
 
