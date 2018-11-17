@@ -1,11 +1,17 @@
 // Nunito Black
-
-.nun-black-hero {
-  font-family: 'Nunito', sans-serif;
-  color: #000;
+$tilda-black: #292929;
+.hero-text {
+  font-family: 'Open Sans', sans-serif;
+  color: $tilda-black;
   font-weight: 800;
-  font-size: 52px;
+  font-size: 62px;
 
+}
+
+.sub-hero-text {
+  font-family: 'Open Sans', sans-serif;
+  color: $tilda-black;
+  font-size: 42px;
 }
 
 .nun-black-h1 {
@@ -35,7 +41,7 @@
 
 }
 
-.nun-black-h4 {
+.header-black-h4 {
   font-family: 'Nunito', sans-serif;
   color: #000;
   font-weight: 700;
@@ -44,7 +50,7 @@
 
 }
 
-.nun-black-h5 {
+.header-black-h5 {
   font-family: 'Nunito', sans-serif;
   color: #000;
   font-weight: 400;
@@ -52,26 +58,7 @@
 
 }
 
-.nun-black-body {
-  font-family: 'Nunito', sans-serif;
-  color: #000;
-  font-weight: 400;
-  font-size: 18px;
-}
 
-.nun-black-para {
-  font-family: 'Nunito', sans-serif;
-  color: #000;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.nun-light-italic {
-    font-family: 'Nunito', sans-serif;
-    color: rgb(87, 87, 87);
-    font-weight: 300i;
-    font-size: 16px;
-}
 
 //  200,300,300i,400,600,700,800,900
 
@@ -79,9 +66,8 @@
 // home banner
 
 .banner-type-product {
-   
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .element {
@@ -113,8 +99,4 @@
 .small-font-skills,
 .skill-card-header a {
   text-decoration: none !important;
-}
-
-.skill-edit-text {
-  font-size: 9px;
 }
