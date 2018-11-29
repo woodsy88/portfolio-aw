@@ -1,17 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
+
+function JobSkill (props) {
+  return (
+    <span className="skill-item">{props.title}</span>
+  )
+}
+
 class Job extends React.Component {
   render () {
     return (
       <React.Fragment>
-      <div className=" card card-block">
-          <h2>{this.props.company}</h2>
-          <p>{this.props.date_text}</p>
-          <p>{this.props.job_title}</p>
-          <p>{this.props.position}</p>
+         <h2 className="sub-hero-text">{this.props.company}</h2>
          <p>{this.props.body}</p>
-         <p>{this.props.job_skills.title}</p>
-      </div>
+         <div>{this.props.job_skills.map(function(skill){
+            return <JobSkill title={skill.title} />;
+         })}</div>
       </React.Fragment>
     );
   }
@@ -19,9 +23,10 @@ class Job extends React.Component {
 
 Job.propTypes = {
   company: PropTypes.string,
-  jobTitle: PropTypes.string,
+  // jobTitle: PropTypes.string,
   body: PropTypes.string,
-  position: PropTypes.string,
-  date_text: PropTypes.string
+  // position: PropTypes.string,
+  // date_text: PropTypes.string,
+  job_skills: PropTypes.array
 };
 export default Job
