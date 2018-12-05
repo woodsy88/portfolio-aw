@@ -2,6 +2,10 @@
 
   <h2><%= @blog.title %></h2>
 
+  <% @blog.tag_list.each do |tag| %>
+    <div class="skill-item"><%= link_to tag, tagged_path(tag: tag) %></div>
+  <% end %>
+
   <nav class="breadcrumb">
     <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
@@ -24,6 +28,23 @@
   <p>
     <%= markdown @blog.body %>
   </p>
+
+ <div class="container">
+ <h3>Related Resources</h3>
+   <div class="row">
+     
+      <% @related_blogs.each do |blog| %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <%= link_to blog.title, blog_path(blog) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+ 
   <!-- add new comments -->
   <%= render 'comments/comment_form' %>
 <!-- automatically loooks in views for partial called _comment.  renders all comments associated with that specific blog -->

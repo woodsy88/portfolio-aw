@@ -8,6 +8,14 @@ class BlogsController < ApplicationController
 
   #go into layout directory, find blog html.erb file and use it instead of application.html.erb
   layout "blog"
+
+  def tagged
+    if params[:tag].present?
+      @blogs = Blog.tagged_with(params[:tag])
+    else
+      @blogs = Blog.all
+    end
+  end  
   
   def index
     if logged_in?(:site_admin)
@@ -32,6 +40,8 @@ class BlogsController < ApplicationController
     else
       redirect_to blogs_path, notice: "You are not authorized to access this page"
     end
+
+      @related_blogs = @blog.find_related_tags
 
   end
 
@@ -85,6 +95,14 @@ class BlogsController < ApplicationController
     redirect_to blogs_url, notice: 'Post status updated'
   end
 
+  def tagged
+    if params[:tag].present?
+      @blogs = Blog.tagged_with(params[:tag])
+    else
+      @blogs = Blog.all
+    end
+  end  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -97,7 +115,8 @@ class BlogsController < ApplicationController
                                    :body, 
                                    :topic_id, 
                                    :status,
-                                   skill_ids: []
+                                   :tag_list,
+                                   skill_ids: [],
                                    )
     end
 

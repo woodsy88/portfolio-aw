@@ -1,0 +1,11 @@
+<% @blogs.each do |blog| %>
+  <div class="card">
+ <div class=card-body>
+        <h2><%= link_to blog.title, blog_path(blog) %></h2>
+       <strong>Tags</strong>
+       <% blog.tag_list.each do |tag| %>
+          <div class="skill-item"><%= link_to tag, tagged_path(tag: tag) %></div>
+        <% end %>
+ </div>
+  </div>
+<% end %>

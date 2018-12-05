@@ -32,4 +32,6 @@ Rails.application.routes.draw do
   
   resources :skills, except: [:destroy]
 
+  get '/tagged', to: "blogs#tagged", as: :tagged
+
 end
