@@ -1,56 +1,69 @@
-<%= form_for (@job) do |form| %>
+<div class="container section-padding-sm">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+        <h2 class="card-title text-center">Job</h2>
+          <%= form_for (@job) do |form| %>
 
- <% if @job.errors.any? %>
-    <% @job.errors.full_messages.each do |error| %>
-      <%= alert_generator error %>
-    <% end %>
-  <% end %>
+          <% if @job.errors.any? %>
+              <% @job.errors.full_messages.each do |error| %>
+                <%= alert_generator error %>
+              <% end %>
+            <% end %>
 
- <div class="row pt-5">
-    <div class="col-md-6">
-     <div class="form-group">
-       <%= form.label :company %>
-       <%= form.text_field :company, class: "form-control" %>
-     </div>
-     
-     <div class="form-group">
-       <%= form.label :job_title %>
-       <%= form.text_field :job_title, class: "form-control" %>
-     </div>
-     <div class="form-group">
-       <%= form.label :position %>
-       <%= form.text_field :position, class: "form-control" %>
-     </div>     
-   </div>
-   
-   <div class="col-md-6">
-    <div class="form-group">
-       <%= form.label :date_text %>
-       <%= form.text_field :date_text, class: "form-control" %>
-     </div>   
-     <div class="form-group">
-       <%= form.label :body %>
-       <%= form.text_area :body, class: "form-control", row: 20 %>
-     </div>
+          <div class="row pt-5">
+              <div class="col-md-6">
+              <div class="form-group">
+                <%= form.label :company %>
+                <%= form.text_field :company, class: "form-control" %>
+              </div>
+              
+              <div class="form-group">
+                <%= form.label :job_title %>
+                <%= form.text_field :job_title, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= form.label :position %>
+                <%= form.text_field :position, class: "form-control" %>
+              </div>     
+            </div>
+            
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.label :date_text %>
+                <%= form.text_field :date_text, class: "form-control" %>
+              </div>   
+              <div class="form-group">
+                <%= form.label :body %>
+                <%= form.text_area :body, class: "form-control", row: 20 %>
+              </div>
 
 
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <%= form.collection_check_boxes :skill_ids, 
-                                        Skill.all, :id, :title do |cb| %>
-    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-offset-2 col-md-12">
+                  <label class="form-label">Skills</label>
+                    <%= form.collection_check_boxes :skill_ids, 
+                                                  Skill.all, :id, :title do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>  
+
+
+            </div>
+          </div>  
+            <div class="actions">
+                <%= form.submit "Submit",  class: "btn btn-primary btn-block mt-5" %>
+          </div>
+
+
           <% end %>
+
         </div>
       </div>
-    </div>  
-
-
-   </div>
- </div>  
-  <div class="actions">
-       <%= form.submit "Submit",  class: "btn btn-primary btn-block mt-5" %>
+    </div>
+  </div>
 </div>
-
-
-<% end %>

@@ -4,14 +4,14 @@ import PropTypes from "prop-types"
 class Job extends React.Component {
   render () {
 
-    const { job_skills } = this.props;
+    const { job_skills, company, title, date_text, body } = this.props;
 
     return (
       <React.Fragment>
-         <h2 className="sub-hero-text">{this.props.company}</h2>
-         <h3>{this.props.title}</h3>
-         <p>{this.props.date_text}</p>
-         <p>{this.props.body}</p>
+         <h2 className="header-1">{company}</h2>
+         <h3>{title}</h3>
+         <p>{date_text}</p>
+         <p>{body}</p>
 
         {/* check what data is coming in from job_skills */}
          {console.log(job_skills)}   
@@ -19,6 +19,7 @@ class Job extends React.Component {
               console.log('title: ', title, 'id: ', id);
             return (<span className="skill-item"><a href={"skills/" + id}>{title}</a></span>)
          })}</div>
+
       </React.Fragment>
     );
   }

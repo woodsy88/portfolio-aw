@@ -3,11 +3,9 @@ import PropTypes from "prop-types"
 
 
 function SchoolItem (props) {
-
   let styles = {
     width: '100%',
   };
-
 
   return (
     <div className="col-md-4 d-flex" key={props.school}  > 
@@ -21,7 +19,6 @@ function SchoolItem (props) {
     </div>     
   )
 }
-
 
 class School extends React.Component {
 
@@ -46,11 +43,15 @@ class School extends React.Component {
   
     return (
       <React.Fragment>
-        {
-          list.map(function(school){
-            return <SchoolItem img={school.img} school={school.school} degree={school.degree} />
+       <div className="row">
+        {list.map(function(school){
+          return (
+            <SchoolItem img={school.img} 
+                        school={school.school} 
+                        degree={school.degree} />)
           })
-        }        
+        }  
+        </div>
       </React.Fragment>
     );
   }

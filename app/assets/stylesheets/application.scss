@@ -10,9 +10,10 @@
 @import "tech_news.scss";
 @import "_cards.scss";
 @import "skills.scss";
+@import "jobs.scss";
 @import "section_header.scss";
 @import "banner.scss";
-
+@import "icons.scss";
 
 /* Custom Style */
 
@@ -21,7 +22,7 @@
 }
 
 body {
-  background-color: $tilda-grey;
+  background-color: $tilda-white;
 }
 
 /*Banner*/
@@ -48,6 +49,9 @@ body {
   margin-bottom: 5px;
 }
 
+
+
+
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
@@ -61,3 +65,4 @@ h5, .h5,
 h6, .h6 {
   font-family: 'Nunito', serif;
 }
+

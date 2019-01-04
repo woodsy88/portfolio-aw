@@ -1,55 +1,68 @@
-// blues
-$turq: #517c84;
-$dull-turg: #849494;
-$royal-blue: #0f5379;
-$lighter-royal-blue: #1c80b0;
-$light-blue: #58c4e2;
-$flat-blue: #517c84;
+// PRIMARY
 
-$darkish-lightish-blue: #4e7aa4;
+  // Custom Blues
+  $royal-blue: #0f5379;
+  $lighter-royal-blue: #1c80b0;
+  $light-blue: #58c4e2;
+
+  // Primary Blues
+
+  $blue-900: #12283A;
+  $blue-800: #1A4971;
+  $blue-700: #2368A2;
+  $blue-600: #3183C8;
+  $blue-500: #63A2D8;
+  $blue-400: #AAD4F5;
+  $blue-300: #EFF8FF;
+
+// NEUTRALS
+
+  // whites
+  $tilda-white: #F5F5F5;
+  // Blacks
+  $tilda-black: #292929;
+
+  // Greys
+  $tilda-grey: #828282;
+  $grey1-900: #202833;
+  $grey1-800: #404B5A;
+  $grey1-700: #6E7A8A;
+  $grey1-600: #929FB1;
+  $grey1-500: #AEBECD;
+  $grey1-400: #CCD4DB;
+  $grey1-300: #D5DDE5;
+  $grey1-200: #E1E7EC;
+  $grey1-100: #F8F9FA;
+
+// ACCENTS
+
+  // greens
+  $dark-900: #173632;
+  $green-800: #145239;
+  $green-700: #197741;
+  $green-600: #259D58;
+  $green-500: #38C172;
+  $green-400: #74D99F;
+  $green-300: #A8EEC1;
+  $green-200: #E3FCEC;
+
+  // yellows
+  $yellow-900: #5C4813;
+  $yellow-800: #8C6D1F;
+  $yellow-700: #CAA53D;
+  $yellow-600: #F4CA64;
+  $yellow-500: #FAE29F;
+  $yellow-400: #FDF3D7;
+  $yellow-300: #FFFCF4;
+
+  // reds
+  $red-900: #611818;
+  $red-900: #891B1B;
+  $red-900: #B82020;
+  $red-900: #DC3030;
+  $red-900: #E46464;
+  $red-900: #F5AAAA;
+  $red-900: #FCE8E8;
 
 
 
-// blacks
-$blackish: #1b1b16;
-$less-blacker: #383838;
-
-// greys
-$whitish-greyish: #ececec;
-$light-grey: #9c9c9c;
-$dark-grey: #808080;
-$light-grey-2: #F9F9FA;
-
-// whites
-$off-white: #fbfbfb;
-$less-white: #f9fafa;
-$whey: #deddd7;
-
-$very-dark-white: #d9cfd2;
-
-// yellows
-$yellow-one: #eab762;
-
-
-// purples
-$royal-purple: #403d7b;
-
-//greens
-$dark-green: #173632;
-
-
-
-//blue pallet
-
-$pallet-1-grey-: #71819b;
-$pallet-1-db: #0590d1;
-$pallet-1-light-grey:#dfe3ea;
-$pallet-1-light-blue:#04bef7;
-$pallet-1-dark-blue:#23395b;
-
-
-// tolda color set
-
-$tilda-grey: #F5F5F5;
-$tilda-font-grey: #828282;
-$tilda-black: #292929;

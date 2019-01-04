@@ -6,7 +6,7 @@ class CodeSnippet extends React.Component {
       <React.Fragment>
 
         <div className="col-md-4 card">
-        <h1 className="nun-black-h3">{this.props.title}</h1>
+        <h1 className="header-3">{this.props.title}</h1>
         <p>{this.props.body}</p>
       < /div>
       </React.Fragment>
