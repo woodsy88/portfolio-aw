@@ -1,9 +1,14 @@
 <div class="container section-padding">
-  <div class="row">
-      <%= render 'pages/cards/home_card', header: "Skills", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
-      <%= render 'pages/cards/home_card', header: "Work Experience", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
-      <%= render 'pages/cards/home_card', header: "Portfolio", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
-      <%= render 'pages/cards/home_card', header: "Blog", subheader: "Stuff", description: "stuff and stuff and stuff and stuff" %>
+  <div class="row cards-row">
+      <%= render 'pages/cards/home_card',
+                     header: "Skills",
+                     path: skills_path %>
+      <%= render 'pages/cards/home_card',
+                     header: "Experience",
+                     path: about_me_path   %>
+      <%= render 'pages/cards/home_card',
+                     header: "Portfolio",
+                     path: portfolios_path %>
   </div>
 </div>
 

@@ -40,3 +40,20 @@
 .banner-center {
     text-align: center;
 }
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+}
+
+
+a.card {
+transition: 0.3s;
+}
+
+a.card:hover {
+    text-decoration: none; 
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+}

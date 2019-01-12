@@ -3,10 +3,20 @@
 // color
 // weight
 // font-family
-
+@import "_colors.scss";
 
 .no-decor {
   text-decoration: none !important;
+}
+
+// line-heights
+
+.sm-l-h {
+  line-height: 1;
+}
+
+.med-l-h {
+  line-height: 1.5;
 }
 //  Heading Spacing
 
@@ -113,25 +123,35 @@
 }
 
 .header-4{
-
+  color: $blue-700;
+  @extend .bold;
+  margin-bottom: .25rem;
+  @extend .large-32;
+  @extend .sm-l-h;
 }
 
 .header-5 {
-
+  color: $blue-800;
+  @extend .regular;
+  margin-bottom: .25rem;
+  @extend .large-24;
+  @extend .sm-l-h;
 }
 
 .header-6 {
+  color: $blue-700;
+  @extend .bold;
+  margin-bottom: .25rem;
+  @extend .large-32;
+  @extend .sm-l-h;
 
 }
 
-// Skill Cards
-
-
-.skill-card-header {
+.header-7 {
   color: $tilda-black;
   @extend .x-bold;
   @extend .heading-spacing-m;
-  @extend .small-14;
+  @extend .medium-18;
   @extend .no-decor;
 
 }
