@@ -10,14 +10,14 @@ class Job extends React.Component {
       <React.Fragment>
          <h2 className="header-1">{company}</h2>
          <h3>{title}</h3>
-         <p>{date_text}</p>
+         <p class="grey-md-text">{date_text}</p>
          <p>{body}</p>
 
         {/* check what data is coming in from job_skills */}
          {console.log(job_skills)}   
          <div>{job_skills.map(function({title, id}){
               console.log('title: ', title, 'id: ', id);
-            return (<span className="skill-item"><a href={"skills/" + id}>{title}</a></span>)
+            return (<span className="category-item"><a href={"skills/" + id}>{title}</a></span>)
          })}</div>
 
       </React.Fragment>

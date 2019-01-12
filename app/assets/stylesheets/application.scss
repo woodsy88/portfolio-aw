@@ -14,6 +14,7 @@
 @import "section_header.scss";
 @import "banner.scss";
 @import "icons.scss";
+@import "_pills.scss";
 
 /* Custom Style */
 
@@ -42,15 +43,6 @@ body {
 //   background: image-url('home_bg.jpg') no-repeat;
 //   background-size: cover;
 // }
-
-
-.skill {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-
-
 
 body {
   font-family: 'Nunito', sans-serif;
