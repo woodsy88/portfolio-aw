@@ -1,35 +1,37 @@
 <div class="row">
-          <% object.each do |skill| %>
-          <div class="col-md-6 d-flex">
-            <div class="card" style="width: 100%"> 
-              <div class="card-body flex-fill">
-                <h3 class="header-7"><%= link_to skill.title, skill_path(skill) %></h3>
-                  <div class="row container skill-container">
-                    
-                        <div class="small-font-skills">
-                          <%  if skill.jobs.any?  %>
-                          <i class="fas fa-briefcase skill-icon"></i><%= link_to pluralize(skill.jobs.count, "job"), skill_path(skill) %>
-                          <% end %>
-                        </div> 
-                        <div class="small-font-skills">
-                          <%  if skill.portfolios.any?  %>
-                            <i class="fas fa-desktop skill-icon"></i><%= link_to pluralize(skill.portfolios.count, "project"), skill_path(skill) %>
-                          <% end %>
-                        </div>  
-                        <div class="small-font-skills">
-                          <%  if skill.blogs.any?  %>
-                            <i class="fas fa-book-alt skill-icon"></i><%= link_to pluralize(skill.blogs.count, "resource"), skill_path(skill) %>
-                          <% end %>
-                        </div> 
-                  </div>
-              </div>
-               <%  if logged_in?(:site_admin) %>
-                    <div class="card-footer">
-                      <%= link_to 'Edit Skill', edit_skill_path(skill), class: "btn btn-primary" %>
-                    </div>
-               <% end %>
+  <% object.each do |skill| %>
+  <div class="col-md-6 d-flex">
+    <div class="card" style="width: 100%"> 
+      <div class="card-body flex-fill">
+      <h3 class="header-7 spacing-xs"><%= link_to skill.title, skill_path(skill) %></h3>
+          <div class="skill-container">
+                  <div class="small-font-skills">
+                    <%  if skill.jobs.any?  %>
+                    <i class="fas fa-briefcase skill-icon"></i>
+                    <%= link_to pluralize(skill.jobs.count, "job"), skill_path(skill) %>
+                    <% end %>
+                  </div> 
+                  <div class="small-font-skills">
+                    <%  if skill.portfolios.any?  %>
+                      <i class="fas fa-desktop skill-icon"></i>
+                      <%= link_to pluralize(skill.portfolios.count, "project"), skill_path(skill) %>
+                    <% end %>
+                  </div> 
+                  <div class="small-font-skills">
+                    <%  if skill.blogs.any?  %>
+                      <i class="fas fa-book-alt skill-icon"></i>
+                      <%= link_to pluralize(skill.blogs.count, "resource"), skill_path(skill) %>
+                    <% end %>
+                  </div> 
 
-              </div>   
+          </div>
+      </div>
+        <%  if logged_in?(:site_admin) %>
+            <div class="card-footer">
+              <%= link_to 'Edit Skill', edit_skill_path(skill), class: "btn btn-primary" %>
             </div>
-          <% end %>
+        <% end %>
+      </div>   
+    </div>
+  <% end %>
 </div>  

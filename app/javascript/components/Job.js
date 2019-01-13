@@ -8,9 +8,9 @@ class Job extends React.Component {
 
     return (
       <React.Fragment>
-         <h2 className="header-1">{company}</h2>
-         <h3>{title}</h3>
-         <p class="grey-md-text">{date_text}</p>
+         <h2 className="header-3">{company}</h2>
+         <h3 class="header-2">{title}</h3>
+         <p class="grey-light-text">{date_text}</p>
          <p>{body}</p>
 
         {/* check what data is coming in from job_skills */}

@@ -12,8 +12,11 @@ function SchoolItem (props) {
       <div className="card" style={styles}>
       <img className="card-img-top" src={props.img} alt="Card image cap" />
           <div className="card-body flex-fill">
-            <h3 className="card-title">{props.school}</h3>
-            <h5 className="card-subtitle text-muted">{props.degree}</h5>
+            <h3 className="header-4 spacing-sm">{props.school}</h3>
+            <h5 className="header-6 text-muted spacing-sm">{props.degree}</h5>
+          <h5 className= "grey-light-text small-12" > {
+              props.date
+            } < /h5>
           </div>
       </div>
     </div>     
@@ -26,19 +29,23 @@ class School extends React.Component {
 
   var list = [{
         school: "Trent University", 
-        degree: "Bachelor of Business", 
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/larger-trent.jpg"
-      },
-      {
-        school: "Brain Station", 
-        degree: "Javascript", 
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/Brainstation.jpg"
+        degree: "Bachelor of Business Administration (B.B.A)",
+        img: "http://featuredheights.com/wp-content/uploads/2018/10/larger-trent.jpg",
+        date: "2008 - 2012"
       },
       {
         school: "George Brown", 
         degree: "Post Graduate: Advanced Digital Design",
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/GB.jpg"
-      }]
+        img: "http://featuredheights.com/wp-content/uploads/2018/10/GB.jpg",
+        date: "2012 - 2013"
+      },
+      {
+        school: "Brain Station",
+        degree: "Web Development Focusing on JavaScript",
+        img: "http://featuredheights.com/wp-content/uploads/2018/10/Brainstation.jpg",
+        date: "2015"
+      }
+    ]
   
   
     return (
@@ -48,7 +55,8 @@ class School extends React.Component {
           return (
             <SchoolItem img={school.img} 
                         school={school.school} 
-                        degree={school.degree} />)
+                        degree={school.degree}
+                        date={school.date} />)
           })
         }  
         </div>

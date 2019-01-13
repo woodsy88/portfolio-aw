@@ -9,10 +9,14 @@
   text-decoration: none !important;
 }
 
-// Font colots
+// Font colors
 
 .grey-md-text {
   color: $grey1-700;
+}
+
+.grey-light-text {
+  color: $grey1-600
 }
 
 // line-heights
@@ -52,6 +56,12 @@
 }
 
 // Size
+
+.xs-8 {
+  font-size: 12px;
+}
+
+
 .small-12 {
   font-size: 12px;
 }
@@ -107,7 +117,6 @@
 .header-1 {
   color: $blue-900;
   @extend .regular;
-  margin-bottom: .25rem;
   @extend .large-42;
 
 }
@@ -116,22 +125,19 @@
   color: $blue-900;
   @extend .x-bold;
   @extend .large-32;
-  margin-bottom: .25rem;
 
 }
 
 .header-3 {
   color: $blue-900;
-  @extend .x-bold;
-  margin-bottom: .25rem;
+  @extend .light;
   @extend .large-32;
 
 }
 
 .header-4{
-  color: $blue-700;
+  color: $grey1-900;
   @extend .bold;
-  margin-bottom: .25rem;
   @extend .large-32;
   @extend .sm-l-h;
 }
@@ -139,38 +145,25 @@
 .header-5 {
   color: $blue-800;
   @extend .regular;
-  margin-bottom: .25rem;
   @extend .large-24;
   @extend .sm-l-h;
+  @extend .med-l-h;
 }
 
 .header-6 {
   color: $blue-700;
   @extend .bold;
-  margin-bottom: .25rem;
-  @extend .large-32;
-  @extend .sm-l-h;
+  @extend .medium-20;
+  @extend .med-l-h;
 
 }
 
 .header-7 {
   color: $tilda-black;
   @extend .x-bold;
-  @extend .heading-spacing-m;
   @extend .medium-18;
   @extend .no-decor;
 
 }
 
-.small-font-skills {
-  color: $tilda-black;
-  @extend .light;
-  @extend .heading-spacing-m;
-  @extend .small-12;
-   @extend .no-decor;
-}
 
-.small-font-skills,
-.skill-card-header a {
-   @extend .no-decor;
-}

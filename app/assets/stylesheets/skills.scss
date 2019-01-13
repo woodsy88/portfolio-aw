@@ -1,10 +1,28 @@
+@import '_fonts.scss';
+@import '_colors.scss';
+@import '_icons.scss';
+
 .skill-icon {
-  color: #cdcdcd;
+  color: $grey1-500;
   margin-right: 5px;
+  @extend .xxs-icon;
 }
 
 .skill-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
 }
 
+.small-font-skills a,
+.small-font-skills {
+  @extend .light;
+  @extend .heading-spacing-m;
+  font-size: 12px;
+  @extend .no-decor;
+}
+
+.small-font-skills a:hover {
+  color: $blue-600 !important;
+}
