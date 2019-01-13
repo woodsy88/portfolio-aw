@@ -9,16 +9,6 @@
   text-decoration: none !important;
 }
 
-// Font colors
-
-.grey-md-text {
-  color: $grey1-700;
-}
-
-.grey-light-text {
-  color: $grey1-600
-}
-
 // line-heights
 
 .sm-l-h {
@@ -86,6 +76,10 @@
   font-size: 24px;
 }
 
+.large-28 {
+  font-size: 28px;
+}
+
 .large-32 {
   font-size: 32px;
 }
@@ -138,32 +132,48 @@
 .header-4{
   color: $grey1-900;
   @extend .bold;
-  @extend .large-32;
+  @extend .large-28;
   @extend .sm-l-h;
 }
 
 .header-5 {
-  color: $blue-800;
-  @extend .regular;
+  color: $tilda-grey;
+  @extend .light;
   @extend .large-24;
   @extend .sm-l-h;
   @extend .med-l-h;
 }
 
 .header-6 {
-  color: $blue-700;
-  @extend .bold;
+  @extend .regular;
   @extend .medium-20;
   @extend .med-l-h;
-
 }
 
 .header-7 {
-  color: $tilda-black;
+  
   @extend .x-bold;
   @extend .medium-18;
   @extend .no-decor;
 
+}
+
+// Font colors
+
+.grey-md-text {
+  color: $grey1-700;
+}
+
+.grey-light-text {
+  color: $grey1-600
+}
+
+.blue-700 {
+  color: $blue-700;
+}
+
+.black-font {
+  color: $tilda-black;
 }
 
 

@@ -4,16 +4,16 @@
 @import "gritter";
 @import "_colors.scss";
 @import "application.scss";
+@import "_colors.scss";
+@import "_fonts.scss";
+@import "_layout.scss";
 
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
-.navbar {
-  margin-bottom: 0;
-  background-color: $royal-blue;
-}
+
 
 .jumbotron {
   padding-top: 6rem;
@@ -43,72 +43,5 @@ body {
 
 
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
 
 
-/* Custom Styles */
-
-body {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Nunito', serif;
-}
-
-// Portfolio Index Cards
-
-  .portfolio-card-title {
-    font-size: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #000;
-  }
-
-  .portfolio-card-title a {
-    text-decoration: none;
-    color: #000;
-  }
-
-.portfolio-card {
-
-
-  .tech-portfolio-card-item {
-    
-  }
-
-  .portfolio-card-title {
-  font-size: 25px;
-  font-weight: 600;
-  }
-
-  .portfolio-card-title a {
-    text-decoration: none;
-    color: #000;
-  }
-
-  .portfolio-card-title a:hover {
-    color: #676767;
-  }
-
-  .portfolio-card-subtitle {
-    font-size: 20px;
-  }
-}
-
-.portfolio-card-image {
-
-}

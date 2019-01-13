@@ -2,28 +2,28 @@
   <div class="card " data-id="<%= portfolio_item.id  %>">
       <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'rounded portfolio-card-image' %>
     <div class="card-body flex-fill">
-            <h3 class="portfolio-card-title"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
-            <h4 class="portfolio-card-subtitle"><%= portfolio_item.subtitle %></h4>       
-                <ul class="list-group list-group-flush">
-                    <% if portfolio_item.technologies.any? %><li class="list-group-item list-group-item-light"> <strong>Tech Stack</strong></li><% end %>
-                    <% portfolio_item.technologies.each do |technology| %>  
-                    <li class="list-group-item"><%= technology.name %></li>
-                    <% end %>
-                </ul>
-
-            <% if portfolio_item.skills.any? %>
-                <div class="container">
-                    <h5 class="pt-3">Skills Utilized</h5>
-                    <div class="row">
-                        <% portfolio_item.skills.each do |skill| %>
-                            <%= render skill %>
-                        <% end %>
-                    </div>
-                </div>
-            <% end %>
+        <h3 class="header-4"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
+        <h4 class="header-5"><%= portfolio_item.subtitle %></h4>       
+          <ul class="list-group list-group-flush">
+              <% if portfolio_item.technologies.any? %><li class="list-group-item list-group-item-light"> <strong>Tech Stack</strong></li><% end %>
+              <% portfolio_item.technologies.each do |technology| %>  
+              <li class="list-group-item"><%= technology.name %></li>
+              <% end %>
+          </ul>
+        <% if portfolio_item.skills.any? %>
+          <div class="container">
+              <h5 class="pt-3 grey-md-text">Skills Utilized</h5>
+              <div class="row">
+                  <% portfolio_item.skills.each do |skill| %>
+                      <%= render skill %>
+                  <% end %>
+              </div>
+          </div>
+        <% end %>
     </div>
      <div class="card-footer">  
-        <%= link_to "View Item", portfolio_show_path(portfolio_item.id), class: "mt-2 btn btn-primary btn-block" %>
+        <%= link_to "View Item", portfolio_show_path(portfolio_item.id), 
+                                 class: "mt-2 btn btn-primary btn-block" %>
      </div>      
   </div>
 </div>
