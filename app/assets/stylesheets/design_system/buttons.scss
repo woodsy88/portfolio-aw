@@ -1,0 +1,43 @@
+// Button Color Styles - override bootstrap colors
+.btn-primary {
+  color: #fff;
+  background-color: $royal-blue;
+  border-color: $royal-blue;
+}
+
+.btn-primary:hover {
+  background-color: $lighter-royal-blue;
+  border-color: $lighter-royal-blue;
+}
+
+.btn-hollow {
+  border: 2px solid #000;
+  color: #000;
+}
+
+.btn-hollow:hover {
+  background: #000;
+  color: #fff;
+}
+
+// Custom Button Sizes
+
+.custom-btn-xl {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.custom-btn-l {
+  font-size: 16px;
+  padding: 12px 16px;
+}
+
+.custom-btn-md {
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.custom-btn-sm {
+  font-size: 12px;
+  padding: 6px 8px;
+}

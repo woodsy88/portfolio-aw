@@ -1,30 +1,31 @@
 <div class="container section-padding">
-<%= render 'pages/section_header', header: "Past Job Experience", 
-                               text: "I combine business and coding skills",
-                               icon: "fas fa-briefcase" %>
-    <div class="row">
-        <% @jobs.each do |job| %>
-            <div class="col-md-12 d-flex">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body flex-fill">
-                        <h2><%= link_to job.company, job_path(job) %></h2><span><%= job.date_text %></span>
-                        <h3><%= job.job_title %></h3>
-                        <%= job.position  %>
-                        <p><%= truncate(job.body, length: 100) %></p>
-            
-                        <% job.skills.each do |skill| %>
-                            <%= render skill %>
-                        <% end %>
-                    </div>
-                    <% if logged_in?(:site_admin) %>
-                        <div class="card-footer">     
-                            <div>
-                                <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-warning' %>
-                            </div>
+    <%= render 'pages/section_header', 
+                    header: "Past Job Experience", 
+                    text: "I combine business and coding skills",
+                    icon: "fas fa-briefcase" %>
+        <div class="row">
+            <% @jobs.each do |job| %>
+                <div class="col-md-12 d-flex">
+                    <div class="card job-card" style="width: 100%;">
+                        <div class="card-body flex-fill">
+                                <%= react_component("Job", { 
+                                            company: job.company,
+                                            title: job.job_title,
+                                            position: job.position,
+                                            date_text: job.date_text,
+                                            body: truncate(job.body, length: 200),
+                                            job_skills: job.skills,
+                                                }) %>
                         </div>
-                     <% end %>
+                        <% if logged_in?(:site_admin) %>
+                            <div class="card-footer">     
+                                <div>
+                                    <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-outline-warning' %>
+                                </div>
+                            </div>
+                            <% end %>
+                    </div>
                 </div>
-            </div>
-        <% end %>
-    </div>    
+            <% end %>
+        </div>    
 </div>

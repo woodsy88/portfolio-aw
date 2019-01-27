@@ -2,9 +2,13 @@
 @import "font-awesome";
 @import "gritter";
 @import "_footer.scss";
-@import "_layout.scss";
-@import "_fonts.scss";
 @import "application.scss";
+
+
+// Design System
+@import "design_system/layout.scss";
+@import "design_system/fonts.scss";
+
 
 
 /*

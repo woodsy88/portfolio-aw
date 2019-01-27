@@ -2,58 +2,5 @@
 @import "gritter";
 @import "font-awesome";
 
-.home-banner {
-    background-color: $tilda-white;
-    // -moz-box-shadow : 1px 1px 5px 2px #ccc;
-    // -webkit-box-shadow: 1px 1px 5px 2px #ccc;
-    // box-shadow : 1px 1px 5px 2px #ccc;
-   
-}
-
-.banner-inner-container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.page-banner {
-    background-color: #F9F9FA;
-    -moz-box-shadow: 1px 1px 5px 2px #ccc;
-    -webkit-box-shadow: 1px 1px 5px 2px #ccc;
-    box-shadow: 1px 1px 5px 2px #ccc;
-}
-
-.page-container {
-    padding-top: 50px;
-}
-
-.banner-fonts {
-    .page-banner-header {
-        font-size: 55px;
-    }
-
-    .page-banner-sub-header {
-        font-size: 30px;
-        font-weight: 300;
-    }
-} 
-
-.banner-center {
-    text-align: center;
-}
-
-.cards-row {
-    display: flex;
-    justify-content: center;
-}
 
 
-a.card {
-transition: 0.3s;
-}
-
-a.card:hover {
-    text-decoration: none; 
-    -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-}

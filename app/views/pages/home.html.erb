@@ -1,11 +1,25 @@
 <%= render 'home_banner' %>
 <%= render 'home_cards' %>
 <div class="container">
- <div class="section-padding">
-    <h2 class="spacing-lg">Code Snippets</h2>
-    <%= render 'recent_snippets' %>
- </div>
+
+  <%= render 'section_header', header: "Work Experience", 
+                               text: "I have worked at 4 tech startups over the last 7 years + have ran my own web development shop",
+                               icon: "fas fa-briefcase" %>
+  <%= render 'jobs' %>
+
+  <%= render 'section_header', header: "Skills", 
+                               text: "I combine business and coding skills",
+                               icon: "fas fa-database" %>
+  <%= render 'skills' %>  
+ 
+  <%= render 'section_header', header: "Education", 
+                               text: "I did my undergrad in business, then a post grad in Advanced Desgin and Project Management, followed by a coding bootcamp",
+                               icon: "fas fa-graduation-cap" %>     
+  <%= render 'education' %>
 </div>
+
+
+
 
 
 

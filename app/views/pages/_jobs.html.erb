@@ -1,25 +1,26 @@
-        <% @jobs.each do |job| %>
-            <div class="col-md-12 d-flex">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body flex-fill">
-                            <%= react_component("Job", { 
-                                      company: job.company,
-                                      title: job.job_title,
-                                      position: job.position,
-                                      date_text: job.date_text,
-                                      body: truncate(job.body, length: 200),
-                                      job_skills: job.skills,
-                                            }) %>
-                    </div>
-                    <% if logged_in?(:site_admin) %>
-                        <div class="card-footer">     
-                            <div>
-                                <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-warning' %>
-                            </div>
-                        </div>
-                     <% end %>
-                </div>
+<% @jobs.each do |job| %>
+    <div class="col-md-12 d-flex">
+        <div class="card job-card" style="width: 100%;">
+            <div class="card-body flex-fill">
+                    <%= react_component("Job", { 
+                                company: job.company,
+                                title: job.job_title,
+                                position: job.position,
+                                date_text: job.date_text,
+                                body: truncate(job.body, length: 200),
+                                job_skills: job.skills,
+                                    }) %>
             </div>
-        <% end %>
+            <% if logged_in?(:site_admin) %>
+            <div class="card-footer">
+              <span class="pull-right">
+                <%= link_to fa_icon('pencil-square-o'), edit_job_path(job)  %>
+                <%= link_to fa_icon('trash'), job, method: :delete, data: { confirm: 'Are you sure you want to delete this post' }  %>
+              </span>
+            </div>
+            <% end %>
+        </div>
+    </div>
+<% end %>
 
              

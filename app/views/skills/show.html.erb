@@ -1,45 +1,53 @@
-<div class="container">
-  <h1 class="section-padding"><%= @skill.title %></h1>
+<div class="container section-padding-lg">
+
+  <div class="header-1 spacing-md"><%= @skill.title %></div>
     <% if @skill.jobs.count != 0 %>
-        <h2 class="spacing-sm">Job's containing <%= @skill.title %></h2>
-        <div class="row spacing-lg">
-          <% @skill.jobs.each do |job| %> 
-            <div class="col-md-4 d-flex">
-              <div class="card" style="width: 100%;">
-                <div class="card-body flex-fill">
-                  <%= link_to job.company, job_path(job) %>
+<div class="spacing-xl">
+      <h2 class="spacing-lg">Job's containing <%= @skill.title %></h2>
+          <div class="row">
+            <% @skill.jobs.each do |job| %> 
+              <div class="col-md-4 d-flex">
+                <div class="card skill-show-card" style="width: 100%;">
+                  <div class="card-body flex-fill">
+                    <%= link_to job.company, job_path(job), class: "header-5" %>
+                  </div>
                 </div>
-              </div>
-            </div> 
-          <% end %> 
-        </div>  
+              </div> 
+            <% end %> 
+          </div> 
+</div> 
     <% end %>
     <% if @skill.portfolios.count != 0 %> 
-        <h2 class="spacing-sm">Portfolio items containing <%= @skill.title %></h2>
-        <div class="row spacing-lg">
+      <div class="spacing-xl">
+        <h2 class="spacing-lg">Portfolio items containing <%= @skill.title %></h2>
+        <div class="row">
           <% @skill.portfolios.each do |portfolio_item| %>
               <div class="col-md-4 d-flex">
-                <div class="card" style="width: 100%;">
+                <div class="card skill-show-card" style="width: 100%;">
                   <div class="card-body flex-fill">
-                    <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %>
+                    <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item), class: "header-5" %>
                   </div>    
                 </div>
               </div>
           <% end %>
         </div>
+      </div>
     <% end %>
+
+
     <% if @skill.blogs.count != 0 %>
-      <h2 class="spacing-sm">Blogs Containing <%= @skill.title %></h2>
-      <div class="row spacing-lg">     
-        <div class="col-md-4 d-flex">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <% @skill.blogs.each do |blog| %>
-                  <%= link_to blog.title, blog_path(blog) %>
-              <% end %>
-            </div>
-          </div>
-        </div>  
+    <h2 class="spacing-lg">Blog items containing <%= @skill.title %></h2>
+      <div class="row">
+            <% @skill.blogs.each do |blog| %>
+              <div class="col-md-4 d-flex">
+                  <div class="card skill-show-card" style="width: 100%;">
+                    <div class="card-body">              
+                          <%= link_to blog.title, blog_path(blog), class: "header-5" %>
+                    </div>
+                  </div>    
+              </div>                               
+            <% end %>
+      </div>
       </div>  
-     <% end %>
+    <% end %>
 </div>

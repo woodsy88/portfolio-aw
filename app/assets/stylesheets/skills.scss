@@ -1,10 +1,10 @@
-@import '_fonts.scss';
-@import '_colors.scss';
-@import '_icons.scss';
+@import "design_system/fonts.scss";
+@import "design_system/colors.scss";
+@import 'design_system/icons.scss';
 
 .skill-icon {
   color: $grey1-500;
-  margin-right: 5px;
+  margin-right: 1px;
   @extend .xxs-icon;
 }
 

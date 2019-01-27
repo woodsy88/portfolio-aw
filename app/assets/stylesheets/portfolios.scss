@@ -2,12 +2,14 @@
 @import "font-awesome";
 @import "jquery-ui";
 @import "gritter";
-@import "_colors.scss";
 @import "application.scss";
-@import "_colors.scss";
-@import "_fonts.scss";
-@import "_layout.scss";
 
+
+// Design System
+@import "design_system/colors.scss";
+@import "design_system/fonts.scss";
+@import "design_system/layout.scss";
+@import "design_system/cards.scss";
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
@@ -41,6 +43,10 @@ body {
   background-color: #f7f7f7;
 }
 
+
+// .portfolio-main {
+//   width: 200px !important;
+// }
 
 
 

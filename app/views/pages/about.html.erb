@@ -1,17 +1,13 @@
-<%= render 'shared/page_header', 
-            title: "About me", 
-            subtitle: "Product Designer, Developer & Manager" %>
-
 <div class="container">
-  <%= render 'section_header', header: "Skills", 
-                               text: "I combine business and coding skills",
-                               icon: "fas fa-database" %>
-  <%= render 'skills' %>
-  
   <%= render 'section_header', header: "Work Experience", 
                                text: "I have worked at 4 tech startups over the last 7 years + have ran my own web development shop",
                                icon: "fas fa-briefcase" %>
   <%= render 'jobs' %>
+
+  <%= render 'section_header', header: "Skills", 
+                               text: "I combine business and coding skills",
+                               icon: "fas fa-database" %>
+  <%= render 'skills' %>  
  
   <%= render 'section_header', header: "Education", 
                                text: "I did my undergrad in business, then a post grad in Advanced Desgin and Project Management, followed by a coding bootcamp",

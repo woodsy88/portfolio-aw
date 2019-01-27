@@ -1,7 +1,7 @@
 <div class="row">
   <% object.each do |skill| %>
   <div class="col-md-6 d-flex">
-    <div class="card" style="width: 100%"> 
+    <div class="card skill-card" style="width: 100%"> 
       <div class="card-body flex-fill">
       <h3 class="header-7 spacing-xs"><%= link_to skill.title, skill_path(skill) %></h3>
           <div class="skill-container">
@@ -26,11 +26,14 @@
 
           </div>
       </div>
-        <%  if logged_in?(:site_admin) %>
+            <% if logged_in?(:site_admin) %>
             <div class="card-footer">
-              <%= link_to 'Edit Skill', edit_skill_path(skill), class: "btn btn-primary" %>
+              <span class="pull-right">
+                <%= link_to fa_icon('pencil-square-o'), edit_skill_path(skill)  %>
+                <%= link_to fa_icon('trash'), skill, method: :delete, data: { confirm: 'Are you sure you want to delete this post' }  %>
+              </span>
             </div>
-        <% end %>
+            <% end %>
       </div>   
     </div>
   <% end %>

@@ -1,22 +1,46 @@
 // 3 Keys to Fonts
-// size
-// color
-// weight
+// font size
+// font color
+// font weight
 // font-family
-@import "_colors.scss";
+@import "design_system/colors.scss";
 
 .no-decor {
   text-decoration: none !important;
 }
 
+//  letter spacing
+
+.tight {
+  letter-spacing: -0.05em;
+}
+
+.wide {
+  letter-spacing: 0.05em;
+}
+
 // line-heights
+  //  Line-height and font size are inversely proportional — 
+     //  use a taller line-height for small text and a shorter line-height for large text.
+
+.xs-l-h {
+  line-height: 1;
+}
 
 .sm-l-h {
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .med-l-h {
   line-height: 1.5;
+}
+
+.lg-l-h {
+  line-height: 1.75;
+}
+
+.xl-l-h {
+  line-height: 2.0;
 }
 //  Heading Spacing
 
@@ -48,9 +72,8 @@
 // Size
 
 .xs-8 {
-  font-size: 12px;
+  font-size: 8px;
 }
-
 
 .small-12 {
   font-size: 12px;
@@ -76,68 +99,75 @@
   font-size: 24px;
 }
 
-.large-28 {
-  font-size: 28px;
+.large-30 {
+  font-size: 30px;
 }
 
-.large-32 {
-  font-size: 32px;
+.large-36 {
+  font-size: 36px;
 }
 
 .large-42 {
   font-size: 42px;
 }
 
+.x-large-48 {
+  font-size: 48px;
+}
+
 .x-large-52 {
   font-size: 52px;
 }
 
-.x-large-65 {
-  font-size: 65px;
+.x-large-60 {
+  font-size: 60px;
+}
+
+.xx-large-72 {
+  font-size: 72px;
+}
+
+.extra-lg-font {
+  @extend .xx-large-72;
 }
 
 
 .hero-text {
-  color: $tilda-black;
-  @extend .x-bold;
-  @extend .x-large-65;
+  @extend .light;
+  @extend .x-large-60;
 }
 
 .sub-hero-text {
-  color: $tilda-black;
-  @extend .large-42;
+  color: $grey1-700;
+  @extend .large-30;
+  @extend .light;
 }
 
 .header-1 {
-  color: $blue-900;
   @extend .regular;
   @extend .large-42;
 
 }
 
 .header-2 {  
-  color: $blue-900;
   @extend .x-bold;
-  @extend .large-32;
+  @extend .large-30;
 
 }
 
 .header-3 {
-  color: $blue-900;
   @extend .light;
-  @extend .large-32;
+  @extend .large-30;
 
 }
 
 .header-4{
-  color: $grey1-900;
   @extend .bold;
-  @extend .large-28;
+  @extend .large-30;
   @extend .sm-l-h;
 }
 
 .header-5 {
-  color: $tilda-grey;
   @extend .light;
   @extend .large-24;
   @extend .sm-l-h;
@@ -158,6 +188,16 @@
 
 }
 
+.section-header-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 26px;
+  color: $tilda-black;
+  max-width: 560px;
+  text-align: center;
+}
+
 // Font colors
 
 .grey-md-text {
@@ -174,6 +214,25 @@
 
 .black-font {
   color: $tilda-black;
+}
+
+
+// Paragraph Widths
+
+.max-width-para-1 {
+  max-width: 20em;
+}
+
+.max-width-para-2 {
+  max-width: 25em;
+}
+
+.max-width-para-3 {
+  max-width: 30em;
+}
+
+.max-width-para-4 {
+  max-width: 35em;
 }
 
 

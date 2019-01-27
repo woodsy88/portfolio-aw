@@ -7,8 +7,8 @@ class Portfolio < ApplicationRecord
 
 
   include Placeholder
+
   validates_presence_of :title, :body
-  
 
   #mount_uploader is a carrierwave method, uses PortfolioUploader
   mount_uploader :thumb_image, PortfolioUploader

@@ -1,20 +1,24 @@
 @import "bootstrap";
 @import "gritter";
-@import "_colors.scss";
-@import "_fonts.scss";
-@import "_layout.scss";
 @import "pages.scss";
 @import "_nav.scss";
 @import "_footer.scss";
-@import "_buttons.scss";
 @import "tech_news.scss";
-@import "_cards.scss";
 @import "skills.scss";
 @import "jobs.scss";
 @import "section_header.scss";
-@import "banner.scss";
-@import "icons.scss";
-@import "_pills.scss";
+@import "_banner.scss";
+
+
+// Design System
+@import "design_system/colors.scss";
+@import "design_system/fonts.scss";
+@import "design_system/layout.scss";
+@import "design_system/icons.scss";
+@import "design_system/pills.scss";
+@import "design_system/buttons.scss";
+@import "design_system/cards.scss";
+
 
 /* Custom Style */
 
@@ -25,6 +29,17 @@
 body {
   background-color: $tilda-white;
 }
+
+.font-row {
+   display: flex;
+   flex-direction: column;
+   padding-left: 50px;
+ }
+
+.font-row-display-none {
+    display: none;
+  }
+
 
 /*Banner*/
 
