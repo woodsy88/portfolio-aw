@@ -1,22 +1,24 @@
 <div class="container section-padding-lg">
 
   <div class="header-1 spacing-md"><%= @skill.title %></div>
+
     <% if @skill.jobs.count != 0 %>
-<div class="spacing-xl">
-      <h2 class="spacing-lg">Job's containing <%= @skill.title %></h2>
-          <div class="row">
-            <% @skill.jobs.each do |job| %> 
-              <div class="col-md-4 d-flex">
-                <div class="card skill-show-card" style="width: 100%;">
-                  <div class="card-body flex-fill">
-                    <%= link_to job.company, job_path(job), class: "header-5" %>
-                  </div>
+    <div class="spacing-xl">
+    <h2 class="spacing-lg">Job's containing <%= @skill.title %></h2>
+        <div class="row">
+          <% @skill.jobs.each do |job| %> 
+            <div class="col-md-4 d-flex">
+              <div class="card skill-show-card" style="width: 100%;">
+                <div class="card-body flex-fill">
+                  <%= link_to job.company, job_path(job), class: "header-5" %>
                 </div>
-              </div> 
-            <% end %> 
-          </div> 
-</div> 
+              </div>
+            </div> 
+          <% end %> 
+        </div> 
+    </div> 
     <% end %>
+
     <% if @skill.portfolios.count != 0 %> 
       <div class="spacing-xl">
         <h2 class="spacing-lg">Portfolio items containing <%= @skill.title %></h2>
@@ -33,7 +35,6 @@
         </div>
       </div>
     <% end %>
-
 
     <% if @skill.blogs.count != 0 %>
     <h2 class="spacing-lg">Blog items containing <%= @skill.title %></h2>

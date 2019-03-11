@@ -1,11 +1,8 @@
 <div class="container">
-<div class="row spacing-lg">
-  <%= link_to ("<i class='fa fa-arrow-left'></i> " +'Back to all portfolio items').html_safe, portfolios_path, class: 'btn btn-outline-secondary mt-5' %>
 
-</div>
   
-      <div class="">
-        <h1 class="header-2 spacing-sm"><%= @portfolio_item.title %></h1>
+     
+        <h1 class="header-1 spacing-sm mt-5"><%= @portfolio_item.title %></h1>
         <h2 class="header-3 grey-md-text spacing-md"><%= @portfolio_item.subtitle %></h2>
           <%  if @portfolio_item.skills.any? %>
       
@@ -15,7 +12,7 @@
               <% end %>
         
           <% end %>         
-      </div>
+     
   
   <div class="row pt-5">
       <div class="col-md-7">
@@ -41,10 +38,16 @@
           <% end %>                 
       </div>
   </div>
-
+  
+  <div class="row spacing-lg">
+  <%= link_to ("<i class='fa fa-arrow-left'></i> " +'Back to all portfolio items').html_safe, portfolios_path, class: 'btn btn-outline-secondary ml-2' %>
   <%  if logged_in?(:site_admin) %>    
       <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-outline-warning' %>
-  <%  end  %>  
+  <%  end  %>    
+
+</div>
+
+
 
 </div>
 

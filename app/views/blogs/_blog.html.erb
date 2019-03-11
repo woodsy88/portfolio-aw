@@ -4,17 +4,10 @@
         <div class="blog-post section-padding">    
             <div class="card-body">
                 <div class="container">
-                    <h2 class="header-3"><%= link_to blog.title.upcase, blog %></h2>
+                    <h2 class="header-3"><%= link_to blog.title, blog %></h2>
                     <p class="blog-post-meta">Created
                         <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>       
                         <p><%= markdown blog.body %></p>
-                        <%  if blog.skills.any? %>
-                            <div class="row">
-                                <% blog.skills.each do |skill| %>
-                                    <%= render skill %>
-                                <% end %>
-                            </div>
-                        <% end %>  
 
 
 <p>

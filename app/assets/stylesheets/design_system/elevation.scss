@@ -1,0 +1,56 @@
+// 1 shadow
+
+.elevation-1 {
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+}
+
+.elevation-2 {
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, .2);
+}
+
+.elevation-3 {
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, .2);
+}
+
+.elevation-4 {
+  box-shadow: 0 10px 24px hsla(0, 0%, 0%, .2);
+}
+
+.elevation-5 {
+  box-shadow: 0 15px 35px hsla(0, 0%, 0%, .2);
+}
+
+// 2 shadows
+
+.elevation2-1 {
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, .12), 0 1px 2px hsla(0,0%, 0%,.24);
+}
+
+.elevation2-2 {
+  box-shadow: 0 3px 6px hsla(0, 0%, 0%, .15), 0 2px 4px hsla(0,0%, 0%, .12);
+}
+
+.elevation2-3 {
+  box-shadow: 0 10px 20px hsla(0, 0%, 0%, .15), 0 3px 6px hsla(0,0%, 0%,.10);
+}
+
+.elevation2-4 {
+  box-shadow: 0 15px 25px hsla(0, 0%, 0%, .15), 0 5px 10px hsla(0,0%, 0%, .5);
+}
+
+.elevation2-5 {
+  box-shadow: 0 20px 40px hsla(0, 0%, 0%, .2)
+}
+
+
+// inset - wells - good for form inputs
+
+.well-1 {
+  box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+// raised buttons - need to correct hsl coluor
+
+.raised-btn {
+  box-shadow: inset 0 1px 0 hsl(224, 84%, 74%), 0 1px 3px hsla(0, 0%, 0%, .2);
+}

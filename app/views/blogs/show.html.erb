@@ -2,41 +2,35 @@
 
   <h2><%= @blog.title %></h2>
 
-  <% @blog.tag_list.each do |tag| %>
-    <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
-  <% end %>
 
+<%= link_to fa_icon('long-arrow-left'), blogs_path, class: "arrow-icon-size" %>
   <nav class="breadcrumb">
     <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
-
     <span class="breadcrumb-item active"><%= @blog.title %></span>
 
-    <span class="pull-right">
+    <span class="text-right">
       <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
       <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this post' } if logged_in?(:site_admin) %>
     </span>
   </nav>
+  
 
-  <%= link_to fa_icon('long-arrow-left'), blogs_path, class: "arrow-icon-size" %>
+  <% @blog.tag_list.each do |tag| %>
+    <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
+  <% end %>  
 
-            <%  if @blog.skills.any? %>
-                <% @blog.skills.each do |skill| %>
-                    <%= render skill %>
-                <% end %>
-            <% end %>
   <p>
     <%= markdown @blog.body %>
   </p>
 
  <div class="container">
- <h3>Related Resources</h3>
+     <h3>Related Resources</h3>
    <div class="row">
-     
       <% @related_blogs.each do |blog| %>
         <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
+          <div class="card flex-fill">
+            <div class="card-body w-100">
               <%= link_to blog.title, blog_path(blog) %>
             </div>
           </div>
@@ -44,7 +38,6 @@
       <% end %>
     </div>
   </div>
- 
   <!-- add new comments -->
   <%= render 'comments/comment_form' %>
 <!-- automatically loooks in views for partial called _comment.  renders all comments associated with that specific blog -->
