@@ -105,3 +105,5 @@ gem "awesome_print", require:"ap"
 gem "pry-rails", group:"development"
 
 gem 'acts-as-taggable-on', '~> 6.0'
+
+gem 'ransack', '~> 2.1', '>= 2.1.1'

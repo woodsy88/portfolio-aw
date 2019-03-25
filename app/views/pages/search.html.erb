@@ -1,0 +1,37 @@
+	<div class="row">
+  <div class="col">
+    <h1>Jobs</h1>
+    <% if @jobs.any? %>
+      <% @jobs.each do |job| %>
+        <p><%= link_to job.job_title, job %></p>
+      <% end %>
+    <% else %>
+      <p>there are no jobs matching your search term, please try another term</p>
+    <% end %>
+  </div>
+
+  <div class="col">
+
+    <h1>Portfolios</h1>
+      <% if @portfolios.any? %>
+    <% @portfolios.each do |portfolio| %>
+      <p><%= link_to portfolio.title, portfolio %></p>
+    <% end %>
+  <% else %>
+   <p>there are no portfolio items matching your search term, please try another term</p>
+  <% end %>
+  </div>
+
+
+    <div class="col">
+
+    <h1>Skills</h1>
+      <% if @skills.any? %>
+    <% @skills.each do |skill| %>
+      <p><%= link_to skill.title, skill %></p>
+    <% end %>
+  <% else %>
+   <p>there are no skills matching your search term, please try another term</p>
+  <% end %>
+  </div>
+</div>

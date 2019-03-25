@@ -7,8 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
      <ul class="navbar-nav mr-auto">
        <%= nav_helper 'nav-link', 'span' %>
-   <%= login_helper 'nav-link' %>
+       <%= login_helper 'nav-link' %>
      </ul>
+
+    <%= form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form| %>
+      <%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "form-control mr-sm-2" %>
+      <%= form.button "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+    <% end %>
+
+
+
  </div>
   </div>
 </nav>
