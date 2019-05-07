@@ -9,15 +9,15 @@
     categories: [
       {
         listLocation: "jobs",
-        header: "<strong>Jobs</strong>",
+        header: "<h5>Jobs</h5>",
       },
       {
         listLocation: "portfolios",
-        header: "<strong>Projects</strong>",
+        header: "<h5>Projects</h5>",
       },
       {
         listLocation: "skills",
-        header: "<strong>Skills</strong>",
+        header: "<h5>Skills</h5>",
       }
     ],
     list: {
