@@ -48,6 +48,10 @@ module ApplicationHelper
         title: 'About Me'
       },
       {
+        url: work_path,
+        title: 'Jobs'
+      },      
+      {
         url: portfolios_path,
         title: 'Portfolio'
       },      

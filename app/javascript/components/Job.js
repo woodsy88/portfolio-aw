@@ -9,8 +9,8 @@ class Job extends React.Component {
     return (
       <React.Fragment>
          <h2 className="header-3">{company}</h2>
-         <p class="grey-light-text spacing-md">{date_text}</p>
-         <h3 class="header-2">{title}</h3>
+         <p className="grey-light-text spacing-md">{date_text}</p>
+         <h3 className="header-2">{title}</h3>
          
          <p>{body}</p>
 
@@ -18,7 +18,7 @@ class Job extends React.Component {
          {console.log(job_skills)}   
          <div>{job_skills.map(function( {title, id} ){
               console.log('title: ', title, 'id: ', id);
-            return (<span className="category-item"><a href={"skills/" + id}>{title}</a></span>)
+            return (<span key={id} className="category-item"><a href={"skills/" + id}>{title}</a></span>)
          })}</div>
 
       </React.Fragment>
