@@ -27,25 +27,26 @@ class School extends React.Component {
 
   render () {
 
-  var list = [{
-        school: "Trent University", 
-        degree: "Bachelor of Business Administration (B.B.A)",
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/larger-trent.jpg",
-        date: "2008 - 2012"
-      },
-      {
-        school: "George Brown", 
-        degree: "Post Graduate: Advanced Digital Design",
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/GB.jpg",
-        date: "2012 - 2013"
-      },
-      {
-        school: "Brain Station",
-        degree: "Web Development Focusing on JavaScript",
-        img: "http://featuredheights.com/wp-content/uploads/2018/10/Brainstation.jpg",
-        date: "2015"
-      }
-    ]
+  var list = [
+    {
+      school: "Trent University",
+      degree: "Bachelor of Business Administration (B.B.A)",
+      img: "https://i.imgur.com/AZgPFKT.jpg",
+      date: "2008 - 2012"
+    },
+    {
+      school: "George Brown",
+      degree: "Post Graduate: Advanced Digital Design",
+      img: "https://i.imgur.com/qvRrfMH.jpg",
+      date: "2012 - 2013"
+    },
+    {
+      school: "Brain Station",
+      degree: "Web Development Focusing on JavaScript",
+      img: "https://i.imgur.com/gWE6XWf.jpg",
+      date: "2015"
+    }
+  ];
   
   
     return (
