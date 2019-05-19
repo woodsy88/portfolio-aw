@@ -8,12 +8,12 @@ function SchoolItem (props) {
   };
 
   return (
-    <div className="col-md-4 d-flex" key={props.school}  > 
+    <div className="col-md-4 d-flex mb-5" key={props.school}  > 
       <div className="card" style={styles}>
       <img className="card-img-top" src={props.img} alt="Card image cap" />
           <div className="card-body flex-fill">
-            <h3 className="header-4 spacing-sm">{props.school}</h3>
-            <h5 className="header-6 text-muted spacing-sm">{props.degree}</h5>
+            <h3 className="header-5 spacing-sm">{props.school}</h3>
+            <h5 className="header-7 text-muted spacing-sm">{props.degree}</h5>
           <h5 className= "grey-light-text small-12" > {
               props.date
             } < /h5>

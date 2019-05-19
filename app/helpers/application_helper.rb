@@ -40,21 +40,17 @@ module ApplicationHelper
  def nav_items
     [
       {
-        url: root_path,
-        title: 'Home'
-      },
-      {
-        url: about_me_path,
-        title: 'About Me'
-      },
-      {
         url: work_path,
-        title: 'Jobs'
+        title: 'Experience'
       },      
       {
         url: portfolios_path,
         title: 'Portfolio'
-      },      
+      },  
+      {
+        url: skills_path,
+        title: 'Skills'
+      },          
       {
         url: blogs_path,
         title: 'Resources'

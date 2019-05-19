@@ -1,6 +1,6 @@
 <%= render "shared/blog_masthead" %>
 <div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
-<div class="row">
+<div class="row mb-5">
 
   <div class="col-md-9">
      <%= paginate @blogs %>

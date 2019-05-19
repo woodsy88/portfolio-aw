@@ -1,0 +1,13 @@
+
+  <h3 class="header-4">Related Resources</h3>
+  <div class="row">
+    <% @related_blogs.each do |blog| %>
+      <div class="col-md-4 d-flex">
+        <div class="card flex-fill w-100 p-2">
+          <div class="card-body">
+            <%= link_to blog.title, blog_path(blog) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
