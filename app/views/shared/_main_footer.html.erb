@@ -1,12 +1,19 @@
  <footer class="footer">
-       <p>
-          Project built with
-          <span>front end</span>  
-        <i class="fab fa-js-square"></i> 
-        <i class="fab fa-react"></i>
-          <span>Backend</span>
-      </p> 
+       <div class="footer-container">
+          <h5>Project built with</h5>
+            <div class="tech-container">
+                  <span class="stack-header">front end</span>  
+                  <span><i class="fab fa-js-square footer-icon fa-2x"></i><i class="fab fa-react footer-icon fa-2x"></i><i class="fab fa-sass footer-icon fa-2x"></i></span>
+            </div>
+          
+            <div class="tech-container">
+                  <span class="stack-header">Back end</span>
+                  <span> <%= image_tag 'ruby-grey-icon.png', class: "footer-icon-img" %><%= image_tag 'rails-icon2.png', class: "footer-icon-img" %></span>
+            </div>
+      </div> 
 
-      <p><%= copyright_generator %></p>
-      <p><a href="#">Back to top</a></p>
+<div class="copyright-generator">
+            <div><%= copyright_generator %></div>
+            <div><a href="#">Back to top</a></div>
+</div>
 </footer>

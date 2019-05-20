@@ -21,3 +21,42 @@ body {
   text-align: center;
   border-top: .05rem solid #e5e5e5;  
 }
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center !important;
+ 
+  span {
+    margin-bottom: -25px;
+  }
+}
+
+.footer-icon {
+  margin-right: 5px;;
+  color: #3f3f3f;
+}
+
+.footer-item {
+  align-content: flex-start;
+}
+
+.footer-icon-img {
+  max-width: 30px;
+  margin-right: 5px;;
+}
+
+.stack-header {
+ font-weight: bold;
+ font-style: italic;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.copyright-generator {
+  margin-top: 40px;;
+}
