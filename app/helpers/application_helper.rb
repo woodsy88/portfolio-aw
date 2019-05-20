@@ -55,10 +55,10 @@ module ApplicationHelper
         url: blogs_path,
         title: 'Resources'
       },
-      {
-        url: contact_path,
-        title: 'Contact'
-      },      
+      # {
+      #   url: contact_path,
+      #   title: 'Contact'
+      # },      
       # {
       #   url: tech_news_path,
       #   title: 'Tech News'
