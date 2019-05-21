@@ -1,4 +1,7 @@
-<%= render "shared/blog_masthead" %>
+<%= render 'pages/section_header', 
+            header: "Resources", 
+            text: "My favorite guides and code snippets.",
+            icon: "fal fa-book" %>
 <div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
 <div class="row mb-5">
 
