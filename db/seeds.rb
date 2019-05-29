@@ -18,7 +18,6 @@ User.create!(
 puts "1 admin user created"
 
 
-
 User.create!(
   email: "user@user.com",
   password: "password",
@@ -56,10 +55,23 @@ end
 puts "10 blog posts created"
 
 
-5.times do |job|
+# 5.times do |job|
+#   Job.create!(
+#     company: "Job #{job}", 
+#     job_title: "Title of Job",
+#     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+#     Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
+#     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
+#     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
+#     ac commodo erat. Quisque in sem quam.",
+#     position: "Product Manager",
+#     date_text: "Januay, 2012 - December, 2015"
+#     )
+# end
+
   Job.create!(
-    company: "Job #{job}", 
-    job_title: "Title of Job",
+    company: "Crowdmatrix", 
+    job_title: "Head of Product",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
@@ -68,9 +80,32 @@ puts "10 blog posts created"
     position: "Product Manager",
     date_text: "Januay, 2012 - December, 2015"
     )
-end
+    
+   Job.create!(
+    company: "Hackworks", 
+    job_title: "Marketing Specialist",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
+    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
+    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
+    ac commodo erat. Quisque in sem quam.",
+    position: "Product Manager",
+    date_text: "Januay, 2012 - December, 2015"
+    )
+    
+  Job.create!(
+    company: "XMG", 
+    job_title: "Marketing & Business Development Associate",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
+    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
+    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
+    ac commodo erat. Quisque in sem quam.",
+    position: "Product Manager",
+    date_text: "Januay, 2012 - December, 2015"
+    )    
 
-puts "10 jobs created"
+puts "jobs created"
 
 5.times do |skill|
   Skill.create!(
