@@ -21,6 +21,11 @@
 <body>
     <%= render 'shared/application_nav' %>
     <%= yield %>
+
+    <% if Rails.env.development? %>
+        <%= render 'shared/header_template' %>
+    <% end %>
+
     <%= render 'shared/main_footer' %>
     <%= alerts %>       
 </body>

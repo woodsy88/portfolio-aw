@@ -4,14 +4,15 @@ import PropTypes from "prop-types"
 class Job extends React.Component {
   render () {
 
-    const { job_skills, company, title, date_text, body, path } = this.props;
+    const { job_skills, position, company, title, date_text, body, path } = this.props;
 
     return (
       <React.Fragment>
          <a href={path}><h2 className="header-3">{company}</h2></a>
+        <h3 className="header-5">{title}</h3>
          <p className="grey-light-text spacing-md">{date_text}</p>
-         <h3 className="header-2">{title}</h3>
-         
+        
+        <h3 className="header-2">{position}</h3>
          <p>{body}</p>
 
         {/* check what data is coming in from job_skills */}

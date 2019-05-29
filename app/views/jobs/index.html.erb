@@ -1,7 +1,7 @@
 <div class="container section-padding">
     <%= render 'pages/section_header', 
                     header: "Past Job Experience", 
-                    text: "I combine business and coding skills",
+                    text: "I have developed a diverse range of skills from working at early to mid-stage startups and running my own freelance business. I can wear many hats and fill in the gaps on any team. I always try to push my boundaries  and learn new skills in design, code, devops, marketing and management.",
                     icon: "fas fa-briefcase" %>
         <div class="row">
             <% @jobs.each do |job| %>
@@ -28,5 +28,10 @@
                     </div>
                 </div>
             <% end %>
-        </div>    
+        </div>  
+
+  <%= render 'pages/section_header', header: "Education", 
+                               text: "I did my undergrad in business (B.B.A), then a post-grad in Advanced Design and Project Management, followed by a coding Bootcamp.",
+                               icon: "fas fa-graduation-cap" %>     
+    <%= render 'pages/education' %>      
 </div>
