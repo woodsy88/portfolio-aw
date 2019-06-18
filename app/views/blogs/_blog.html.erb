@@ -1,21 +1,21 @@
 
-<div class="card card-spacing spacing-md" style="width: 100%;">
+<div class="spacing-md" style="width: 100%;">
     <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>   
         <div class="blog-post section-padding">    
-            <div class="card-body">
+         
                 <div class="container">
                     <h2 class="header-3"><%= link_to blog.title, blog %></h2>
                     <p class="blog-post-meta">Created
                         <%= distance_of_time_in_words(blog.created_at, Time.now)   %> ago</p>       
-                        <p><%= markdown blog.body %></p>
+                        <p id="release-notes"><%= markdown blog.body %></p>
 
 
-<p>
-  <% blog.tag_list.each do |tag| %>
-    <%= link_to tag, tagged_path(tag: tag) %>
-  <% end %>
-</p>             
+                <div>
+                  <% blog.tag_list.each do |tag| %>
+                    <%= link_to tag, tagged_path(tag: tag) %>
+                  <% end %>
+                </div>             
                 </div>        
-            </div>
+           
         </div>
  </div>

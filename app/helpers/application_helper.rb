@@ -51,10 +51,10 @@ module ApplicationHelper
         url: skills_path,
         title: 'Skills'
       },          
-      # {
-      #   url: blogs_path,
-      #   title: 'Resources'
-      # },
+      {
+        url: blogs_path,
+        title: 'Release Notes'
+      },
       # {
       #   url: contact_path,
       #   title: 'Contact'

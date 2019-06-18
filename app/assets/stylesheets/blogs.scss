@@ -10,66 +10,60 @@
 @import "design_system/fonts.scss";
 
 
+// GLOBAL
 
-/*
- * Globals
- */
-
-@media (min-width: 48em) {
-  html {
-    font-size: 18px;
-  }
-}
 
 body {
-  // font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  background-color: #222222;
+  color: #fff;  
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Banner
+
+.blog-masthead-container {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  // border-bottom: .05rem solid #eee;
+}
+
+.blog-banner-header-1 {
+  font-size: 2rem;
   font-weight: 400;
-  color: #333;
 }
 
-
-/*
- * Override Bootstrap's default container.
- */
-
-// .container {
-//   max-width: 60rem;
-// }
-
-
-/*
- * Masthead for nav
- */
-
-.blog-masthead {
-  margin-bottom: 3rem;
-  background-color: #428bca;
-  box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+.blog-banner-description {
+  font-size: 1.1rem;
+  color: #999;
 }
 
-/* Nav links */
+// FONTS
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Nunito', serif;
+}
+
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+  font-size: 12px;
+}
+
+// NAV
+
 .nav-link {
   position: relative;
   padding: 1rem;
   font-weight: 500;
   color: #cdddeb;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: #fff;
@@ -94,37 +88,8 @@ h6,
   border-left: .3rem solid transparent;
 }
 
+// SIDE BAR
 
-/*
- * Blog name and description
- */
-
-.blog-header {
-  padding-bottom: 1.25rem;
-  margin-bottom: 2rem;
-  border-bottom: .05rem solid #eee;
-}
-.blog-title {
-  font-size: 2rem;
-  font-weight: 400;
-}
-.blog-description {
-  font-size: 1.1rem;
-  color: #999;
-}
-
-@media (min-width: 40em) {
-  .blog-title {
-    font-size: 3.5rem;
-  }
-}
-
-
-/*
- * Main column and sidebar layout
- */
-
-/* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 1rem;
 }
@@ -139,51 +104,9 @@ h6,
   margin-bottom: 0;
 }
 
-
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
+.blog-sidebar-source {
+  margin-top: 20px;
 }
-.blog-pagination > .btn {
-  border-radius: 2rem;
-}
-
-
-/*
- * Blog posts
- */
-
-.blog-post {
-
-  margin-bottom: 20px;
-}
-.blog-post-title {
-  font-family: 'Nunito', sans-serif;
-  margin-bottom: .25rem;
-  font-size: 22px;
-}
-.blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #999;
-  font-size: 12px;
-}
-
-
-/*
- * Footer
- */
-
-// .blog-footer {
-//   padding: 2.5rem 0;
-//   margin-top: 20px;
-//   color: #999;
-//   text-align: center;
-//   background-color: #f9f9f9;
-//   border-top: .05rem solid #e5e5e5;
-// }
-// .blog-footer p:last-child {
-//   margin-bottom: 0;
-// }
 
 
 /*Custom Styles*/
@@ -192,18 +115,8 @@ h6,
   font-size: 1.5em;
 }
 
-.comment-card {
-  margin-top: 15px;
-}
 
-.comment-attribution {
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-.comment-name {
-  font-weight: 700;
-}
+// ADMIN options for blog
 
 .blogcrumb {
   font-size: 1.25em;
@@ -211,31 +124,62 @@ h6,
  a {
   margin-right: 10px;
  }
+
+ .white-icon {
+   color: #fff;
+ }
 }
 
-.arrow-icon-size {
-  font-size: 2.0em;
-}
 
 .blog-nav {
   margin-bottom: 30px;
+  background: #222222;
+
+  -webkit-box-shadow: 0 3px 6px -6px #000;
+  -moz-box-shadow: 0 3px 6px -6px #000;
+  box-shadow: 0 3px 6px -6px #000;
+  
 }
 
-.blog-sidebar-source {
-  margin-top: 20px;
+/* Media Q*/
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 40em) {
+  .blog-banner-header-1 {
+    font-size: 3.5rem;
+  }
 }
 
 
-body {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
+
+
+
+code {
+    background: #42ff0d;
+    padding: .5rem;
+    color: #222222;
+    margin: .25rem;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Nunito', serif;
+#release-notes {
+    a {
+      text-decoration: none;
+      transition: all .2s ease-in;
+      line-height: 2;
+      border-bottom: 2px solid #ffffff;
+      color: #FF0DD1;
+      padding: 2px 0;
+  }
+
+  a:hover {
+      border-bottom: 5px solid #FF0DD1;
+      transition: all .2s ease-in;
+      border-width: 100%;
+  }
+
 }

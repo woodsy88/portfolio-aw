@@ -1,22 +1,21 @@
-<%= render 'pages/section_header', 
-            header: "Resources", 
-            text: "My favorite guides and code snippets.",
+<%= render 'shared/blog_masthead', 
+            header: "Release Notes", 
+            text: "Documenting the development of this project.",
             icon: "fal fa-book" %>
-<div><%= link_to 'New Blog', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
+
+
+<div><%= link_to 'New Note', new_blog_path, class: "btn btn-primary mb-4" if logged_in?(:site_admin) %></div>
 <div class="row mb-5">
+   
+   <div class="col-md-9">
+    
+      <div class="row release-notes">
+         <%= render @blogs %>
+      </div>
 
-  <div class="col-md-9">
-     <%= paginate @blogs %>
-     
-     <div class="row">
-        <%= render @blogs %>
-     </div>
-
-     <%= paginate @blogs %>
-  </div>
-  <div class="col-md-3">
-  <%= render 'shared/blog_sidebar' %>
-  </div>
-  
-
+   </div>
+   
+   <div class="col-md-3">
+   <%= render 'shared/blog_sidebar' %>
+   </div>
 </div> 

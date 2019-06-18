@@ -1,15 +1,19 @@
-<div class="col-sm-8 blog-main">
-  <h2><%= @blog.title %></h2>
-  <%= link_to fa_icon('long-arrow-left'), blogs_path, class: "arrow-icon-size" %>
+<div class="container">
+  <div class="col-sm-8 blog-main">
+    <h2><%= @blog.title %></h2>
+       <%= link_to fa_icon('long-arrow-left'), blogs_path, class: "fa-2x" %>
+    
+    <%= render 'blog_admin_options' %>
+    
+    <% @blog.tag_list.each do |tag| %>
+      <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
+    <% end %>  
   
-  <%= render 'blog_nav' %>
+    <p class="release-notes"><%= markdown @blog.body %></p>
   
-  <% @blog.tag_list.each do |tag| %>
-    <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
-  <% end %>  
+  <% if @related_blogs.any? %>
+    <%= render 'related_blogs' %>
+  <% end %>
+  </div>
 
-  <p><%= markdown @blog.body %></p>
-
-<% if @related_blogs.any? %>
-  <%= render 'related_blogs' %>
-<% end %>
+</div>

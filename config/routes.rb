@@ -25,7 +25,7 @@ Rails.application.routes.draw do
                                               #as: adds the prefix portfolio_show_path
   get 'portfolios/:id', to: 'portfolios#show', as: 'portfolio_show'
 
-  resources :blogs do
+  resources :blogs, :path => 'releases' do
     member do
       get :toggle_status
     end

@@ -1,3 +1,5 @@
+@import "design_system/colors.scss";
+
 .xxs-icon {
   font-size: 8px;
 }
@@ -27,4 +29,8 @@
 
 .location-icon {
   width: 30px;
+}
+
+.off-white-icon {
+  color: $grey1-100
 }
