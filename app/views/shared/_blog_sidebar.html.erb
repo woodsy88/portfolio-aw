@@ -1,10 +1,11 @@
  <div class="blog-sidebar">   
-         <%= source_helper("alert alert-info blog-sidebar-source") %> 
+         <!-- <%= source_helper("alert alert-info blog-sidebar-source") %> -->
       
           <div class="sidebar-module">
             <h6>Filter Release Notes</h6>
             <% if @side_bar_topics %>
                 <% @side_bar_topics.each do |topic|  %>
+                
                     <p><%= link_to topic.title, topic_path(topic) %></p>
                 <% end %>
             <% end %>
