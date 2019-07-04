@@ -37,7 +37,7 @@
     <% end %>
 
     <% if @skill.blogs.count != 0 %>
-    <h2 class="spacing-lg">Blog items containing <%= @skill.title %></h2>
+    <h2 class="spacing-lg">Releases containing <%= @skill.title %></h2>
       <div class="row">
             <% @skill.blogs.each do |blog| %>
               <div class="col-md-4 d-flex">

@@ -98,7 +98,7 @@ module ApplicationHelper
 
   #creating a flash method, then gets called in above alerts method
   def alert_generator msg
-    js add_gritter(msg, title: "Andrew Woods Portfolio", sticky: false)
+    js add_gritter(msg, title: "Andrew Woods Portfolio", sticky: false, time: 1000)
   end
 
 

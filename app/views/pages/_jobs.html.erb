@@ -1,3 +1,8 @@
+<%  if logged_in?(:site_admin) %>
+    <%= link_to ("<i class='fa fa-plus'></i> " +'New Job').html_safe, 
+                new_job_path, 
+                class: 'btn btn-primary mb-3'  %>
+  <% end %>
 <% @jobs.each do |job| %>
     <div class="col-md-12 d-flex">
         <div class="card job-card" style="width: 100%;">
