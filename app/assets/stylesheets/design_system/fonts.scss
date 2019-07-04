@@ -193,10 +193,8 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 19px;
-  line-height: 26px;
+  line-height: 1.5;
   color: $tilda-black;
-  max-width: 560px;
-  text-align: center;
 }
 
 // Font colors
@@ -235,5 +233,10 @@
 .max-width-para-4 {
   max-width: 35em;
 }
+
+.max-width-para-5 {
+  max-width: 45em;
+}
+
 
 

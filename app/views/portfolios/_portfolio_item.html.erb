@@ -1,5 +1,5 @@
 <div class="col-md-4 d-flex">
-  <div class="card " data-id="<%= portfolio_item.id  %>">
+  <div class="card " data-id="<%= portfolio_item.id  %>" style="width: 100%;">
       <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'rounded portfolio-card-image' %>
     <div class="card-body flex-fill">
         <h3 class="header-4"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
