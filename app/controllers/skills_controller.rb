@@ -12,7 +12,17 @@ class SkillsController < ApplicationController
 		@skill = Skill.new(skill_params)
 	#	@skill.user_id = current_user.id
 
-		if @skill.save
+    if @skill.save
+      
+      Analytics.track(
+          user_id: current_user.id,
+          event: 'Created Skill',
+          properties: { 
+              title: @skill.title, 
+              area: @skill.area
+             }
+            ) 
+
 			redirect_to @skill, notice: 'Your skill was created successfully'
 		else
 			render :new

@@ -13,7 +13,14 @@ class JobsController < ApplicationController
     end
 
     def show
-        
+      Analytics.track(
+          user_id: current_user.id,
+          event: 'Viewed Job',
+          properties: { 
+              company: @job.company, 
+              job_title: @job.job_title
+             }
+            ) if user_signed_in?        
     end
 
     def create

@@ -44,3 +44,10 @@
     </div>
   </div>
 </div>
+
+<%= javascript_tag do %>
+  analytics.track("Visited Skill form", {
+    user: "<%= current_user.name %>" 
+  });
+<% end %>
+

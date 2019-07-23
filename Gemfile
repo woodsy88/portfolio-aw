@@ -107,3 +107,5 @@ gem "pry-rails", group:"development"
 gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'ransack', '~> 2.1', '>= 2.1.1'
+
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
