@@ -1,53 +1,93 @@
 // PRIMARY
 
   // Custom Blues
-  $royal-blue: #0f5379;
-  $lighter-royal-blue: #1c80b0;
-  $light-blue: #58c4e2;
-
   // Primary Blues
 
   $blue-900: #12283A;
   $blue-800: #1A4971;
-  $blue-700: #2368A2;
-  $blue-600: #3183C8;
-  $blue-500: #63A2D8;
-  $blue-400: #AAD4F5;
-  $blue-300: #EFF8FF;
+  $blue-700: #0f5379;
+  $blue-600: #2368A2;
+  $blue-500: #1c80b0;
+  $blue-400: #3183C8;
+
+  .blue-900 {
+    color: $blue-900;
+  }
+  .blue-800 {
+    color: $blue-800;
+  } 
+  .blue-700 {
+    color: $blue-700;
+  } 
+  .blue-600 {
+    color: $blue-600;
+  } 
+  .blue-500 {
+    color: $blue-500;
+  } 
+  .blue-400 {
+    color: $blue-400;
+  } 
+    
 
 // NEUTRALS
 
   // whites
   $tilda-white: #F5F5F5;
+
   // Blacks
   $tilda-black: #292929;
 
   // Greys
   $tilda-grey: #828282;
-  $grey1-900: #202833;
-  $grey1-800: #404B5A;
-  $grey1-700: #6E7A8A;
-  $grey1-600: #929FB1;
-  $grey1-500: #AEBECD;
-  $grey1-400: #CCD4DB;
-  $grey1-300: #D5DDE5;
-  $grey1-200: #E1E7EC;
-  $grey1-100: #F8F9FA;
+  $grey-900: #202833;
+  $grey-800: #404B5A;
+  $grey-700: #6E7A8A;
+  $grey-600: #929FB1;
+  $grey-500: #AEBECD;
+  $grey-400: #CCD4DB;
+  $grey-300: #D5DDE5;
+  $grey-200: #E1E7EC;
+  $grey-100: #F8F9FA;
 
+  .grey-900 {
+    color: $grey-900;
+  }
 
-  .grey1-800 {
-    color: $grey1-800;
+  .grey-800 {
+    color: $grey-800;
   }
-  .grey1-500 {
-    color: $grey1-500;
+
+  .grey-700 {
+    color: $grey-700;
   }
-  .grey1-500 {
-    color: $grey1-500;
+
+  .grey-600 {
+    color: $grey-600;
+  }  
+
+  .grey-500 {
+    color: $grey-500;
+  }   
+  .grey-400 {
+    color: $grey-400;
   }
+
+  .grey-300 {
+    color: $grey-300;
+  }
+
+  .grey-200 {
+    color: $grey-300;
+  }  
+
+  .grey-100 {
+    color: $grey-300;
+  }    
 // ACCENTS
 
   // greens
-  $dark-900: #173632;
+  $green-900: #173632;
   $green-800: #145239;
   $green-700: #197741;
   $green-600: #259D58;
@@ -55,6 +95,37 @@
   $green-400: #74D99F;
   $green-300: #A8EEC1;
   $green-200: #E3FCEC;
+
+  .green-900 {
+    color: $green-900;
+  }
+  .green-800 {
+    color: $green-800;
+  }
+  
+   .green-700 {
+    color: $green-700;
+  }
+  
+   .green-600 {
+    color: $green-600;
+  }
+  
+   .green-500 {
+    color: $green-500;
+  }
+  
+   .green-400 {
+    color: $green-400;
+  }
+  .green-300 {
+    color: $green-300;
+  }
+  .green-200 {
+    color: $green-200;
+  } 
+
+
 
   // yellows
   $yellow-900: #5C4813;

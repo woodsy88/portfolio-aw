@@ -56,6 +56,8 @@ group :development do
   gem 'meta_request'
   gem "better_errors"
   gem "binding_of_caller"
+
+  gem 'rb-readline'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

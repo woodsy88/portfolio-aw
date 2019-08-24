@@ -40,7 +40,7 @@ module ApplicationHelper
  def nav_items
     [
       {
-        url: work_path,
+        url: jobs_path,
         title: 'Experience'
       },      
       {

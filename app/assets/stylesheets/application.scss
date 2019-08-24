@@ -3,7 +3,6 @@
 @import "easy-autocomplete.themes";
 @import "bootstrap";
 @import "gritter";
-@import "pages.scss";
 @import "_nav.scss";
 @import "_footer.scss";
 @import "tech_news.scss";
@@ -12,6 +11,12 @@
 @import "section_header.scss";
 @import "_banner.scss";
 @import "timeline.scss";
+
+
+// components
+
+@import "home_cards.scss";
+@import "grid.scss";
 
 
 // Design System
@@ -27,6 +32,12 @@
 
 /* Custom Style */
 
+.card-main {
+ border: 1px solid rgba(0, 0, 0, 0.125);
+ border-radius: 8px;
+ box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
 .input_checkbox input {
   width: auto !important;
 }
@@ -36,14 +47,14 @@ body {
 }
 
 .font-row {
-   display: flex;
-   flex-direction: column;
-   padding-left: 50px;
- }
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
 
 .font-row-display-none {
     display: none;
-  }
+}
 
 
 /*Banner*/
@@ -83,3 +94,4 @@ a {
   text-decoration: none !important;
   color: $blue-800;
 }
+

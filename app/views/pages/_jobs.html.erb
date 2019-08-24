@@ -5,7 +5,7 @@
   <% end %>
 <% @jobs.each do |job| %>
     <div class="col-md-12 d-flex">
-        <div class="card job-card" style="width: 100%;">
+        <div class="card" style="width: 100%;">
             <div class="card-body flex-fill">
                     <%= react_component("Job", { 
                                 company: job.company,

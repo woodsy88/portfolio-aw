@@ -8,7 +8,7 @@ const TimelineItem = ({ data }) => (
       </span>
       <time>{data.date}</time>
       <p>{data.text}</p>
-      <p className="grey1-800">{data.subtext}</p>
+      <p className="grey-800">{data.subtext}</p>
       {data.link && (
         <a href={data.link.url} target="_blank" rel="noopener noreferrer">
           {data.link.text}

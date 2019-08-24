@@ -1,12 +1,17 @@
 <div class="col-md-4 d-flex">
-  <div class="card " data-id="<%= portfolio_item.id  %>" style="width: 100%;">
-      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'rounded portfolio-card-image' %>
+  <div class="card mt-5" data-id="<%= portfolio_item.id  %>" style="width: 100%;">
+      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'card-img-top' %>
     <div class="card-body flex-fill">
-        <h3 class="header-4"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
-        <h4 class="header-6 grey-md-text"><%= portfolio_item.subtitle %></h4>       
+    <div>
+        <% portfolio_item.technologies.each do |tech| %>
+          <span class="text-uppercase xs-12 blue-500"><%= tech.name %> </span>
+        <% end %>
+    </div>
+        <h3 class="large-24"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>
+        <h4 class="medium-18  grey-md-text"><%= portfolio_item.subtitle %></h4>       
 
         <% if portfolio_item.skills.any? %>
-          <div class="container">
+          <div class="container mt-4">
               <div class="row">
                   <% portfolio_item.skills.each do |skill| %>
                       <%= render skill %>
@@ -17,7 +22,7 @@
     </div>
      <a><div class="card-footer">  
 
-<%= link_to ('View    ' + "<i class='far fa-arrow-alt-from-left'></i>").html_safe, portfolio_show_path(portfolio_item.id), class: 'mt-2 btn btn-default btn-block' %>                                 
+<%= link_to ('View    ' + "<i class='far fa-arrow-alt-from-left'></i>").html_safe, portfolio_show_path(portfolio_item.id), class: 'mt-2' %>                                 
      </div> </a>     
   </div>
 </div>

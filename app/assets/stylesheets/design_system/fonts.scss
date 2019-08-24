@@ -139,7 +139,7 @@
 }
 
 .sub-hero-text {
-  color: $grey1-700;
+  color: $grey-700;
   @extend .large-30;
   @extend .light;
 }
@@ -200,11 +200,11 @@
 // Font colors
 
 .grey-md-text {
-  color: $grey1-700;
+  color: $grey-700;
 }
 
 .grey-light-text {
-  color: $grey1-600
+  color: $grey-600
 }
 
 .blue-700 {

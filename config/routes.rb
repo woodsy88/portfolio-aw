@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   #get 'pages/contact'
   get 'contact', to: 'pages#contact'
-  get 'work', to: 'pages#work'
+  # get 'work', to: 'pages#work'
 
   get 'tech-news', to: 'pages#tech_news'
 

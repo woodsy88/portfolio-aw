@@ -1,13 +1,13 @@
 // Button Color Styles - override bootstrap colors
 .btn-primary {
   color: #fff;
-  background-color: $royal-blue;
-  border-color: $royal-blue;
+  background-color: $blue-700;
+  border-color: $blue-700;
 }
 
 .btn-primary:hover {
-  background-color: $lighter-royal-blue;
-  border-color: $lighter-royal-blue;
+  background-color: $blue-500;
+  border-color: $blue-500;
 }
 
 .btn-hollow {

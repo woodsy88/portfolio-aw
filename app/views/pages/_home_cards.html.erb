@@ -1,21 +1,21 @@
-<div class="container section-padding">
-  <div class="row cards-row mb-5">
+<div class="container mt-5">
+  <div class="home-card-container">
+
     <%= render 'pages/cards/home_card',
         header: "Projects",
         path: portfolios_path,
         icon: "far fa-code",
-        col: "col-md-12" %>  
+        item: "home-card-item-1" %>  
     <%= render 'pages/cards/home_card',
         header: "Skills",
         path: skills_path,
         icon: "far fa-ballot",
-        col: "col-md-6" %>
+        item: "home-card-item-2" %>
     <%= render 'pages/cards/home_card',
         header: "Work Experience",
-        path: work_path,
+        path: jobs_path,
         icon: "far fa-briefcase",
-        col: "col-md-6"   %>
+        item: "home-card-item-3"   %>
 
   </div>
 </div>
-
