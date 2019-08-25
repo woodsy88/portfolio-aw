@@ -9,3 +9,29 @@
   grid-gap: 60px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
+
+.home-card-container {
+  // border: 10px solid yellow;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr)  
+}
+
+.home-card {
+  // border: 5px dotted red;
+  text-align: center;
+}
+
+.home-card-item-1 {
+   grid-column: 1 / -1;
+}
+
+@media (max-width: 770px) {
+ .home-card-item-2 {
+    grid-column: 1 / -1;
+ }
+  .home-card-item-3 {
+    grid-column: 1 / -1;
+ }
+}
+

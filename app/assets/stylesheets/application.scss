@@ -3,34 +3,37 @@
 @import "easy-autocomplete.themes";
 @import "bootstrap";
 @import "gritter";
-@import "_nav.scss";
-@import "_footer.scss";
-@import "tech_news.scss";
-@import "skills.scss";
-@import "jobs.scss";
-@import "section_header.scss";
-@import "_banner.scss";
-@import "timeline.scss";
+@import "_nav";
+
+@import "_footer";
+@import "tech_news";
+@import "skills";
+@import "jobs";
+@import "section_header";
+@import "_banner";
+@import "timeline";
 
 
 // components
 
-@import "home_cards.scss";
-@import "grid.scss";
+
+@import "grid";
 
 
 // Design System
-@import "design_system/colors.scss";
-@import "design_system/fonts.scss";
-@import "design_system/layout.scss";
-@import "design_system/icons.scss";
-@import "design_system/pills.scss";
-@import "design_system/buttons.scss";
-@import "design_system/cards.scss";
-@import "design_system/elevation.scss";
+@import "colors";
+@import "fonts";
+@import "layout";
+@import "icons";
+@import "pills";
+@import "buttons";
+@import "cards";
+@import "elevation";
 
 
 /* Custom Style */
+
+
 
 .card-main {
  border: 1px solid rgba(0, 0, 0, 0.125);
@@ -94,4 +97,5 @@ a {
   text-decoration: none !important;
   color: $blue-800;
 }
+
 

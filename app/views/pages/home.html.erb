@@ -1,6 +1,6 @@
   <%= render 'home_banner' %>
     <div class="section-header-row">
-     <div class="container">
+     <div class="container pt-5 pb-5">
         <div class="home-content-container mt-5 text-justify section-header-text grey-md-text">
           <p>I am a Technical Product Manager who started coding six years ago shortly after I started working in the tech industry. I now build products for fun and as a profession.</p>
           <p>My back-end specialties are Ruby and Rails, my front-end specialties are JavaScript and React. I also enjoy writing CSS with Flexbox and Grid, as well as working with popular libraries, including Tailwind CSS and Bootstrap CSS.</p>    
@@ -8,6 +8,7 @@
      </div>
   <%= render 'home_cards' %>
 
+<%= react_component("Home") %>
 <script>
   analytics.page('Home Page Visit');
 </script>

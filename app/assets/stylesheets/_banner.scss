@@ -1,13 +1,20 @@
 .home-banner {
-  background-color: $tilda-white;
+  background-color: $blue-900;
   // -moz-box-shadow : 1px 1px 5px 2px #ccc;
   // -webkit-box-shadow: 1px 1px 5px 2px #ccc;
   // box-shadow : 1px 1px 5px 2px #ccc;
-
+  color: $grey-200;
 }
 
 .banner-inner-container {
-  padding-top: 100px;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  
+}
+
+.banner-inner-container {
+  padding-top: 6em;
+  padding-bottom: 6em;
   
 }
 
