@@ -8,6 +8,7 @@ layout 'portfolio'
 
   def index 
     @portfolio_items = Portfolio.by_position
+    p @portfolio_items
   end
 
   def sort

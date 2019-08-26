@@ -1,9 +1,9 @@
 <div class="col-md-4 d-flex">
   <div class="card mt-5" data-id="<%= portfolio_item.id  %>" style="width: 100%;">
-      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%', class: 'card-img-top' %>
+      <%= image_tag(portfolio_item.thumb_image) unless portfolio_item.thumb_image.nil? %>
     <div class="card-body flex-fill">
     <div>
-        <% portfolio_item.technologies.each do |tech| %>
+        <% portfolio_item.technologies.each do |tech| %> 
           <span class="text-uppercase xs-12 blue-500"><%= tech.name %> </span>
         <% end %>
     </div>
