@@ -1,6 +1,6 @@
 <div class="col-md-4 d-flex">
   <div class="card mt-5" data-id="<%= portfolio_item.id  %>" style="width: 100%;">
-      <%= image_tag(portfolio_item.thumb_image) unless portfolio_item.thumb_image.nil? %>
+      <%= image_tag(portfolio_item.thumb_image_url) if portfolio_item.thumb_image_url %>
     <div class="card-body flex-fill">
     <div>
         <% portfolio_item.technologies.each do |tech| %> 
