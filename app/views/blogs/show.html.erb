@@ -5,15 +5,9 @@
     
     <%= render 'blog_admin_options' %>
     
-    <% @blog.tag_list.each do |tag| %>
-      <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
-    <% end %>  
   
     <p class="release-notes"><%= markdown @blog.body %></p>
   
-  <% if @related_blogs.any? %>
-    <%= render 'related_blogs' %>
-  <% end %>
   </div>
 
 </div>

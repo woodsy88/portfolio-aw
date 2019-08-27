@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
   
-  resources :skills, except: [:destroy]
+  resources :skills
 
   get '/tagged', to: "blogs#tagged", as: :tagged
 

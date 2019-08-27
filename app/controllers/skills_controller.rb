@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :set_skill, only: [:show, :edit, :update]
+  before_action :set_skill, only: [:show, :edit, :update, :destroy]
 
    #petergate - authetication for different user roles at controller level
  access all: [:show, :index], user: {except: [ :new, :create, :update, :edit]}, site_admin: :all
@@ -49,6 +49,13 @@ class SkillsController < ApplicationController
     @management_skills = Skill.where(area: 'management')
     @marketing_skills = Skill.where(area: 'marketing')    
   end
+
+   def destroy
+    @skill.destroy
+    respond_to do |format|
+      format.html { redirect_to skills_url, notice: 'Skill was successfully destroyed.' }
+    end
+   end
 
   private
 
