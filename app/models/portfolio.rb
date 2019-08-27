@@ -18,10 +18,6 @@ class Portfolio < ApplicationRecord
   has_many :portfolio_skills
   has_many :skills, through: :portfolio_skills
 
-  # def to_xml(options = nil)
-  #   JSON.parse(self.to_json).to_xml
-  # end
-
   def self.react
     where(subtitle: "React")
   end

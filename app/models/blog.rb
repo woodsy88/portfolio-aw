@@ -5,8 +5,6 @@ class Blog < ApplicationRecord
   #takes the title of the blog, and converts it into the slug
   friendly_id :title, use: :slugged
 
-  acts_as_taggable_on :tags
-
   #part of paginate, latest blogs created are the first to show
   #default_scope -> { order(updated_at: :desc) }
 

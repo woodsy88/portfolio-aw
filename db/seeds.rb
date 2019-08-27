@@ -127,7 +127,7 @@ puts "jobs created"
       )
   end
 
-  1.times do |portfolio_item|
+  5.times do |portfolio_item|
     Portfolio.create!(
       title: "Portfolio title #{portfolio_item}",
       subtitle: "React",

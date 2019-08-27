@@ -104,8 +104,6 @@ gem "awesome_print", require:"ap"
 
 gem "pry-rails", group:"development"
 
-gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
-
 gem 'ransack', '~> 2.1', '>= 2.1.1'
 
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
