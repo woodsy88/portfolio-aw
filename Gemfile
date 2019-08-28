@@ -96,7 +96,7 @@ gem 'redis', '~> 3.3.5'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
-gem 'webpacker', '~> 3.3'
+gem 'webpacker', '~> 4.0'
 
 gem 'react-rails'
 

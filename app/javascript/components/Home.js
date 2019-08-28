@@ -8,7 +8,7 @@ class Home extends Component {
       <div>
         <BannerContainer title="poop" subtitle="pee" icon="fa fa-rocket">
           <BannerContent>
-            <p>poopy children</p>
+            <p>peee pooo pee pee children</p>
           </BannerContent>
 
         </BannerContainer>
