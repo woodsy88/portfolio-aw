@@ -6,9 +6,6 @@
           <div class="card-body flex-fill">
             <h2 class="header-3"><%= link_to blog.title, blog_path(blog) %></h2>
             <div class="header-7">Tags</div>
-            <% blog.tag_list.each do |tag| %>
-                <div class="category-item"><%= link_to tag, tagged_path(tag: tag) %></div>
-            <% end %>
           </div>
         </div>
      </div>

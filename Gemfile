@@ -5,9 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby "2.4.0"
+ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 6.0'
 # Use postgresql as the database for Active Record
 
 gem 'bundler', '2.0.2'
@@ -26,7 +26,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -66,7 +66,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'friendly_id', '~> 5.1.0'
 
-gem 'devise', '~> 4.2'
+gem 'devise', github: 'plataformatec/devise'
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
@@ -81,11 +81,6 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
-gem 'carrierwave', '~> 1.2', '>= 1.2.1'
-
-gem 'mini_magick', '~> 4.8'
-
-gem 'carrierwave-aws', '~> 1.3'
 #allows u to create a d.env file - used for amazon aws
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
@@ -101,7 +96,7 @@ gem 'redis', '~> 3.3.5'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
-gem 'webpacker', '~> 3.3'
+gem 'webpacker', '~> 4.0'
 
 gem 'react-rails'
 
@@ -109,8 +104,16 @@ gem "awesome_print", require:"ap"
 
 gem "pry-rails", group:"development"
 
-gem 'acts-as-taggable-on', '~> 6.0'
-
 gem 'ransack', '~> 2.1', '>= 2.1.1'
 
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+
+gem 'mini_magick', '~> 4.8'
+
+gem 'carrierwave-aws', github: 'sorentwo/carrierwave-aws'
+
+gem "fog-aws"
+
+gem "mime-types"
