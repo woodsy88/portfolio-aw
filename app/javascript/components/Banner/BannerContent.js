@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BannerContent = ({children, hero}) => {
+const BannerContent = ({children}) => {
   return (
-    <header className={hero}>
+    <header className="banner">
       {children} 
     </header>
   );

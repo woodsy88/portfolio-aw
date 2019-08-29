@@ -3,12 +3,14 @@ import BannerContainer from './Banner/BannerContainer';
 import BannerContent from './Banner/BannerContainer';
 
 class Home extends Component {
+
+  
   render() {
     return (
       <div>
-        <BannerContainer title="poop" subtitle="pee" icon="fa fa-rocket">
+        <BannerContainer title="Andrew Woods" subtitle="Product Manager" icon="fa fa-rocket">
           <BannerContent>
-            <p>peee pooo pee pee children</p>
+            <p>I am a Technical Product Manager who started coding six years ago shortly after I started working in the tech industry. I now build products for fun and as a profession.</p>
           </BannerContent>
 
         </BannerContainer>
