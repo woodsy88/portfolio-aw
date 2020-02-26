@@ -7,6 +7,18 @@ module ApplicationHelper
    "<p>My Helper</p>".html_safe
  end
 
+#  def tech_icon tech_stack
+#       byebug
+#       tech_stack.map{ |tech|
+        
+#       tech.name.downcase
+#       tech.name
+
+#           } 
+#     return tech_stack
+
+#  end
+
 #need to pass in a style with login helper
     #setting style = to an empty string by default for when no style is set
   def login_helper style = ''

@@ -1,14 +1,12 @@
-  <%= render 'home_banner' %>
-    <div class="section-header-row">
-     <div class="container pt-5 pb-5">
-        <div class="home-content-container mt-5 text-justify section-header-text grey-md-text">
-          <p>I am a Technical Product Manager who started coding six years ago shortly after I started working in the tech industry. I now build products for fun and as a profession.</p>
-          <p>My back-end specialties are Ruby and Rails, my front-end specialties are JavaScript and React. I also enjoy writing CSS with Flexbox and Grid, as well as working with popular libraries, including Tailwind CSS and Bootstrap CSS.</p>    
-      </div>
-     </div>
-  <%= render 'home_cards' %>
-
-<%= react_component("Home") %>
+<% provide(:use_custom_container, true) %>
+<div class="container m-top-xxl">
+  <%= render 'shared/home_nav' %>
+  <%= react_component("Home", {
+     portfolios_path: portfolios_path,
+     skills_path: skills_path,
+     jobs_path: jobs_path,
+  }) %>
+</div>
 <script>
   analytics.page('Home Page Visit');
 </script>

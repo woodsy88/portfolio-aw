@@ -4,6 +4,90 @@
 // font weight
 // font-family
 
+// font-size: 52px;
+// font-size: 42px;
+// font-size: 32px;
+// font-size: 24px;
+// font-size: 20px;
+// font-size: 18px;
+// font-size: 16px;
+// font-size: 14px;
+// font-size: 12px;
+
+
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Nunito Sans', serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+// Home
+
+.home-card-header {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.home-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.home-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
 @import "colors.scss";
 
 .no-decor {
@@ -21,8 +105,8 @@
 }
 
 // line-heights
-  //  Line-height and font size are inversely proportional — 
-     //  use a taller line-height for small text and a shorter line-height for large text.
+//  Line-height and font size are inversely proportional — 
+//  use a taller line-height for small text and a shorter line-height for large text.
 
 .xs-l-h {
   line-height: 1;
@@ -43,6 +127,7 @@
 .xl-l-h {
   line-height: 2.0;
 }
+
 //  Heading Spacing
 
 .heading-spacing-m {
@@ -68,6 +153,10 @@
 
 .xx-bold {
   font-weight: 800;
+}
+
+.xxx-bold {
+  font-weight: 900;
 }
 
 // Size
@@ -150,7 +239,7 @@
 
 }
 
-.header-2 {  
+.header-2 {
   @extend .x-bold;
   @extend .large-30;
 
@@ -162,7 +251,7 @@
 
 }
 
-.header-4{
+.header-4 {
   @extend .bold;
   @extend .large-30;
   @extend .sm-l-h;
@@ -182,7 +271,7 @@
 }
 
 .header-7 {
-  
+
   @extend .x-bold;
   @extend .medium-18;
   @extend .no-decor;
@@ -237,6 +326,3 @@
 .max-width-para-5 {
   max-width: 45em;
 }
-
-
-

@@ -13,10 +13,11 @@
 @import "_banner";
 @import "timeline";
 
+// Pages
+
+@import "home/*";
 
 // components
-
-
 @import "grid";
 
 
@@ -31,9 +32,47 @@
 @import "elevation";
 
 
-/* Custom Style */
+
+// Nav Scratch Board
+
+.show-nav-border {
+ transition: 1s;
+left: 0;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  background-color: #fff;
+}
+
+.hide-nav {
+ display: none;
+}
+
+.nav-grid-links {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
 
 
+.nav-grid-container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  
+}
+
+.nav-icon {
+  justify-self: start;
+}
+
+
+
+
+
+// ===========================
 
 .card-main {
  border: 1px solid rgba(0, 0, 0, 0.125);
@@ -78,19 +117,7 @@ body {
 //   background-size: cover;
 // }
 
-body {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
-}
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Nunito', serif;
-}
 
 
 a {

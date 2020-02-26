@@ -70,6 +70,18 @@ puts "10 blog posts created"
 # end
 
   Job.create!(
+    company: "Xtreme Blockchain Labs", 
+    job_title: "technical Project Manager",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
+    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
+    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
+    ac commodo erat. Quisque in sem quam.",
+    position: "Product Manager",
+    date_text: "Januay, 2012 - December, 2015"
+    )
+
+  Job.create!(
     company: "Crowdmatrix", 
     job_title: "Head of Product",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -105,37 +117,67 @@ puts "10 blog posts created"
     date_text: "Januay, 2012 - December, 2015"
     )    
 
-puts "jobs created"
+puts "3 jobs created"
 
-5.times do |skill|
-  Skill.create!(
-    title: "My Skill #{skill}",
-    percent_utilized: 15
-    )
-  end
+# 15.times do |skill|
+#   Skill.create!(
+#     title: "My Skill #{skill}",
+#     percent_utilized: 15,
+#     area: "development",
+#     badge: "fab fa-react"
+#     )
+# end
 
-  puts "5 skills created"
+ skill_list = [
+   ["React", "development", 9],
+   ["JavaScript", "development", 9],
+   ["CSS", "development", 9],
+   ["HTML", "development", 9],
+   ["Ruby", "development", 9],
+   ["Redux", "development", 9],
+   ["Sketch", "design", 9],
+   ["UI", "design", 9],
+   ["UX", "design", 9],
+   ["Project Management", "management", 9],
+   ["Product Management", "management", 9],
+   ["Email", "marketing", 9],
+   ["Copywriting", "marketing", 9],
+ ]
 
-  9.times do |portfolio_item|
-    Portfolio.create!(
-      title: "Portfolio title #{portfolio_item}",
-      subtitle: "Ruby on Rails",
-      body: "Mauris dapibus mauris nulla, Aenean aliquet elit tellus, nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, ac commodo erat. Quisque in sem quam. Sed at iaculis sem. Duis luctus sedtristique elementum risus Fusce vulputate efficitur tellus a hendrerit.",
-      main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/300x150",
 
-      )
-  end
+ skill_list.each do |title, area, percent_utilized|
+  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+ end
 
-  5.times do |portfolio_item|
-    Portfolio.create!(
-      title: "Portfolio title #{portfolio_item}",
-      subtitle: "React",
-      body: "Mauris dapibus mauris nulla, Aenean aliquet elit tellus, nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, ac commodo erat. Quisque in sem quam. Sed at iaculis sem. Duis luctus sedtristique elementum risus Fusce vulputate efficitur tellus a hendrerit.",
-      main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/300x150",
-      )
-  end
+   puts "13 skills created"
+
+portfolio_list = [
+  ["Crowdmatrix", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Featured Heights", "freelance Web Development Website",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Holistick", "Shopify Store",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Crypto Tracker", "Crypto Tracking and Prices",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Dev Course Reviews", "Reviews of Developer Courses",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Logo Aggregator", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+]
+
+
+portfolio_list.each do |title, subtitle, body, main_image, thumb_image |
+  Portfolio.create!(title: title, subtitle: subtitle, body: body, main_image: main_image, thumb_image: thumb_image)
+end
+
+
+
+
+
+  # 5.times do |portfolio_item|
+  #   Portfolio.create!(
+  #     title: "Portfolio title #{portfolio_item}",
+  #     subtitle: "React",
+  #     body: "Mauris dapibus mauris nulla, Aenean aliquet elit tellus, nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, ac commodo erat. Quisque in sem quam. Sed at iaculis sem. Duis luctus sedtristique elementum risus Fusce vulputate efficitur tellus a hendrerit.",
+  #     main_image: "http://via.placeholder.com/600x400",
+  #     thumb_image: "http://via.placeholder.com/300x150",
+  #     )
+  # end
   puts "9 portfolio items rewarded"
 
 3.times do |technology|

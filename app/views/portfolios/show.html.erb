@@ -1,38 +1,37 @@
 <div class="container">
-<div class="row pt-5"><%= link_to ("<i class='fas fa-arrow-left fa-2x'></i>").html_safe, portfolios_path %></div>
-        <h1 class="header-1 spacing-sm mt-5"><%= @portfolio_item.title %></h1>
-        <h2 class="header-3 grey-md-text spacing-md"><%= @portfolio_item.subtitle %></h2>
-          <%  if @portfolio_item.skills.any? %>
-              <% @portfolio_item.skills.each do |skill| %>
-                  <%= render skill %>
-              <% end %>
-          <% end %>         
-  <div class="row pt-5">
-      <div class="col-md-7">
-          <div class="spacing-lg">  <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), class: "portfolio-main img-fluid" %></div>      
-      </div>
+        <div class="ps-item-1 p-top-lg">
+           <%= link_to ("<i class='fas fa-arrow-left fa-2x'></i>").html_safe, portfolios_path %>
+        </div>  
+        <div class="ps-item-2 p-top-lg">
+          <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), class: "portfolio-show-img img-fluid" %>
 
-      <div class="col-md-5">
-          <div class="card  w-100">
-              <div class="card-body portfolio-show-card">  
-                <h2>Overview</h2>
-                  <p><%= @portfolio_item.body %></p>
-              </div>
-          </div> 
-          <% if @portfolio_item.technologies.any? %>
-              <div class="spacing-lg">
-                <div class="grey-md-text header-5">Tech Stack</div>
-                  <% @portfolio_item.technologies.each do |tech| %>
-                        <p><%= tech.name %></p>
-                  <% end %>
-              </div>
-          <% end %>                 
-      </div>
-  </div>
-  <div class="row">
-    
-    <%  if logged_in?(:site_admin) %>    
-        <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-outline-warning' %>
-    <%  end  %>    
-  </div>
+            <div class="portfolio-show-card">
+            <h2 class="xxx-bold xxx-bold spacing-sm m-top-sm"><%= @portfolio_item.title %></h2>
+            <h2 class="medium-16 grey-md-text spacing-md"><%= @portfolio_item.subtitle %></h2>
+                <p><%= @portfolio_item.body %></p>
+                
+                <% if @portfolio_item.technologies.any? %>
+                    <div class="spacing-lg medium-16">
+                        <div class="grey-md-text ">Tech Stack</div>
+                        <% @portfolio_item.technologies.each do |tech| %>
+                                <span class="xxx-bold"><%= tech.name %></span><br>
+                        <% end %>
+        
+                
+                    </div>
+                <% end %>    
+                <%  if @portfolio_item.skills.any? %>
+                    <% @portfolio_item.skills.each do |skill| %>
+                        <%= render skill %>
+                    <% end %>
+                <% end %>        
+            
+            </div>          
+        </div>
+
+        <div class="ps-item-3 m-top-lg">
+            <%  if logged_in?(:site_admin) %>    
+                <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-outline-warning' %>
+            <%  end  %>       
+        </div>
 </div>

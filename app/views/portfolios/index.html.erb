@@ -1,7 +1,10 @@
-<%= render 'pages/section_header', 
-            header: "Portfolio", 
-            text: "Products I have developed",
-            icon: "fas fa-database" %>
+<div class="container">
+    <%= react_component("PageBanner", {
+      title: "Portfolio",
+      text: "Products I have developed",
+      icon: "fas fa-database"
+    }) %>  
+</div>          
  <div class="album text-muted">
       <div class="container">
            <!-- <%= source_helper("alert alert-warning") %> -->

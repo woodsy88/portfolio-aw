@@ -1,0 +1,22 @@
+// Home Nav
+.home-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 10px;
+}
+
+.form-parent {
+  width: 100% !important;
+}
+
+.home-search-bar {
+  width: 100% !important;
+  display: grid;
+  grid-gap: 5px; 
+  grid-template-columns: 1fr auto;
+}
+
+.nav-search {
+  width: 100% !important;
+}
+

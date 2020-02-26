@@ -10,24 +10,24 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,300i,400,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords  %>" />
     <%= favicon_link_tag 'favicons/aw-favicon.ico' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
-
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= tag :meta, name: "current-user", content: current_user.id, data: { email: current_user.email, name: current_user.name } if user_signed_in? %>
 </head>
 
 <body>
-    <%= render 'shared/application_nav' %>
-    <%= yield %>
-
-    <% if Rails.env.development? %>
-        <%= render 'shared/header_template' %>
+    <% if yield(:use_custom_container).present? %>
+        <%= yield %>
+    <% else %>
+         <%= render 'shared/application_nav' %>
+        <%= yield %>
     <% end %>
-
     <%= render 'shared/main_footer' %>
     <%= alerts %>       
 </body>
