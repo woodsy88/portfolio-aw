@@ -1,13 +1,14 @@
 <div class="container section-padding">
-    <%= render 'pages/section_header', 
-                    header: "Skills", 
-                    text: " I have developed strong coding, design, marketing, and management skills by working in a diverse range of roles and always focusing on learning new skills.",
-                    icon: "far fa-ballot" %>
+  <%= react_component("PageBanner", {
+    title: "Skills",
+    text: "I have developed strong coding, design, marketing, and management skills by working in a diverse range of roles and always focusing on learning new skills.",
+    icon: "far fa-ballot"
+  }) %>
 
-         <%  if logged_in?(:site_admin) %>
-             <%= link_to ("<i class='fa fa-plus'></i> " +'New Skill').html_safe, 
-                         new_skill_path, 
-                         class: 'btn btn-primary mb-3'  %>
-            <% end %>                    
+  <%  if logged_in?(:site_admin) %>
+      <%= link_to ("<i class='fa fa-plus'></i> " +'New Skill').html_safe, 
+                  new_skill_path, 
+                  class: 'btn btn-primary mb-3'  %>
+    <% end %>                    
   <%= render 'pages/skills' %>
 </div>

@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
 import BannerContainer from './Banner/BannerContainer';
-import BannerContent from './Banner/BannerContainer';
+import BannerContent from './Banner/BannerContent';
+import HomeCards from './Cards/HomeCards';
+import BannerInfo from './Banner/BannerInfo';
+import WhereFrom from './Banner/WhereFrom';
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-  
   render() {
+    const { portfolios_path, skills_path, jobs_path } = this.props;
     return (
-      <div>
-        <BannerContainer title="Andrew Woods" subtitle="Product Manager" icon="fa fa-rocket">
-          <BannerContent>
-            <p>I am a Technical Product Manager who started coding six years ago shortly after I started working in the tech industry. I now build products for fun and as a profession.</p>
-          </BannerContent>
-
-        </BannerContainer>
-       
-      </div>
+        <div className="grid-container-home mt-4">
+            <BannerContent subtitle="Andrew Woods" title="Product Manager">
+              <WhereFrom />
+              <BannerInfo />
+            </BannerContent>
+            <HomeCards 
+              portfolios_path={portfolios_path} 
+              skills_path={skills_path}
+              jobs_path={jobs_path} />
+        </div>
     );
   }
 }

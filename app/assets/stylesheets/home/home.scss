@@ -1,0 +1,91 @@
+.grid-container-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 10px;
+}
+
+.home-card-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr)  
+}
+
+// icons
+.home-icon-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-icons-container {
+  display:flex;
+  justify-content: center;
+}
+
+// Card Section - Projects, Experience and Jobs
+
+.home-cards {
+  display: grid;
+  grid-gap: 20px; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.home-card {
+  background: #fff;
+  padding: 100px;
+  transition: background-color 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-items {
+  display: flex;
+  justify-content: center;
+}
+
+.home-card-item-1 {
+   grid-column: 1 / -1
+}
+
+// home card transitions
+
+.home-card-header, .home-icon {
+  transition: color 1s ease-out;
+}
+
+.home-card:hover .home-card-header  {
+  color: $yellow-900;
+  transition: color 0.5s ease;
+}
+
+.home-card:hover .home-icon  {
+  color: $yellow-900;
+  transition: color 0.5s ease;
+}
+
+// .home-card:hover .home-icon  {
+//   color: $grey-100;
+//   transition: color 1s ease;
+// }
+
+.home-card:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  transition: box-shadow 1s ease;
+}
+
+@media (max-width: 1200px) {
+
+.home-card-item-2 {
+  grid-column: 1 / -1
+}  
+
+}
+

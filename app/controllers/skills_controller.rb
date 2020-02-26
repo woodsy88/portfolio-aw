@@ -13,7 +13,6 @@ class SkillsController < ApplicationController
 	#	@skill.user_id = current_user.id
 
     if @skill.save
-      
       Analytics.track(
           user_id: current_user.id,
           event: 'Created Skill',

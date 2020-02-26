@@ -11,7 +11,9 @@
     <meta name="keywords" content="<%= @seo_keywords %>" />
     <%= favicon_link_tag 'favicons/aw-favicon.ico' %>
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application' %>
   </head>
   <body>
     <%= render 'shared/application_nav' %>

@@ -1,15 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 
 
-const BannerContainer = ({ children, title, subtitle, icon}) => {
+const BannerContainer = ({children}) => {
   return (
-    <div className="defaultHero">
-      <i className={icon}></i>
-      <h2>{title}</h2>
-      <p>{subtitle}</p>
+    <StyledBannerContainer height={"550px"}>
       {children}
-    </div>
+    </StyledBannerContainer>
   );
 };
 
 export default BannerContainer;
+
+const StyledBannerContainer = styled.header`
+  display:flex;
+  height: ${(props) =>{ props.height || '400px'}}
+  /* grid-template-columns: 1fr 1fr; */
+  flex-direction: column;
+  justify-content: center;
+  background-color: #12283A;
+  color: #E1E7EC;
+`;

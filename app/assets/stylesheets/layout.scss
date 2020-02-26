@@ -17,13 +17,7 @@
 
 /*Spacing*/
 
-.spacing-xxs {
-  margin-bottom: 4px;
-}
 
-.spacing-xs {
-  margin-bottom: 12px;
-}
 
 .spacing-sm {
   margin-bottom: 24px;
@@ -45,10 +39,14 @@
   margin-bottom: 96px;
 }
 
+
+
+
 .section-spacing {
   margin-bottom: 128px;
 }
 
+// Section spacing - both sides
 .section-padding {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -74,6 +72,99 @@
 .section-padding-lg {
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+
+// PADDING - TOP 
+
+.p-top-xxs {
+  padding-top: 6px;
+}
+
+.p-top-xs {
+ padding-top: 12px;
+}
+
+.p-top-sm {
+ padding-top: 16px;
+}
+
+.p-top-md {
+ padding-top: 24px;
+}
+
+.p-top-lg {
+ padding-top: 32px;
+}
+
+.p-top-xl {
+ padding-top: 48px;
+}
+
+.p-top-xxl {
+ padding-top: 64px;
+}
+
+.p-top-xxxl {
+ padding-top: 96px;
+}
+
+
+// MARGIN TOP - everything should be swithced to margin top 
+
+.m-top-xxs {
+  margin-top: 6px;
+}
+
+.m-top-xs {
+ margin-top: 12px;
+}
+
+.m-top-sm {
+ margin-top: 16px;
+}
+
+.m-top-md {
+ margin-top: 24px;
+}
+
+.m-top-lg {
+ margin-top: 32px;
+}
+
+.m-top-xl {
+ margin-top: 48px;
+}
+
+.m-top-xxl {
+ margin-top: 64px;
+}
+
+.m-top-xxxl {
+ margin-top: 96px;
+}
+
+
+// Margin left 
+
+.m-left-xs {
+ margin-left: 4px;
+}
+
+.m-left-sm {
+ margin-left: 8px;
+}
+
+.m-left-md {
+ margin-left: 12px;
+}
+
+.m-left-lg {
+ margin-left: 16px;
+}
+
+.m-left-xl {
+ margin-left: 24px;
 }
 
 

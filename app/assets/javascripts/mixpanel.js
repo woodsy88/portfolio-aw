@@ -9,6 +9,6 @@ for(h=0;h<l.length; h++)c(e,l[h]);var f="set set_once union unset remove delete"
 mixpanel.init("05b02ef7da04b3f767e43801bd4134f4");
 
 document.addEventListener("turbolinks:load", function(){
-  console.log("mixpanel fired");
+  // console.log("mixpanel fired");
   mixpanel.track("loaded a page");
 });

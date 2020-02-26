@@ -26,3 +26,26 @@
 .small-font-skills a:hover {
   color: $blue-600 !important;
 }
+
+.skills-grid-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+
+.skill-grid-item {
+    display: grid;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    align-items: center;
+    padding: 20px 10px 20px 10px;
+}
+
+.skill-icon-grid-container {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}

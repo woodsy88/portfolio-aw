@@ -1,22 +1,6 @@
-
-<div class=" row spacing-lg">
-    <div class="col-md-6">
-      <h2 class="header-2 text-center spacing-md">Management</h2>
-      <%= render 'pages/skill_area',  object: @management_skills  %>
-    </div>
-
-    <div class="col-md-6">
-      <h2 class="header-2 text-center spacing-md">Coding</h2>
-        <%= render 'pages/skill_area',  object: @development_skills  %>
-    </div>
-  </div>
-<div class=" row spacing-lg">
-    <div class="col-md-6">
-      <h2 class="header-2 text-center spacing-md">Design</h2>
-        <%= render 'pages/skill_area',  object: @design_skills  %>
-    </div>
-    <div class="col-md-6">
-      <h2 class="header-2 text-center spacing-md">Marketing</h2>
-      <%= render 'pages/skill_area',  object: @marketing_skills  %>
-    </div>
-</div>
+  <%= react_component("Skills", {
+     marketing_skills: @marketing_skills,
+     design_skills: @design_skills,
+     development_skills: @development_skills,
+     management_skills: @management_skills
+  }) %>

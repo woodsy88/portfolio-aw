@@ -1,11 +1,14 @@
 import React from 'react';
 
-const BannerContent = ({children}) => {
+const BannerContent = ({ title, subtitle, children }) => {
   return (
-    <header className="banner">
-      {children} 
-    </header>
+    <div className="banner-header">
+      <h4 className="home-subtitle">{subtitle}</h4>
+      <h2 className="home-title">{title}</h2>
+      {children}
+    </div>
   );
 };
 
 export default BannerContent;
+

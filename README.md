@@ -1,29 +1,14 @@
 # README
 
+A full stack portfolio built with a Rails backend and a React front end. Lets you easily add new portfolio projects and new skills without ever having to edit any code
+
 ## Features
 
-- real time chate engine for comments
+- real time chat engine for comments
 - Blog
 - Portfolio
-- Drag and Drop interface
+-   Drag and Drop interface
 
-## Code Example
-
-``` ruby
-def stuff
-end
-```
-
-Testing rescue time, zappier connection 
-
-2nd test commit for zappier - portfolio
-
-3rd commit for zap
-
-
-4th commit for zap
-
-]
 
 
 

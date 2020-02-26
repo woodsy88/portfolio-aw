@@ -10,46 +10,30 @@
 @import "fonts.scss";
 @import "layout.scss";
 @import "cards.scss";
+@import "grid.scss";
 
 @import "colors.scss";
 
-body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+
+
+.ps-item-1 {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-
-
-.jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0;
-  background-color: #ececec;
+.ps-item-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
 }
 
-.jumbotron p:last-child {
-  margin-bottom: 0;
+.portfolio-show-img {
+  justify-self: stretch;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
-.jumbotron-heading {
-  font-weight: 300;
+.ps-item-3 {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-
-.album {
-  min-height: 50rem; /* Can be removed; just added for demo purposes */
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-color: #f7f7f7;
-}
-
-
-// .portfolio-main {
-//   width: 200px !important;
-// }
-
-
-
-
