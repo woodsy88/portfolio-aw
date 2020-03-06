@@ -71,14 +71,15 @@ puts "10 blog posts created"
 
   Job.create!(
     company: "Xtreme Blockchain Labs", 
-    job_title: "technical Project Manager",
+    job_title: "Technical Project Manager",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
     position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015"
+    date_text: "Januay, 2012 - December, 2015",
+    website: "https://www.linkedin.com/company/xtreme-blockchain-labs/"
     )
 
   Job.create!(
@@ -90,7 +91,8 @@ puts "10 blog posts created"
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
     position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015"
+    date_text: "Januay, 2012 - December, 2015",
+    website: "https://crowdmatrix.co/"
     )
     
    Job.create!(
@@ -102,7 +104,8 @@ puts "10 blog posts created"
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
     position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015"
+    date_text: "Januay, 2012 - December, 2015",
+    website: "https://www.hackworks.com/en/"
     )
     
   Job.create!(
@@ -114,7 +117,8 @@ puts "10 blog posts created"
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
     position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015"
+    date_text: "Januay, 2012 - December, 2015",
+    website: "http://xmgstudio.com/"
     )    
 
 puts "3 jobs created"
@@ -128,36 +132,74 @@ puts "3 jobs created"
 #     )
 # end
 
- skill_list = [
+dev_skill_list = [
    ["React", "development", 9],
    ["JavaScript", "development", 9],
    ["CSS", "development", 9],
+   ["CSS Flexbox", "development", 9],
+   ["CSS Grid", "development", 9],
+   ["Bootstrap", "development", 9],
+   ["Tailwind", "development", 9],
    ["HTML", "development", 9],
    ["Ruby", "development", 9],
    ["Redux", "development", 9],
+ ]
+
+design_skill_list = [
    ["Sketch", "design", 9],
    ["UI", "design", 9],
    ["UX", "design", 9],
+   ["mockups", "design", 9],
+   ["wireframes", "design", 9],
+   ["Adobe XD", "design", 9],
+   ["PhotoShop", "design", 9],
+   ["Typography", "design", 9],
+ ]
+
+management_skill_list = [
    ["Project Management", "management", 9],
-   ["Product Management", "management", 9],
-   ["Email", "marketing", 9],
+   ["Kanban", "management", 9],
+   ["Agile", "management", 9],
+   ["Sprint Planning", "management", 9],
+   ["User Stories", "management", 9],
+ ]
+
+marketing_skill_list = [
+   ["Email Marketing", "marketing", 9],
    ["Copywriting", "marketing", 9],
+   ["A/B Testing", "marketing", 9],
+   ["Web Analytics", "marketing", 9],
+   ["Segmentation", "marketing", 9],
+   ["Product Marketing", "marketing", 9],    
  ]
 
 
- skill_list.each do |title, area, percent_utilized|
+dev_skill_list.each do |title, area, percent_utilized|
   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
- end
+end
 
-   puts "13 skills created"
+design_skill_list.each do |title, area, percent_utilized|
+  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+end
+
+management_skill_list.each do |title, area, percent_utilized|
+  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+end
+
+marketing_skill_list.each do |title, area, percent_utilized|
+  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+end
+
+puts "13 skills created"
 
 portfolio_list = [
-  ["Crowdmatrix", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
-  ["Featured Heights", "freelance Web Development Website",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
-  ["Holistick", "Shopify Store",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
-  ["Crypto Tracker", "Crypto Tracking and Prices",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
-  ["Dev Course Reviews", "Reviews of Developer Courses",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
-  ["Logo Aggregator", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/300x150" ],
+  ["Crowdmatrix", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["Featured Heights", "freelance Web Development Website",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["Holistick", "Shopify Store",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["Crypto Tracker", "Crypto Tracking and Prices",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["Dev Course Reviews", "Reviews of Developer Courses",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["HackWorks", "Hackathon event hosting platform",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  ["Logo Aggregator", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
 ]
 
 
