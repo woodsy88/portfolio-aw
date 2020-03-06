@@ -1,13 +1,13 @@
 <div class="container">
     <%= react_component("PageBanner", {
       title: "Portfolio",
-      text: "Products I have developed",
+      text: "Products I have built",
       icon: "fas fa-database"
     }) %>  
 </div>          
  <div class="album text-muted">
       <div class="container">
-           <!-- <%= source_helper("alert alert-warning") %> -->
+        <!-- <%= source_helper("alert alert-warning") %> -->
 
             <%  if logged_in?(:site_admin) %>
              <%= link_to ("<i class='fa fa-plus'></i> " +'New Portfolio').html_safe, 

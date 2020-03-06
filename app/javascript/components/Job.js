@@ -4,14 +4,15 @@ import PropTypes from "prop-types"
 class Job extends React.Component {
   render () {
 
-    const { job_skills, position, company, title, date_text, body, path } = this.props;
+    const { job_skills, position, company, title, date_text, body, path, website } = this.props;
+    console.log('website', website)
 
     return (
       <React.Fragment>
          <a href={path}><h2 className="header-3">{company}</h2></a>
         <h3 className="header-5">{title}</h3>
          <p className="grey-light-text spacing-md">{date_text}</p>
-        
+      
         <h3 className="header-2">{position}</h3>
          <p>{body}</p>
 
@@ -22,6 +23,7 @@ class Job extends React.Component {
             return (<span key={id} className="category-item"><a href={"skills/" + id}>{title}</a></span>)
          })}</div>
 
+        {website ? <a href={website} target="_blank"><i class="fas fa-external-link"></i> {company}</a> : ""}
       </React.Fragment>
     );
   }
@@ -29,6 +31,7 @@ class Job extends React.Component {
 
 Job.propTypes = {
   company: PropTypes.string,
+  website: PropTypes.string,
   title: PropTypes.string,
   body: PropTypes.string,
   position: PropTypes.string,

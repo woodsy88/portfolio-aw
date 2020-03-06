@@ -1,21 +1,23 @@
 <div class="container section-padding">
-    <%= render 'pages/section_header', 
-                    header: "Past Job Experience", 
-                    text: "I have developed a diverse range of skills from working at early to mid-stage startups and running my own freelance business. I can wear many hats and fill in the gaps on any team. I always try to push my boundaries  and learn new skills in design, code, devops, marketing and management.",
-                    icon: "fas fa-briefcase" %>
+  <%= react_component("PageBanner", {
+    title: "Past Job Experience",
+    text: "I have developed a diverse range of skills from working at early to mid-stage startups and running my own freelance business. I can wear many hats and fill in the gaps on any team. I always try to push my boundaries  and learn new skills in design, code, devops, marketing and management.",
+    icon: "fas fa-briefcase"
+  }) %>                    
         <div class="row">
             <% @jobs.each do |job| %>
                 <div class="col-md-12 d-flex">
-                    <div class="card" style="width: 100%;">
+                    <div class="card mt-4" style="width: 100%;">
                         <div class="card-body flex-fill">
                                 <%= react_component("Job", { 
                                             company: job.company,
+                                            website: job.website,
                                             title: job.job_title,
                                             position: job.position,
                                             date_text: job.date_text,
                                             body: truncate(job.body, length: 200),
                                             job_skills: job.skills,
-                                            path: job_path(job)
+                                            path: job_path(job),
                                                 }) %>
                         </div>
                         <% if logged_in?(:site_admin) %>
@@ -29,9 +31,12 @@
                 </div>
             <% end %>
         </div>  
-
-  <%= render 'pages/section_header', header: "Education", 
-                               text: "I did my undergrad in business (B.B.A), then a post-grad in Advanced Design and Project Management, followed by a coding Bootcamp.",
-                               icon: "fas fa-graduation-cap" %>     
+<div class="mt-5">
+      <%= react_component("PageBanner", {
+        title: "Education",
+        text: "I did my undergrad in business (B.B.A), then a post-grad in Advanced Design and Project Management, followed by a coding Bootcamp.",
+        icon: "fas fa-graduation-cap"
+      }) %>  
+</div>      
     <%= render 'pages/education' %>      
 </div>

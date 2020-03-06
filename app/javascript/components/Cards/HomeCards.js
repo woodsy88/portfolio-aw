@@ -14,13 +14,13 @@ const HomeCards = ({ portfolios_path, skills_path, jobs_path}) => {
       }, 
       {
       title: "Experience",
-      path: skills_path,
+      path: jobs_path,
       class: "home-card-item-2",
       icon: "fa fa-briefcase"
       }, 
       {
       title: "Skills",
-      path: portfolios_path,
+      path: skills_path,
       class: "home-card-item-2",
       icon: "fa fa-ballot-check"
     }

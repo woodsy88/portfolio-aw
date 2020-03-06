@@ -3,7 +3,8 @@
            <%= link_to ("<i class='fas fa-arrow-left fa-2x'></i>").html_safe, portfolios_path %>
         </div>  
         <div class="ps-item-2 p-top-lg">
-          <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), class: "portfolio-show-img img-fluid" %>
+
+          <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), class: "portfolio-show-img img-fluid" if @portfolio_item.main_image.present? %>
 
             <div class="portfolio-show-card">
             <h2 class="xxx-bold xxx-bold spacing-sm m-top-sm"><%= @portfolio_item.title %></h2>

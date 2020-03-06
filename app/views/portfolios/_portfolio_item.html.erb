@@ -4,7 +4,7 @@
     <div class="card-body flex-fill">
     <div>
         <% portfolio_item.technologies.each do |tech| %> 
-          <span class="text-uppercase xs-12 blue-500"><%= tech.name %> </span>
+          <span class="text-uppercase small-12 blue-500"><%= tech.name %> </span>
         <% end %>
     </div>
         <h3 class="large-24"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h3>

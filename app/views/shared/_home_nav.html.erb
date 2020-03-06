@@ -1,9 +1,9 @@
 <div class="home-nav">
+<div></div>
 <div class="form-parent">
     <%= form_with url: search_path, local: true, method: :get, html: { class: "home-search-bar" } do |form| %>
       <%= form.text_field :q, placeholder: "Search for Skills, Projects, Jobs...", data: { behavior: "autocomplete" }, class: "nav-search form-control mr-sm-2" %>
-      <%= form.button "Search", class: "btn btn-outline-success my-2 my-sm-0 ml-2" %>
+      <%= form.button "Search", class: "btn nav-search-btn btn-outline-success my-2 my-sm-0 ml-2" %>
     <% end %>
 </div>
-<div></div>
 </div>

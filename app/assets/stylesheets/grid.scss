@@ -5,19 +5,18 @@
 
 .page-banner-container {
   padding: 64px 0 64px 0;
-  display: grid;
-  // height: 40vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  align-items: center;
+ display: flex;
+ flex-direction: column;
 }
 
 .page-banner-item {
-  display: grid;
-  grid-template-columns:20px 1fr;
-  align-items: center;
-  grid-gap: 25px;
+display: flex;
+align-items: center;
+
 }
 
-
+.test-container {
+  display: flex;
+  align-items: center;
+}
 

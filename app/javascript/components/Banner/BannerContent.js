@@ -11,4 +11,3 @@ const BannerContent = ({ title, subtitle, children }) => {
 };
 
 export default BannerContent;
-

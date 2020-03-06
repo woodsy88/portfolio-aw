@@ -14,12 +14,12 @@ class JobsController < ApplicationController
 
     def show
       Analytics.track(
-          user_id: current_user.id,
-          event: 'Viewed Job',
-          properties: { 
-              company: @job.company, 
-              job_title: @job.job_title
-             }
+        user_id: current_user.id,
+        event: 'Viewed Job',
+        properties: { 
+            company: @job.company, 
+            job_title: @job.job_title
+            }
             ) if user_signed_in?        
     end
 
@@ -64,6 +64,7 @@ class JobsController < ApplicationController
         params.require(:job).permit(:company, 
                                     :job_title, 
                                     :body, 
+                                    :website,
                                     :position,
                                     :date_text,
                                     skill_ids: []
