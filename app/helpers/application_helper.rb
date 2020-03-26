@@ -2,8 +2,8 @@ module ApplicationHelper
 
  def sample_helper
   #html safe cleans the html
-    #when dealing with user input, dont use html save
-    #when only dealing with displaying content, use html safe
+    #when dealing with user input, dont use html_safe
+    #when only dealing with displaying content, use html_safe
    "<p>My Helper</p>".html_safe
  end
 
