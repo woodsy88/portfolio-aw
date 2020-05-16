@@ -51,17 +51,19 @@ class Skills extends Component {
 
     return (
       <React.Fragment>
-        <h4>toggle skill areas</h4>
-<div className="btn-group">
-          <button className={this.state.code ? "btn-primary" : "btn-secondary"} onClick={this.handleToggleCode} >Code</button>
-          <button className={this.state.design ? "btn-primary" : "btn-secondary"} onClick={this.handleToggleDesign}>Design</button>
-          <button className={this.state.management ? "btn-primary" : "btn-secondary"} onClick={this.handleToggleManagement}>Management</button>
-          <button className={this.state.marketing ? "btn-primary" : "btn-secondary"} onClick={this.handleToggleMarketing}>Marketing</button>
-</div>
-           { this.state.code && <SkillArea icon="far fa-laptop-code" skills={developmentSkills} title="Development" />}
-            { this.state.design && <SkillArea icon="fa fa-rocket" skills={designSkills} title="Design" />}
-           { this.state.management &&  <SkillArea icon="fa fa-rocket" skills={managementSkills} title="Management" />}
-            { this.state.marketing && <SkillArea icon="fa fa-rocket" skills={marketingSkills} title="Marketing" />  }        
+        <p className="text-muted">toggle skill areas</p>
+      
+        <div className="btn-group">
+          <button className={this.state.code ? "btn-primary" : "btn-light"} onClick={this.handleToggleCode} >Code</button>
+          <button className={this.state.design ? "btn-primary" : "btn-light"} onClick={this.handleToggleDesign}>Design</button>
+          <button className={this.state.management ? "btn-primary" : "btn-light"} onClick={this.handleToggleManagement}>Management</button>
+          <button className={this.state.marketing ? "btn-primary" : "btn-light"} onClick={this.handleToggleMarketing}>Marketing</button>
+        </div>
+
+        { this.state.code && <SkillArea icon="far fa-laptop-code" skills={developmentSkills} title="Development" />}
+        { this.state.design && <SkillArea icon="fa fa-rocket" skills={designSkills} title="Design" />}
+        { this.state.management &&  <SkillArea icon="fa fa-rocket" skills={managementSkills} title="Management" />}
+        { this.state.marketing && <SkillArea icon="fa fa-rocket" skills={marketingSkills} title="Marketing" />  }        
       </React.Fragment>
     );
   }

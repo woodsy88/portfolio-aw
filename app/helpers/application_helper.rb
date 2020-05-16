@@ -63,10 +63,10 @@ module ApplicationHelper
         url: skills_path,
         title: 'Skills'
       },          
-      {
-        url: blogs_path,
-        title: 'Release Notes'
-      },
+      # {
+      #   url: blogs_path,
+      #   title: 'Release Notes'
+      # },
       # {
       #   url: contact_path,
       #   title: 'Contact'

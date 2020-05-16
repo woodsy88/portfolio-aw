@@ -118,3 +118,5 @@ gem 'carrierwave-aws', github: 'sorentwo/carrierwave-aws'
 gem "fog-aws"
 
 gem "mime-types"
+
+gem "chartkick"

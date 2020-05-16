@@ -1,12 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
 User.create!(
   email: "a@d.co",
   password: "password",
@@ -143,6 +134,10 @@ dev_skill_list = [
    ["HTML", "development", 9],
    ["Ruby", "development", 9],
    ["Redux", "development", 9],
+   ["Wordpress", "development", 9],
+   ["Ruby on Rails", "development", 9],
+   ["SQL", "development", 9],
+   ["Data Structures", "development", 9],
  ]
 
 design_skill_list = [
@@ -162,6 +157,7 @@ management_skill_list = [
    ["Agile", "management", 9],
    ["Sprint Planning", "management", 9],
    ["User Stories", "management", 9],
+   ["Product Management", "management", 9],
  ]
 
 marketing_skill_list = [
@@ -171,6 +167,7 @@ marketing_skill_list = [
    ["Web Analytics", "marketing", 9],
    ["Segmentation", "marketing", 9],
    ["Product Marketing", "marketing", 9],    
+   ["Branding", "marketing", 9],    
  ]
 
 
@@ -193,22 +190,82 @@ end
 puts "13 skills created"
 
 portfolio_list = [
-  ["Crowdmatrix", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["Featured Heights", "freelance Web Development Website",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["Holistick", "Shopify Store",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["Crypto Tracker", "Crypto Tracking and Prices",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["Dev Course Reviews", "Reviews of Developer Courses",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["HackWorks", "Hackathon event hosting platform",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
-  ["Logo Aggregator", "Digital Exempt Market Dealer",  "lipsum",  "http://via.placeholder.com/600x400", "http://via.placeholder.com/600x400" ],
+  [
+    "Crowdmatrix", 
+    "Digital Exempt Market Dealer Platform",  
+    "Crowdmatrix is a private investment platform that connects accredited investors with growing companies seeking capital.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400" 
+  ],
+  [
+    "Featured Heights",
+    "Freelance Web Development",
+    "My freelance web development and product management consulting service. ",
+    "http://via.placeholder.com/600x400",
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "Holistick", 
+    "All Natual Skincare Shopify Store",  
+    "Ecommerce store selling Bali inspired natural beauty, skincare and wellness. ",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "Malnutrition Research Group", 
+    "SickKids Project",  
+    "lipsum",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400" 
+  ],
+  [
+    "CHAIN Network", 
+    "Childhood Acute Illness Research Platform",  
+    "Not-for-profit doing medical research on at risk children in developing nations around the world. Partner of the Bill Gates Foundation.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "HackWorks", 
+    "Hackathon event hosting platform",  
+    "Helps people host speciality hackathon events. Comes with a matchmaking system, event management system and a judging tool.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "Gleneagles Construction", 
+    "Construction company marketing website",  
+    "Renovation company operating on the west side of the greater Toronto area specializing in basements and commercial interiors.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "Woods Legal Services", 
+    "Legal Website for a law firm",  
+    "Marketing and informational website for a law firm that has been in business for more then 30+ years",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],
+  [
+    "Distilled Beauty", 
+    "Booking platform for lash and eyebrow beauty services",  
+    "Distilled Beauty is a microblading and lash extensions business based in Toronto, Canada. The website primary serves as a promotional and online booking tool.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],  
+  [
+    "Freckles & Florals", 
+    "Lifestyle blog for the modern mom",  
+    "Style & makeup blog for real mom life.",  
+    "http://via.placeholder.com/600x400", 
+    "http://via.placeholder.com/600x400"
+  ],           
 ]
 
 
 portfolio_list.each do |title, subtitle, body, main_image, thumb_image |
   Portfolio.create!(title: title, subtitle: subtitle, body: body, main_image: main_image, thumb_image: thumb_image)
 end
-
-
-
 
 
   # 5.times do |portfolio_item|
@@ -221,6 +278,14 @@ end
   #     )
   # end
   puts "9 portfolio items rewarded"
+
+  portfolios = Portfolio.all
+
+  portfolios.each do |portfolio|
+    portfolio.technologies.create!(
+      name: "technology"
+    )
+  end
 
 3.times do |technology|
   Portfolio.last.technologies.create!(
