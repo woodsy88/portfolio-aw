@@ -23,10 +23,7 @@
                 <%= form.label :job_title %>
                 <%= form.text_field :job_title, class: "form-control" %>
               </div>
-              <div class="form-group">
-                <%= form.label :position %>
-                <%= form.text_field :position, class: "form-control" %>
-              </div> 
+
               <div class="form-group">
                 <%= form.label :start_date, class: "control-label" %>
                 <%= form.date_field :start_date, class: "form-control" %>
@@ -38,47 +35,66 @@
              <div class="form-group">
                 <%= form.label :current, class: "control-label" %>
                 <%= form.check_box :current, class: "form-control" %>
-              </div>                                                 
+              </div>  
+             <div class="form-group">
+                <%= form.label :acquired, class: "control-label" %>
+                <%= form.check_box :acquired, class: "form-control" %>
+              </div>                                                               
              <div class="form-group">
                   <%= form.label :website %>
                   <%= form.text_field :website, class: "form-control" %>
             </div>                 
             </div>
             
-            <div class="col-md-6">
-              <div class="form-group">
-                <%= form.label :date_text %>
-                <%= form.text_field :date_text, class: "form-control" %>
-              </div>   
+            <div class="col-md-6">  
               <div class="form-group">
                 <%= form.label :body %>
                 <%= form.text_area :body, class: "form-control", row: 20 %>
               </div>
-
-     
-
               <div class="form-group">
                 <div class="row">
-                  <div class="col-md-offset-2 col-md-12">
-                  <label class="form-label">Skills</label>
-                    <%= form.collection_check_boxes :skill_ids, 
-                                                  Skill.all, :id, :title do |cb| %>
-              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
-                    <% end %>
+                  <div class="col-md-6">
+                    <label class="form-label"><strong>Design Skills</strong></label>
+                      <div>
+                        <%= form.collection_check_boxes :skill_ids, Skill.where(area: 'design'), :id, :title do |cb| %>
+                            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                        <% end %>
+                      </div>
                   </div>
+                  <div class="col-md-6">
+                    <label class="form-label"><strong>Code Skills</strong></label>
+                      <div>
+                        <%= form.collection_check_boxes :skill_ids, Skill.where(area: 'development'), :id, :title do |cb| %>
+                            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                        <% end %>
+                      </div>
+                  </div>                  
                 </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="form-label"><strong>Management Skills</strong></label>
+                      <div>
+                        <%= form.collection_check_boxes :skill_ids, Skill.where(area: 'management'), :id, :title do |cb| %>
+                            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                        <% end %>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"><strong>Marketing Skills</strong></label>
+                      <div>
+                        <%= form.collection_check_boxes :skill_ids, Skill.where(area: 'marketing'), :id, :title do |cb| %>
+                            <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                        <% end %>
+                      </div>
+                  </div>                  
+                </div>                
               </div>  
-
-
             </div>
           </div>  
             <div class="actions">
                 <%= form.button "Submit",  class: "btn btn-primary btn-block mt-5", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Creating Job..."} %>
           </div>
-
-
           <% end %>
-
         </div>
       </div>
     </div>

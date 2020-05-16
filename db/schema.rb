@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_173749) do
+ActiveRecord::Schema.define(version: 2020_05_16_205246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_173749) do
     t.date "start_date"
     t.date "end_date"
     t.boolean "current"
+    t.boolean "acquired"
   end
 
   create_table "portfolio_skills", force: :cascade do |t|

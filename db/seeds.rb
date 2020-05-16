@@ -68,6 +68,7 @@ puts "10 blog posts created"
     current: true,
     start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
     end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    acquired: true
     )
 
   Job.create!(
@@ -82,6 +83,7 @@ puts "10 blog posts created"
     current: false,
     start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
     end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    acquired: true
     )
 
   Job.create!(
@@ -96,6 +98,7 @@ puts "10 blog posts created"
     current: true,
     start_date: Date.strptime("01/11/2015", "%d/%m/%Y"),
     end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    acquired: true
     )
 
   Job.create!(
@@ -106,6 +109,7 @@ puts "10 blog posts created"
     current: true,
     start_date: Date.strptime("01/11/2015", "%d/%m/%Y"),
     end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    acquired: false
     )    
     
    Job.create!(
@@ -116,6 +120,7 @@ puts "10 blog posts created"
     current: false,
     start_date: Date.strptime("01/02/2015", "%d/%m/%Y"),
     end_date: Date.strptime("09/11/2015", "%d/%m/%Y"),    
+    acquired: false
     )
     
   Job.create!(
@@ -126,6 +131,7 @@ puts "10 blog posts created"
     current: false,
     start_date: Date.strptime("31/10/2012", "%d/%m/%Y"),
     end_date: Date.strptime("09/03/2015", "%d/%m/%Y"),
+    acquired: true
     )    
 
 puts "3 jobs created"

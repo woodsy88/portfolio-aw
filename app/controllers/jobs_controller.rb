@@ -62,6 +62,7 @@ class JobsController < ApplicationController
                                     :start_date,
                                     :end_date,
                                     :current,
+                                    :acquired,
                                     skill_ids: []
                                     )
     end
