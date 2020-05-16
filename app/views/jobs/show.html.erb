@@ -2,8 +2,8 @@
 <%= link_to 'View All Jobs', jobs_path, class: "btn btn-outline-primary spacing-sm" %>
   <div class="row">
     <div class="col-md-12 d-flex" style="width: 100%;">
-          <div class="card">
-              <div class="card-body flex-fill">
+          <div class="card p-4">
+              <div class=" card-body flex-fill">
                   <h2><%= @job.company  %></h2>
                   <h3><%= @job.job_title %></h3>
                   <p><%= @job.body %></p>
@@ -14,7 +14,6 @@
                       <% end %>
                     <% end %>                           
               </div>
-        
             <div class="card-footer">
               <span class="pull-right">
                 <%= link_to fa_icon('pencil-square-o'), edit_job_path(@job) if logged_in?(:site_admin) %>
