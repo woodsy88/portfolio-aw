@@ -56,7 +56,6 @@ class Job extends React.Component {
   render () {
 
     const { job_skills, company, title, body, path, website, currently_active, start_date, end_date } = this.props;
-    console.log('job skills', job_skills)
 
     // takes a number for month "01" and returns it as a word "January"
     function dateFixer(date) {
@@ -78,8 +77,6 @@ class Job extends React.Component {
     const managementSkills = job_skills.filter((item) => item.area === 'management');
     const designSkills = job_skills.filter((item) => item.area === 'design');
     const marketingSkills = job_skills.filter((item) => item.area === 'marketing');
-    console.log('design skills', designSkills)
-
     const orderSkills = [...codeSkills, ...managementSkills,...designSkills, ...marketingSkills];
 
     function getClassName(area){   
