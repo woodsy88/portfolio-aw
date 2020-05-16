@@ -56,13 +56,11 @@ class Job extends React.Component {
   render () {
 
     const { job_skills, company, title, body, path, website, currently_active, start_date, end_date } = this.props;
-    console.log('start', start_date)
+    console.log('job skills', job_skills)
 
+    // takes a number for month "01" and returns it as a word "January"
     function dateFixer(date) {
-
-      if (date === null) {
-        return ""
-      }
+      if (date === null) { return ""}
       let tempDate = date.split("-");
       tempDate.pop()
       let year = tempDate[0]
@@ -75,23 +73,43 @@ class Job extends React.Component {
     let startDate = dateFixer(start_date);
     let endDate = dateFixer(end_date);
 
-   
+
+    const codeSkills = job_skills.filter((item) => item.area === 'development');
+    const managementSkills = job_skills.filter((item) => item.area === 'management');
+    const designSkills = job_skills.filter((item) => item.area === 'design');
+    const marketingSkills = job_skills.filter((item) => item.area === 'marketing');
+    console.log('design skills', designSkills)
+
+    const orderSkills = [...codeSkills, ...managementSkills,...designSkills, ...marketingSkills];
+
+    function getClassName(area){   
+      if (area === 'development') {
+        return "text-primary border border-primary"
+      } else if (area === 'management') {
+        return "text-secondary border border-secondary "
+      } else if (area === 'design') {
+        return "text-info border border-info "
+      } else {
+        return "text-warning border border-warning "
+      }
+    }
 
     return (
       <React.Fragment>
-         <a href={path}><h2 className="header-3">{company}</h2></a>
-        <h3 className="header-5">{title}</h3>
-    
-        {startDate && <p className="grey-light-text spacing-md">{startDate} - {currently_active ? "present" : endDate }</p>}
-      
-         <p>{body}</p>
-
-         <div>{job_skills.map(function( {title, id} ){
-              console.log('title: ', title, 'id: ', id);
-            return (<span key={id} className="category-item"><a href={"skills/" + id}>{title}</a></span>)
-         })}</div>
-
-        {website ? <a href={website} target="_blank"><i class="fas fa-external-link"></i> {company}</a> : ""}
+        <div className="p-4">
+          <div>
+            <a href={path}><h2 className="large-30 xxx-bold">{company}</h2></a>
+            <h3 className="header-5">{title}</h3>
+              {startDate && <p className="grey-light-text spacing-md">{startDate} - {currently_active ? "present" : endDate }</p>}
+              <p>{body}</p>
+          </div>
+           <div className="mt-3">
+            {orderSkills.map(function ({ title, id, area }) { return (<span key={id} className={`${getClassName(area)} p-1 m-1 small-12`}><a href={"skills/" + id}>{title}</a></span>)})}
+           </div>
+            <div className="mt-4">
+              {website ? <a href={website} target="_blank"><i class="fas fa-external-link pr-1"></i> {company}</a> : ""}
+            </div>
+        </div>
       </React.Fragment>
     );
   }
