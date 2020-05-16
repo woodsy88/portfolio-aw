@@ -11,4 +11,14 @@
                   class: 'btn btn-primary mb-3'  %>
     <% end %>                    
   <%= render 'pages/skills' %>
+  <div class="mt-5">
+        <%= react_component("PageBanner", {
+          title: "Education",
+          text: "I did my undergrad in business (B.B.A), then a post-grad in Advanced Design and Project Management, followed by a coding Bootcamp.",
+          icon: "fas fa-graduation-cap"
+        }) %>  
+  </div>      
+    <%= render 'pages/education' %>      
+
+  
 </div>
