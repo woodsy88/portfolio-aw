@@ -53,7 +53,7 @@ module ApplicationHelper
     [
       {
         url: jobs_path,
-        title: 'Experience'
+        title: 'Work Experience'
       },      
       {
         url: portfolios_path,

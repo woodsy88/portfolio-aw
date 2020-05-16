@@ -13,14 +13,6 @@ class JobsController < ApplicationController
     end
 
     def show
-      Analytics.track(
-        user_id: current_user.id,
-        event: 'Viewed Job',
-        properties: { 
-            company: @job.company, 
-            job_title: @job.job_title
-            }
-            ) if user_signed_in?        
     end
 
     def create
@@ -67,6 +59,9 @@ class JobsController < ApplicationController
                                     :website,
                                     :position,
                                     :date_text,
+                                    :start_date,
+                                    :end_date,
+                                    :current,
                                     skill_ids: []
                                     )
     end

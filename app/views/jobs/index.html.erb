@@ -3,7 +3,10 @@
     title: "Work Experience",
     text: "I have developed a diverse range of skills from working at many early to mid-stage startups. I always try to push my boundaries and learn new skills in design, development, devops, marketing and management.",
     icon: "fas fa-briefcase"
-  }) %>                    
+  }) %>    
+   <% if logged_in?(:site_admin) %>
+    <%= link_to 'New Job', new_job_path, class: "btn btn-outline-secondary" %>
+   <% end %>            
         <div class="row">
             <% @jobs.each do |job| %>
                 <div class="col-md-12 d-flex">
@@ -13,8 +16,9 @@
                                             company: job.company,
                                             website: job.website,
                                             title: job.job_title,
-                                            position: job.position,
-                                            date_text: job.date_text,
+                                            start_date: job.start_date,
+                                            end_date: job.end_date,
+                                            currently_active: job.current,
                                             body: truncate(job.body, length: 200),
                                             job_skills: job.skills,
                                             path: job_path(job),

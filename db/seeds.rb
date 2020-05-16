@@ -61,6 +61,16 @@ puts "10 blog posts created"
 # end
 
   Job.create!(
+    company: "Kognitiv Inc", 
+    job_title: "Product Manager Contracter",
+    body: "Manage a fintech products development.",
+    website: "https://kognitiv.com/",
+    current: true,
+    start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
+    end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    )
+
+  Job.create!(
     company: "Xtreme Blockchain Labs", 
     job_title: "Technical Project Manager",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -68,9 +78,10 @@ puts "10 blog posts created"
     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
-    position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015",
-    website: "https://www.linkedin.com/company/xtreme-blockchain-labs/"
+    website: "https://xblockchainlabs.com/",
+    current: false,
+    start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
+    end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
     )
 
   Job.create!(
@@ -81,35 +92,40 @@ puts "10 blog posts created"
     nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
     nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
     ac commodo erat. Quisque in sem quam.",
-    position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015",
-    website: "https://crowdmatrix.co/"
+    website: "https://crowdmatrix.co/",
+    current: true,
+    start_date: Date.strptime("01/11/2015", "%d/%m/%Y"),
+    end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
     )
+
+  Job.create!(
+    company: "Featured Heights", 
+    job_title: "Product Builder",
+    body: "Featured Heights is my freelance company. I design and develop web apps.",
+    website: "https://crowdmatrix.co/",
+    current: true,
+    start_date: Date.strptime("01/11/2015", "%d/%m/%Y"),
+    end_date: Date.strptime("09/02/2020", "%d/%m/%Y"),
+    )    
     
    Job.create!(
     company: "Hackworks", 
-    job_title: "Marketing Specialist",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
-    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
-    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
-    ac commodo erat. Quisque in sem quam.",
-    position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015",
-    website: "https://www.hackworks.com/en/"
+    job_title: "Product & Marketing Specialist",
+    body: "I planned and organized hackathon events, engaged and recruited participants, grew and managed the various communities and promoted and marketed the Hackorks brand and events.",
+    website: "https://www.hackworks.com/en/",
+    current: false,
+    start_date: Date.strptime("01/02/2015", "%d/%m/%Y"),
+    end_date: Date.strptime("09/11/2015", "%d/%m/%Y"),    
     )
     
   Job.create!(
     company: "XMG", 
     job_title: "Marketing & Business Development Associate",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
-    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
-    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
-    ac commodo erat. Quisque in sem quam.",
-    position: "Product Manager",
-    date_text: "Januay, 2012 - December, 2015",
-    website: "http://xmgstudio.com/"
+    body: "XMG Studio Inc. is an award-winning developer of mobile games that has released 18 mobile games in various genres targeting casual game players of which 7 games have in excess of a million installs and several have won Best App Ever industry awards for best in class.",
+    website: "http://xmgstudio.com/",
+    current: false,
+    start_date: Date.strptime("31/10/2012", "%d/%m/%Y"),
+    end_date: Date.strptime("09/03/2015", "%d/%m/%Y"),
     )    
 
 puts "3 jobs created"
