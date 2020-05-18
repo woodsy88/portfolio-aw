@@ -20,7 +20,13 @@
                  <div class="row">
                     <% @job.portfolios.each do |portfolio| %>
                      <div class="border border-info m-2 p-3"> 
-                        <%= link_to portfolio.title %>
+                        <%= portfolio.title %>
+                        <%= link_to 'view', portfolio_path(portfolio) %>
+                       <p class="text-muted xs-8"> Built with
+                        <% portfolio.technologies.each do |tech| %>
+                          <%= tech.name %>
+                        <% end %>
+                        </p>
                       </div>
                     <% end %>
                  </div>
