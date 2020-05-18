@@ -10,6 +10,8 @@ class Portfolio < ApplicationRecord
 
   validates_presence_of :title, :body
 
+  belongs_to :job, optional: true
+
   #mount_uploader is a carrierwave method, uses PortfolioUploader
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader

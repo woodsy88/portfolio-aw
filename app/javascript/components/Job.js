@@ -101,7 +101,7 @@ class Job extends React.Component {
               <p>{body}</p>
           </div>
            <div className="mt-3">
-            {orderSkills.map(function ({ title, id, area }) { return (<span key={id} className={`${getClassName(area)} p-1 m-1 small-12`}><a href={"skills/" + id}>{title}</a></span>)})}
+            {orderSkills.map(function ({ title, id, area, badge }) { return (<span key={id} className={`${getClassName(area)} p-1 m-1 small-12`}><i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a></span>)})}
            </div>
             <div className="mt-4">
               {website ? <a href={website} target="_blank"><i class="fas fa-external-link pr-1"></i> {company}</a> : ""}

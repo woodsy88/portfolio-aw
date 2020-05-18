@@ -20,7 +20,7 @@ class SkillArea extends Component {
           skills.map((item, index) => {
             return (
               <div key={index} className="skill-grid-item">
-                <a href={`skills/${item.id}`}><span class="medium-18">{item.title}</span></a>
+                <a href={`skills/${item.id}`}><i className={`${item.badge} mr-1`}></i><span class="medium-18">{item.title}</span></a>
               </div>)
           })
         }

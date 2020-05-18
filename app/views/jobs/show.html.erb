@@ -10,9 +10,22 @@
           
                     <% if @job.skills.any? %>
                     <% @job.skills.each do |skill| %>
-                          <%= render @job.skills %>
+                         <%= render partial: "skills/skill", locals: {skill: skill} %>
                       <% end %>
-                    <% end %>                           
+                    <% end %>  
+
+              <% if @job.portfolios.any? %>
+ <div class="m-3">
+                 <h3>Applications I worked on</h3>
+                 <div class="row">
+                    <% @job.portfolios.each do |portfolio| %>
+                     <div class="border border-info m-2 p-3"> 
+                        <%= link_to portfolio.title %>
+                      </div>
+                    <% end %>
+                 </div>
+ </div>
+              <% end %>
               </div>
             <div class="card-footer">
               <span class="pull-right">

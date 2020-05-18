@@ -29,7 +29,7 @@ class Skills extends Component {
   }  
 
   handleToggleMarketing = () => {
-    this.setState({  marketing: !this.state. marketing })
+    this.setState({  marketing: !this.state.marketing })
   }  
 
 

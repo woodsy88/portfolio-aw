@@ -60,7 +60,7 @@ puts "10 blog posts created"
 #     )
 # end
 
-  Job.create!(
+  @kognitiv_job = Job.create!(
     company: "Kognitiv Inc", 
     job_title: "Product Manager Contracter",
     body: "Manage a fintech products development.",
@@ -71,7 +71,7 @@ puts "10 blog posts created"
     acquired: true
     )
 
-  Job.create!(
+  @blockchain_job =  Job.create!(
     company: "Xtreme Blockchain Labs", 
     job_title: "Technical Project Manager",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -86,7 +86,7 @@ puts "10 blog posts created"
     acquired: true
     )
 
-  Job.create!(
+   @crowdmatrix_job = Job.create!(
     company: "Crowdmatrix", 
     job_title: "Head of Product",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -101,7 +101,7 @@ puts "10 blog posts created"
     acquired: true
     )
 
-  Job.create!(
+   @featured_job = Job.create!(
     company: "Featured Heights", 
     job_title: "Product Builder",
     body: "Featured Heights is my freelance company. I design and develop web apps.",
@@ -112,7 +112,7 @@ puts "10 blog posts created"
     acquired: false
     )    
     
-   Job.create!(
+    @hackworks_job = Job.create!(
     company: "Hackworks", 
     job_title: "Product & Marketing Specialist",
     body: "I planned and organized hackathon events, engaged and recruited participants, grew and managed the various communities and promoted and marketed the Hackorks brand and events.",
@@ -123,7 +123,7 @@ puts "10 blog posts created"
     acquired: false
     )
     
-  Job.create!(
+   @xmg_job = Job.create!(
     company: "XMG", 
     job_title: "Marketing & Business Development Associate",
     body: "XMG Studio Inc. is an award-winning developer of mobile games that has released 18 mobile games in various genres targeting casual game players of which 7 games have in excess of a million installs and several have won Best App Ever industry awards for best in class.",
@@ -145,149 +145,234 @@ puts "3 jobs created"
 #     )
 # end
 
-dev_skill_list = [
-   ["React", "development", 9],
-   ["JavaScript", "development", 9],
-   ["CSS", "development", 9],
-   ["CSS Flexbox", "development", 9],
-   ["CSS Grid", "development", 9],
-   ["Bootstrap", "development", 9],
-   ["Tailwind", "development", 9],
-   ["HTML", "development", 9],
-   ["Ruby", "development", 9],
-   ["Redux", "development", 9],
-   ["Wordpress", "development", 9],
-   ["Ruby on Rails", "development", 9],
-   ["SQL", "development", 9],
-   ["Data Structures", "development", 9],
- ]
-
-design_skill_list = [
-   ["Sketch", "design", 9],
-   ["UI", "design", 9],
-   ["UX", "design", 9],
-   ["mockups", "design", 9],
-   ["wireframes", "design", 9],
-   ["Adobe XD", "design", 9],
-   ["PhotoShop", "design", 9],
-   ["Typography", "design", 9],
- ]
-
-management_skill_list = [
-   ["Project Management", "management", 9],
-   ["Kanban", "management", 9],
-   ["Agile", "management", 9],
-   ["Sprint Planning", "management", 9],
-   ["User Stories", "management", 9],
-   ["Product Management", "management", 9],
- ]
-
-marketing_skill_list = [
-   ["Email Marketing", "marketing", 9],
-   ["Copywriting", "marketing", 9],
-   ["A/B Testing", "marketing", 9],
-   ["Web Analytics", "marketing", 9],
-   ["Segmentation", "marketing", 9],
-   ["Product Marketing", "marketing", 9],    
-   ["Branding", "marketing", 9],    
- ]
+# Devlopment Skills
+@react_skill = Skill.create!(title: "React", percent_utilized: 9, area: "development", badge: "fab fa-react")
+@redux_skill = Skill.create!(title: "Redux", percent_utilized: 9, area: "development", badge: "fab fa-react")
+@javascript_skill = Skill.create!(title: "JavaScript", percent_utilized: 9, area: "development", badge: "fab fa-js-square")
+@css_skill = Skill.create!(title: "CSS", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
+@flexbox_skill = Skill.create!(title: "Flexbox", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
+@grid_skill = Skill.create!(title: "Grid", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
+@bootstrap_skill = Skill.create!(title: "Bootstrap", percent_utilized: 9, area: "development", badge: "fab fa-bootstrap")
+@tailwind_skill = Skill.create!(title: "Tailwind", percent_utilized: 9, area: "development", badge: "fal fa-folder-tree")
+@html_skill = Skill.create!(title: "HTML", percent_utilized: 9, area: "development", badge: "fab fa-html5")
+@ruby_skill = Skill.create!(title: "Ruby", percent_utilized: 9, area: "development", badge: "fas fa-gem")
+@rails_skill = Skill.create!(title: "Ruby on Rails", percent_utilized: 9, area: "development", badge: "fas fa-gem")
+@wordpress_skill = Skill.create!(title: "Wordpress", percent_utilized: 9, area: "development", badge: "fab fa-wordpress")
+@sql_skill = Skill.create!(title: "SQL", percent_utilized: 9, area: "development", badge: "fas fa-database")
+@database_skill = Skill.create!(title: "Data Structures", percent_utilized: 9, area: "development", badge: "fas fa-database")
+@testing_skill = Skill.create!(title: "Testing", percent_utilized: 9, area: "development", badge: "far fa-bug")
 
 
-dev_skill_list.each do |title, area, percent_utilized|
-  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
-end
+#Design Skills
+@sketch_skill = Skill.create!(title: "Sketch", percent_utilized: 9, area: "design", badge: "fab fa-sketch")
+@ui_skill = Skill.create!(title: "UI", percent_utilized: 9, area: "design", badge: "far fa-browser")
+@ux_skill = Skill.create!(title: "UX", percent_utilized: 9, area: "design", badge: "far fa-browser")
+@wireframes_skill = Skill.create!(title: "Wireframes", percent_utilized: 9, area: "design", badge: "fal fa-sitemap")
+@userflows_skill = Skill.create!(title: "User Flows", percent_utilized: 9, area: "design", badge: "fal fa-sitemap")
+@mockups_skill = Skill.create!(title: "Mockups", percent_utilized: 9, area: "design", badge: "fal fa-sitemap")
+@xd_skill = Skill.create!(title: "Adobe XD", percent_utilized: 9, area: "design", badge: "fab fa-adobe")
+@photoshop_skill = Skill.create!(title: "Photoshop", percent_utilized: 9, area: "design", badge: "fab fa-adobe")
+@typography_skill = Skill.create!(title: "Typography", percent_utilized: 9, area: "design", badge: "far fa-text-height")
 
-design_skill_list.each do |title, area, percent_utilized|
-  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
-end
 
-management_skill_list.each do |title, area, percent_utilized|
-  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
-end
 
-marketing_skill_list.each do |title, area, percent_utilized|
-  Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
-end
+#Management Skills
 
-puts "13 skills created"
+@project_management_skill = Skill.create!(title: "Project Management", percent_utilized: 9, area: "management", badge: "far fa-tasks")
+@product_management_skill = Skill.create!(title: "Product Management", percent_utilized: 9, area: "management", badge: "far fa-tasks")
+@kanban_skill = Skill.create!(title: "Kanban", percent_utilized: 9, area: "management", badge: "far fa-columns")
+@agile_skill = Skill.create!(title: "Agile", percent_utilized: 9, area: "management", badge: "fa fa-tasks-alt")
+@sprintplannig_skill = Skill.create!(title: "Sprint Planning", percent_utilized: 9, area: "management", badge: "fa fa-tasks-alt")
+@roadmap_skill = Skill.create!(title: "Roadmapping", percent_utilized: 9, area: "management", badge: "fa fa-tasks-alt")
+@userstories_skill = Skill.create!(title: "User Stories", percent_utilized: 9, area: "management", badge: "fa fa-tasks-alt")
 
-portfolio_list = [
-  [
-    "Crowdmatrix", 
-    "Digital Exempt Market Dealer Platform",  
-    "Crowdmatrix is a private investment platform that connects accredited investors with growing companies seeking capital.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400" 
-  ],
-  [
-    "Featured Heights",
-    "Freelance Web Development",
-    "My freelance web development and product management consulting service. ",
-    "http://via.placeholder.com/600x400",
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "Holistick", 
-    "All Natual Skincare Shopify Store",  
-    "Ecommerce store selling Bali inspired natural beauty, skincare and wellness. ",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "Malnutrition Research Group", 
-    "SickKids Project",  
-    "lipsum",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400" 
-  ],
-  [
-    "CHAIN Network", 
-    "Childhood Acute Illness Research Platform",  
-    "Not-for-profit doing medical research on at risk children in developing nations around the world. Partner of the Bill Gates Foundation.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "HackWorks", 
-    "Hackathon event hosting platform",  
-    "Helps people host speciality hackathon events. Comes with a matchmaking system, event management system and a judging tool.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "Gleneagles Construction", 
-    "Construction company marketing website",  
-    "Renovation company operating on the west side of the greater Toronto area specializing in basements and commercial interiors.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "Woods Legal Services", 
-    "Legal Website for a law firm",  
-    "Marketing and informational website for a law firm that has been in business for more then 30+ years",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],
-  [
-    "Distilled Beauty", 
-    "Booking platform for lash and eyebrow beauty services",  
-    "Distilled Beauty is a microblading and lash extensions business based in Toronto, Canada. The website primary serves as a promotional and online booking tool.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],  
-  [
-    "Freckles & Florals", 
-    "Lifestyle blog for the modern mom",  
-    "Style & makeup blog for real mom life.",  
-    "http://via.placeholder.com/600x400", 
-    "http://via.placeholder.com/600x400"
-  ],           
+#marketing skills
+
+@email_skill = Skill.create!(title: "Email Marketing", percent_utilized: 9, area: "marketing", badge: "fal fa-envelope")
+@mailchimp_skill = Skill.create!(title: "Mailchimp", percent_utilized: 9, area: "marketing", badge: "fab fa-mailchimp")
+@sendgrid_skill = Skill.create!(title: "Sendgrid", percent_utilized: 9, area: "marketing", badge: "fal fa-envelope")
+@copywriting_skill = Skill.create!(title: "Copywriting", percent_utilized: 9, area: "marketing", badge: "fas fa-signature")
+@ab_skill = Skill.create!(title: "A/B Testing", percent_utilized: 9, area: "marketing", badge: "fad fa-line-columns")
+@analytics_skill = Skill.create!(title: "Web Analytics", percent_utilized: 9, area: "marketing", badge: "fas fa-analytics")
+@segmentation_skill = Skill.create!(title: "Segmentation", percent_utilized: 9, area: "marketing", badge: "fas fa-users")
+@productmarketing_skill = Skill.create!(title: "Product Marketing", percent_utilized: 9, area: "marketing", badge: "fas fa-search-location")
+@branding_skill = Skill.create!(title: "Branding", percent_utilized: 9, area: "marketing", badge: "fal fa-comment-lines")
+
+
+
+featured_skills = [
+  @react_skill, @product_management_skill, @project_management_skill
 ]
 
-
-portfolio_list.each do |title, subtitle, body, main_image, thumb_image |
-  Portfolio.create!(title: title, subtitle: subtitle, body: body, main_image: main_image, thumb_image: thumb_image)
+featured_skills.each do |skill| 
+   JobSkill.create!(skill_id: skill.id, job_id: @featured_job.id)
 end
+
+# Crowdmatrix Skills
+ JobSkill.create!(skill_id: @react_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @product_management_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @project_management_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @rails_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @userflows_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @redux_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @mailchimp_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @javascript_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @css_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @bootstrap_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @html_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @ruby_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @sql_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @database_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @sketch_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @ui_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @ux_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @wireframes_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @userflows_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @mockups_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @photoshop_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @typography_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @kanban_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @agile_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @sprintplannig_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @roadmap_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @typography_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @userstories_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @email_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @mailchimp_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @sendgrid_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @copywriting_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @ab_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @analytics_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @segmentation_skill.id, job_id: @crowdmatrix_job.id)
+ JobSkill.create!(skill_id: @productmarketing_skill.id, job_id: @crowdmatrix_job.id)
+
+# dev_skill_list.each do |title, area, percent_utilized|
+#   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+# end
+
+# design_skill_list.each do |title, area, percent_utilized|
+#   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+# end
+
+# management_skill_list.each do |title, area, percent_utilized|
+#   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+# end
+
+# marketing_skill_list.each do |title, area, percent_utilized|
+#   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
+# end
+
+puts "skills created"
+
+
+@crowdmatrix_project = Portfolio.create!(
+  title:  "Crowdmatrix", 
+  subtitle: "Digital Exempt Market Dealer Platform",  
+  body: "Crowdmatrix is a private investment platform that connects accredited investors with growing companies seeking capital.",  
+  main_image:   "http://via.placeholder.com/600x400", 
+  thumb_image:  "http://via.placeholder.com/600x400", 
+  job_id:  @crowdmatrix_job.id
+)
+
+@featured_heights = Portfolio.create!(
+  title: "Featured Heights",
+  subtitle:  "Freelance Web Development",
+  body:   "My freelance web development and product management consulting service. ",
+  main_image:  "http://via.placeholder.com/600x400",
+  thumb_image: "http://via.placeholder.com/600x400",
+  job_id:  @featured_job.id
+)
+
+@holistick = Portfolio.create!(
+  title: "Holistick", 
+  subtitle: "All Natual Skincare Shopify Store",  
+  body:  "Ecommerce store selling Bali inspired natural beauty, skincare and wellness. ", 
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image: "http://via.placeholder.com/600x400",
+  job_id:  @featured_job.id
+)
+
+@malnutrition = Portfolio.create!(
+  title:  "Malnutrition Research Group", 
+  subtitle: "SickKids Project",  
+  body: "The Malawi Nutrition Research Group (MNRG) is a team of international and national health researchers in Malawi. ",  
+  main_image:  "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id:  @featured_job.id
+)
+
+@chain = Portfolio.create!(
+  title: "CHAIN Network", 
+  subtitle: "Childhood Acute Illness Research Platform",  
+  body: "Not-for-profit doing medical research on at risk children in developing nations around the world. Partner of the Bill Gates Foundation.",  
+  main_image:  "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id:  @featured_job.id
+)
+
+@hackworks = Portfolio.create!(
+  title: "HackWorks",
+  subtitle: "HackWorks",
+  body: "Helps people host speciality hackathon events. Comes with a matchmaking system, event management system and a judging tool.",  
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id:  @hackworks_job.id
+)
+
+@gleneagles = Portfolio.create!(
+  title: "Gleneagles Construction",
+  subtitle: "Construction company marketing website",  
+  body:  "Renovation company operating on the west side of the greater Toronto area specializing in basements and commercial interiors.",  
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image: "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
+@legal = Portfolio.create!(
+  title:  "Woods Legal Services", 
+  subtitle:  "Legal Website for a law firm", 
+  body:  "Marketing and informational website for a law firm that has been in business for more then 30+ years",  
+  main_image:  "http://via.placeholder.com/600x400", 
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
+@distilled = Portfolio.create!(
+  title: "Distilled Beauty",
+  subtitle: "Booking platform for lash and eyebrow beauty services",  
+  body:  "Distilled Beauty is a microblading and lash extensions business based in Toronto, Canada. The website primary serves as a promotional and online booking tool.",  
+  main_image: "http://via.placeholder.com/600x400", 
+  thumb_image: "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
+@freckles = Portfolio.create!(
+  title: "Freckles & Florals",
+  subtitle: "Lifestyle blog for the modern mom",
+  body: "Style & makeup blog for real mom life.",
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
+@github_search = Portfolio.create!(
+  title: "Github Search",
+  subtitle: "Find the most popular repositories & Github Users",
+  body: "API React app that fetches the most popular repos and also compares two users github accounts and ranks them.",
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
+@dev_course_review = Portfolio.create!(
+  title: "Dev Course",
+  subtitle: "Headless CMS for course reviews",
+  body: "A headless CMS react app that I use to post dev course reviews",
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image:  "http://via.placeholder.com/600x400",
+  job_id: @featured_job.id
+)
+
 
 
   # 5.times do |portfolio_item|
@@ -301,18 +386,49 @@ end
   # end
   puts "9 portfolio items rewarded"
 
-  portfolios = Portfolio.all
 
-  portfolios.each do |portfolio|
-    portfolio.technologies.create!(
-      name: "technology"
-    )
-  end
+  @crowdmatrix_project.technologies.create!(name: "Ruby on Rails")
+  @crowdmatrix_project.technologies.create!(name: "React")
+  @featured_heights.technologies.create!(name: "Wordpress")
 
-3.times do |technology|
-  Portfolio.last.technologies.create!(
-    name: "technology #{technology}",
-    )
-end
+  @holistick.technologies.create!(name: "Shopify")
+
+  @malnutrition.technologies.create!(name: "Wordpress")
+
+  @chain.technologies.create!(name: "Wordpress")
+
+  @hackworks.technologies.create!(name: "PHP")
+
+  @gleneagles.technologies.create!(name: "HTML CSS")
+
+  @legal.technologies.create!(name: "Wordpress")
+
+  @distilled.technologies.create!(name: "Wordpress")
+
+  @freckles.technologies.create!(name: "React")
+
+  @github_search.technologies.create!(name: "React")
+  @github_search.technologies.create!(name: "API")
+
+  @dev_course_review.technologies.create!(name: "React")
+  @dev_course_review.technologies.create!(name: "API")
+  @dev_course_review.technologies.create!(name: "Headless CMS")
+
+
+
+
+#   portfolios = Portfolio.all
+
+#   portfolios.each do |portfolio|
+#     portfolio.technologies.create!(
+#       name: "technology"
+#     )
+#   end
+
+# 3.times do |technology|
+#   Portfolio.last.technologies.create!(
+#     name: "technology #{technology}",
+#     )
+# end
 puts "3 technolgies created"
 
