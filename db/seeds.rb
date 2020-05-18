@@ -197,54 +197,45 @@ puts "3 jobs created"
 @segmentation_skill = Skill.create!(title: "Segmentation", percent_utilized: 9, area: "marketing", badge: "fas fa-users")
 @productmarketing_skill = Skill.create!(title: "Product Marketing", percent_utilized: 9, area: "marketing", badge: "fas fa-search-location")
 @branding_skill = Skill.create!(title: "Branding", percent_utilized: 9, area: "marketing", badge: "fal fa-comment-lines")
+# [ @react_skill, @redux_skill, @javascript_skill, @css_skill, @flexbox_skill,@grid_skill, @bootstrap_skill, @tailwind_skill,@html_skill, @ruby_skill, @rails_skill, @wordpress_skill, @sql_skill, @database_skill, @testing_skill, @sketch_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @xd_skill, @photoshop_skill, @typography_skill, @project_management_skill, @product_management_skill, @kanban_skill, @agile_skill, @sprintplannig_skill, @roadmap_skill, @userstories_skill, @email_skill, @mailchimp_skill, @sendgrid_skill, @copywriting_skill, @ab_skill, @analytics_skill, @segmentation_skill, @productmarketing_skill, @branding_skill ]
 
 
-
-featured_skills = [
-  @react_skill, @product_management_skill, @project_management_skill
-]
+featured_skills = [ @react_skill, @javascript_skill, @css_skill, @flexbox_skill, @grid_skill, @bootstrap_skill, @tailwind_skill,@html_skill, @ruby_skill, @rails_skill, @wordpress_skill,  @sketch_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @xd_skill, @photoshop_skill, @typography_skill, @project_management_skill, @product_management_skill, @branding_skill ]
 
 featured_skills.each do |skill| 
-   JobSkill.create!(skill_id: skill.id, job_id: @featured_job.id)
+  JobSkill.create!(skill_id: skill.id, job_id: @featured_job.id)
 end
 
-# Crowdmatrix Skills
- JobSkill.create!(skill_id: @react_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @product_management_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @project_management_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @rails_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @userflows_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @redux_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @mailchimp_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @javascript_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @css_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @bootstrap_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @html_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @ruby_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @sql_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @database_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @sketch_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @ui_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @ux_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @wireframes_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @userflows_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @mockups_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @photoshop_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @typography_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @kanban_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @agile_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @sprintplannig_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @roadmap_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @typography_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @userstories_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @email_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @mailchimp_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @sendgrid_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @copywriting_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @ab_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @analytics_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @segmentation_skill.id, job_id: @crowdmatrix_job.id)
- JobSkill.create!(skill_id: @productmarketing_skill.id, job_id: @crowdmatrix_job.id)
+crowdmatrix_skills = [ @react_skill, @redux_skill, @javascript_skill, @css_skill, @flexbox_skill,@grid_skill, @bootstrap_skill, @html_skill, @ruby_skill, @rails_skill, @wordpress_skill, @sql_skill, @database_skill, @testing_skill, @sketch_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @xd_skill, @photoshop_skill, @typography_skill, @project_management_skill, @product_management_skill, @kanban_skill, @agile_skill, @sprintplannig_skill, @roadmap_skill, @userstories_skill, @email_skill, @mailchimp_skill, @sendgrid_skill, @copywriting_skill, @ab_skill, @analytics_skill, @segmentation_skill, @productmarketing_skill, @branding_skill ]
+
+crowdmatrix_skills.each do |skill|
+  JobSkill.create!(skill_id: skill.id, job_id: @crowdmatrix_job.id)
+end
+
+
+kognitiv_skills = [ @react_skill, @javascript_skill, @css_skill, @flexbox_skill, @grid_skill, @bootstrap_skill, @html_skill, @ruby_skill, @rails_skill, @sql_skill, @database_skill, @testing_skill, @sketch_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @xd_skill, @project_management_skill, @product_management_skill, @kanban_skill, @agile_skill, @sprintplannig_skill, @roadmap_skill, @userstories_skill ]
+
+kognitiv_skills.each do |skill|
+  JobSkill.create!(skill_id: skill.id, job_id: @kognitiv_job.id)
+end
+
+xblockchain_skills = [ @project_management_skill, @product_management_skill, @kanban_skill, @agile_skill, @sprintplannig_skill, @roadmap_skill, @userstories_skill ]
+
+xblockchain_skills.each do |skill|
+  JobSkill.create!(skill_id: skill.id, job_id: @blockchain_job.id)
+end
+
+hackworks_skills = [ @javascript_skill, @css_skill, @bootstrap_skill, @html_skill,@wordpress_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @photoshop_skill, @typography_skill, @project_management_skill, @product_management_skill, @kanban_skill, @agile_skill, @sprintplannig_skill, @roadmap_skill, @userstories_skill, @email_skill, @mailchimp_skill, @sendgrid_skill, @copywriting_skill, @ab_skill, @analytics_skill, @segmentation_skill, @productmarketing_skill, @branding_skill ]
+
+hackworks_skills.each do |skill|
+  JobSkill.create!(skill_id: skill.id, job_id: @hackworks_job.id)
+end
+
+xmg_skills = [ @css_skill, @bootstrap_skill, @html_skill, @wordpress_skill, @ui_skill, @ux_skill, @wireframes_skill, @userflows_skill, @mockups_skill, @photoshop_skill, @typography_skill, @email_skill, @mailchimp_skill, @copywriting_skill, @ab_skill, @analytics_skill, @segmentation_skill, @productmarketing_skill, @branding_skill ]
+
+xmg_skills.each do |skill|
+  JobSkill.create!(skill_id: skill.id, job_id: @xmg_job.id)
+end
 
 # dev_skill_list.each do |title, area, percent_utilized|
 #   Skill.create!(title: title, area: area, percent_utilized: percent_utilized)
