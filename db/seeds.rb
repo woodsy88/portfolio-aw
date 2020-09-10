@@ -63,7 +63,7 @@ puts "10 blog posts created"
   @kognitiv_job = Job.create!(
     company: "Kognitiv Inc", 
     job_title: "Product Manager Contracter",
-    body: "Manage a fintech products development.",
+    body: "Kognitive  is a loyalty points program focusing on the travel, and real estate industries. I managed a mature fintech product in ongoing development, focusing mainly on compliance, reporting systems, and investor relations.",
     website: "https://kognitiv.com/",
     current: true,
     start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
@@ -74,11 +74,7 @@ puts "10 blog posts created"
   @blockchain_job =  Job.create!(
     company: "Xtreme Blockchain Labs", 
     job_title: "Technical Project Manager",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
-    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
-    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
-    ac commodo erat. Quisque in sem quam.",
+    body: "Xtreme Blockchain Labs was building a secure online trading platform and providing professional level insights into crypto trading volumes. It was acquired 1.5 years after inception and the platform has since been discontinued. I provided product management over the compliant side of the platform focused on accredited investors.",
     website: "https://xblockchainlabs.com/",
     current: false,
     start_date: Date.strptime("09/01/2019", "%d/%m/%Y"),
@@ -89,11 +85,7 @@ puts "10 blog posts created"
    @crowdmatrix_job = Job.create!(
     company: "Crowdmatrix", 
     job_title: "Head of Product",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Nullam non facilisis orci, et porttitor ex. Mauris dapibus mauris nulla, eu imperdiet 
-    nibh suscipit at. In hac habitasse platea dictumst. Aenean aliquet elit tellus, 
-    nec pharetra ipsum efficitur ut. Vestibulum eu lobortis ante. Suspendisse in malesuada nisl, 
-    ac commodo erat. Quisque in sem quam.",
+    body: "Crowdmatrix is a private investment platform that connects accredited investors with growing companies seeking capital. The platform allows private companies to raise money from accredited investors through a structured, compliant online process. The product was acquired by XBL in 2019. I was in charge of all product development.",
     website: "https://crowdmatrix.co/",
     current: true,
     start_date: Date.strptime("01/11/2015", "%d/%m/%Y"),
@@ -152,7 +144,7 @@ puts "3 jobs created"
 @css_skill = Skill.create!(title: "CSS", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
 @flexbox_skill = Skill.create!(title: "Flexbox", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
 @grid_skill = Skill.create!(title: "Grid", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
-@bootstrap_skill = Skill.create!(title: "Bootstrap", percent_utilized: 9, area: "development", badge: "fab fa-bootstrap")
+@bootstrap_skill = Skill.create!(title: "Bootstrap", percent_utilized: 9, area: "development", badge: "fab fa-css3-alt")
 @tailwind_skill = Skill.create!(title: "Tailwind", percent_utilized: 9, area: "development", badge: "fal fa-folder-tree")
 @html_skill = Skill.create!(title: "HTML", percent_utilized: 9, area: "development", badge: "fab fa-html5")
 @ruby_skill = Skill.create!(title: "Ruby", percent_utilized: 9, area: "development", badge: "fas fa-gem")
@@ -161,6 +153,9 @@ puts "3 jobs created"
 @sql_skill = Skill.create!(title: "SQL", percent_utilized: 9, area: "development", badge: "fas fa-database")
 @database_skill = Skill.create!(title: "Data Structures", percent_utilized: 9, area: "development", badge: "fas fa-database")
 @testing_skill = Skill.create!(title: "Testing", percent_utilized: 9, area: "development", badge: "far fa-bug")
+@testing_skill = Skill.create!(title: "APIs", percent_utilized: 9, area: "development", badge: "far fa-bug")
+@testing_skill = Skill.create!(title: "AWS", percent_utilized: 9, area: "development", badge: "far fa-bug")
+@testing_skill = Skill.create!(title: "GIT", percent_utilized: 9, area: "development", badge: "far fa-bug")
 
 
 #Design Skills
