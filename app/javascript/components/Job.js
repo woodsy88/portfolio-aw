@@ -100,13 +100,69 @@ class Job extends React.Component {
               {startDate && <p className="grey-light-text spacing-md">{startDate} - {currently_active ? "present" : endDate }</p>}
               <p>{body}</p>
           </div>
-           <div className="mt-3 d-flex flex-wrap">
-            {orderSkills.map(({ title, id, area, badge }) => { return (
-              <div className="p-1">
-                <span key={id} className={`${getClassName(area)} p-1 small-12`}>
-                  <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
-                  </span>
-                </div>)})}
+          <div className="mt-3 d-flex  justify-content-between">
+          { codeSkills.length > 0 && (         
+            <div className="border p-1 m-1">
+              <h4 className="text-muted light small-12">Dev</h4>
+                <div className="d-flex flex-wrap">
+                {codeSkills.map(({title,id,area,badge}) => { 
+                  return (
+                    <div className="p-1">
+                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                      </span>
+                    </div>
+                  )})}
+                </div>
+            </div>)}
+            {managementSkills.length > 0 &&  (          
+            <div className="border p-1 m-1">
+              <h4 className="text-muted light small-12">Management</h4>
+              <div className="d-flex flex-wrap">
+                {managementSkills.map(({ title, id, area, badge }) => {
+                  return (
+                    <div className="p-1">
+                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>)}
+
+      {   designSkills.length > 0 && ( 
+            <div className="border p-1 m-1">
+              <h4 className="text-muted light small-12">Design</h4>
+              <div className="d-flex flex-wrap">
+                {designSkills.map(({ title, id, area, badge }) => {
+                  return (
+                    <div className="p-1">
+                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+            )}
+     { marketingSkills.length > 0 && 
+          (<div className="border p-1 m-1">
+              <h4 className="text-muted light small-12">Marketing</h4>
+              <div className="d-flex flex-wrap">
+                {marketingSkills.map(({ title, id, area, badge }) => {
+                  return (
+                    <div className="p-1">
+                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>)}
+
            </div>
             <div className="mt-4">
             {website ? <a href={website} target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link pr-1"></i> {company}</a> : ""}

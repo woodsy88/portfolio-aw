@@ -10,6 +10,7 @@ class PagesController < ApplicationController
     # @development_skills = Skill.where(area: 'development')
     # @management_skills = Skill.where(area: 'management')
     # @marketing_skills = Skill.where(area: 'marketing')
+    @recent_portfolio_items = Portfolio.order("created_at DESC").limit(3)
     
   end
 

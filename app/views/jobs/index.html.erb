@@ -1,7 +1,7 @@
 <div class="container section-padding">
   <%= react_component("PageBanner", {
     title: "Places I've Worked",
-    text: "I have developed a diverse range of skills from working at 5 early to mid-stage startups. I always try to push my boundaries to learn new skills in design, development, devops, marketing and management.",
+    text: "I have developed a diverse range of skills from working at #{@jobs.count} early to mid-stage startups.",
     icon: "fas fa-briefcase"
   }) %>    
    <% if logged_in?(:site_admin) %>
