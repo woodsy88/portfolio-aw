@@ -1,6 +1,10 @@
 # README
 
+Visit the live site here: https://featuredproduct.dev/
+
 A full stack portfolio built with a Rails backend and a React frontend. Lets you easily add new portfolio projects and new skills without ever having to edit any code
+
+
 
 ## Features
 
@@ -10,6 +14,12 @@ A full stack portfolio built with a Rails backend and a React frontend. Lets you
 - Portfolio
 -   Drag and Drop interface
 - Skills
+
+
+## Tech Stack
+ 
+ - React
+ - Ruby on Rails
 
 
 
