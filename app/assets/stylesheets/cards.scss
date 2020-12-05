@@ -1,12 +1,12 @@
 .card {
- border-radius: 8px;
- box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  border-radius: 0px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .card-main {
- border: 1px solid rgba(0, 0, 0, 0.125);
- border-radius: 8px;
- box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .card-block {
@@ -14,16 +14,14 @@
   margin-bottom: 5px;
 }
 
-.card>img {
-  margin-bottom: .75rem;
+.card > img {
+  margin-bottom: 0.75rem;
 }
-
 
 .card-block {
   padding-right: 30px;
   padding-left: 30px;
 }
-
 
 a.card {
   transition: 0.5s;
@@ -35,7 +33,6 @@ a.card:hover {
   -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
 }
-
 
 .skill-card {
   padding: 15px 0;
@@ -53,12 +50,9 @@ a.card:hover {
   padding: 20px 0 20px 0;
 }
 
-
 .portfolio-show-card {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  justify-content:space-around;
-
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  justify-content: space-around;
 }
-

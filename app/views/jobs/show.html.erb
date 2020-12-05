@@ -11,7 +11,8 @@
                                               start_date: @job.start_date,
                                               end_date: @job.end_date,
                                               currently_active: @job.current,
-                                              body: truncate(@job.body, length: 200),
+                                              # body: truncate(@job.body, length: 200),
+                                              body: @job.body,
                                               job_skills: @job.skills,
                                               path: job_path(@job),
                                                   }) %>

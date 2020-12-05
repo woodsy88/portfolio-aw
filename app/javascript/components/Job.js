@@ -56,6 +56,7 @@ class Job extends React.Component {
   render () {
 
     const { job_skills, company, title, body, path, website, currently_active, start_date, end_date } = this.props;
+    console.log({path})
 
     // takes a number for month "01" and returns it as a word "January"
     function dateFixer(date) {
@@ -91,6 +92,7 @@ class Job extends React.Component {
       }
     }
 
+
     return (
       <React.Fragment>
         <div className="p-4">
@@ -107,9 +109,9 @@ class Job extends React.Component {
                 <div className="d-flex flex-wrap">
                 {codeSkills.map(({title,id,area,badge}) => { 
                   return (
-                    <div className="p-1">
-                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                    <div key={id} className="p-1">
+                      <span  className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
                       </span>
                     </div>
                   )})}
@@ -121,9 +123,9 @@ class Job extends React.Component {
               <div className="d-flex flex-wrap">
                 {managementSkills.map(({ title, id, area, badge }) => {
                   return (
-                    <div className="p-1">
-                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                    <div key={id} className="p-1">
+                      <span  className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -137,9 +139,9 @@ class Job extends React.Component {
               <div className="d-flex flex-wrap">
                 {designSkills.map(({ title, id, area, badge }) => {
                   return (
-                    <div className="p-1">
-                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                    <div key={id} className="p-1">
+                      <span  className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -153,9 +155,9 @@ class Job extends React.Component {
               <div className="d-flex flex-wrap">
                 {marketingSkills.map(({ title, id, area, badge }) => {
                   return (
-                    <div className="p-1">
-                      <span key={id} className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                    <div key={id} className="p-1">
+                      <span  className={`${getClassName(area)} p-1 small-12`}>
+                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -165,7 +167,7 @@ class Job extends React.Component {
 
            </div>
             <div className="mt-4">
-            {website ? <a href={website} target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link pr-1"></i> {company}</a> : ""}
+            {website ? <a href={website} target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link pr-1"></i> {company}</a> : ""}
             </div>
         </div>
       </React.Fragment>

@@ -4,13 +4,13 @@
 
     <% if @skill.jobs.count != 0 %>
     <div class="spacing-xl">
-    <h2 class="spacing-lg">Job's containing <%= @skill.title %></h2>
+    <h2 class="header-4">Job's containing <%= @skill.title %></h2>
         <div class="row">
           <% @skill.jobs.each do |job| %> 
             <div class="col-md-4 d-flex">
-              <div class="card skill-show-card" style="width: 100%;">
+              <div class="card skill-show-card m-3" style="width: 100%;">
                 <div class="card-body flex-fill">
-                  <%= link_to job.company, job_path(job), class: "header-5" %>
+                  <%= link_to job.company, job_path(job), class: "header-6" %>
                 </div>
               </div>
             </div> 
