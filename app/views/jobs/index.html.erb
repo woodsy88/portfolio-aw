@@ -25,12 +25,12 @@
                                                 }) %>
                         </div>
                         <% if logged_in?(:site_admin) %>
-                            <div class="card-footer">     
-                                <div>
-                                    <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-outline-warning' %>
-                                </div>
+                        <div class="card-footer">     
+                            <div>
+                                <%= link_to "Edit Item", edit_job_path(job), class: 'btn btn-outline-warning' %>
                             </div>
-                            <% end %>
+                        </div>
+                        <% end %>
                     </div>
                 </div>
             <% end %>

@@ -26,6 +26,27 @@ const PageBannerContainer = styled.header`
   .page-banner-item {
     display: flex;
     align-items: center;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
+
+ @keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /* move is all the way to the right */
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    /* return it to its default position */
+    transform: translateX(0);
+  }
+} 
 
 `;

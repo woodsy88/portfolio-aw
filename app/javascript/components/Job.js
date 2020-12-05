@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { skill_path } from 'routes.js.erb';
+
 
 const months = [
   {
@@ -56,7 +58,8 @@ class Job extends React.Component {
   render () {
 
     const { job_skills, company, title, body, path, website, currently_active, start_date, end_date } = this.props;
-    console.log({path})
+  
+    
 
     // takes a number for month "01" and returns it as a word "January"
     function dateFixer(date) {
@@ -111,7 +114,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                        <i className={`${badge}`}></i><a href={`${skill_path(id)}`}>{title}</a>
                       </span>
                     </div>
                   )})}
@@ -125,7 +128,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                        <i className={`${badge}`}></i><a href={`${skill_path(id)}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -141,7 +144,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                        <i className={`${badge}`}></i><a href={`${skill_path(id)}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -157,7 +160,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
+                        <i className={`${badge}`}></i><a href={`${skill_path(id)}`}>{title}</a>
                       </span>
                     </div>
                   )
@@ -168,6 +171,7 @@ class Job extends React.Component {
            </div>
             <div className="mt-4">
             {website ? <a href={website} target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link pr-1"></i> {company}</a> : ""}
+            
             </div>
         </div>
       </React.Fragment>

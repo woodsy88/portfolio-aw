@@ -120,3 +120,5 @@ gem "fog-aws"
 gem "mime-types"
 
 gem "chartkick"
+
+gem "js-routes"
