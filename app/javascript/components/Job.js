@@ -111,7 +111,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
                       </span>
                     </div>
                   )})}
@@ -125,7 +125,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
                       </span>
                     </div>
                   )
@@ -141,7 +141,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
                       </span>
                     </div>
                   )
@@ -157,7 +157,7 @@ class Job extends React.Component {
                   return (
                     <div key={id} className="p-1">
                       <span  className={`${getClassName(area)} p-1 small-12`}>
-                        <i className={`${badge}`}></i><a href={`skills/${id}`}>{title}</a>
+                        <i className={`${badge}`}></i><a href={"skills/" + id}>{title}</a>
                       </span>
                     </div>
                   )
