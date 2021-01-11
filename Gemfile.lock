@@ -321,7 +321,7 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     redis (3.3.5)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -467,7 +467,7 @@ DEPENDENCIES
   ransack (~> 2.1, >= 2.1.1)
   rb-readline
   react-rails
-  redcarpet (~> 3.4)
+  redcarpet (~> 3.5)
   redis (~> 3.3.5)
   sass-rails (~> 5.0)
   solargraph
